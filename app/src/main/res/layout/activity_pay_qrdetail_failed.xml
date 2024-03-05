@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/dialog_header_failed"
+            android:focusable="true" />
+
+        <TextView
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:text="@string/message_transaction_failed"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/TextView12spbold"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Message"/>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tryAgain"
+        style="@style/TextView14spbold"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blue"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/button_try_again"
+        android:textColor="@color/color_white" />
+
+</LinearLayout>

@@ -1,0 +1,1001 @@
+<resources>
+    <string name="locale">system</string>
+    <string name="dilog_loginqr">Please Scan QR Code from OttoPay Sales or skip it if you don\'t have a QR code</string>
+    <string name="hipsum_1">Helvetica four loko wolf, mixtape pug single-origin coffee freegan whatever williamsburg messenger bag tumeric irony fam beard.</string>
+    <string name="hipsum_2">Affogato gentrify bespoke irony. Hexagon master cleanse mustache pinterest unicorn live-edge. Neutra marfa hell of scenester, kickstarter ennui cronut DIY. Vice iMobile occupy keffiyeh 3 wolf moon hammock hell of tbh kickstarter unicorn yuccie pork belly plaid.</string>
+    <string name="hipsum_3">Aesthetic coloring book shabby chic shoreditch locavore, mustache austin VHS. Fanny pack thundercats coloring book green juice tbh four loko. Vice hell of cold-pressed, tbh fashion axe post-ironic franzen humblebrag hot chicken scenester. Subway tile neutra activated charcoal fixie, health goth pop-up cray.</string>
+
+    <string name="temp_name">-</string>
+    <string name="temp_id">-</string>
+    <string name="temp_email">-</string>
+    <string name="s_left">Show QR Code</string>
+    <string name="s_right">Scan QR Code</string>
+
+    <string name="title_activity_nearby_merchant">Nearest merchant</string>
+    <string name="nearby_merchant_hint_search">Input merchant name or region</string>
+    <string name="nearby_merchant_label_powered_by">Powered by Ottopay</string>
+    <string name="nearby_merchant_label_promo">Promotion</string>
+    <string name="nearby_merchant_btn_location">Location</string>
+    <string name="nearby_merchant_btn_detail">Detail</string>
+    <string name="nearby_merchant_msg_merchant_not_found">Merchant not found</string>
+
+    <string name="s_ain_1">Upload Selfie with ID Card</string>
+    <string name="s_ain_2">Upload ID photo</string>
+    <string name="s_ain_3">Make sure your goods photo fill the photo frame area</string>
+
+    <string name="s_sub_1">Make sure your Selfie with ID Card photo fill the photo frame area</string>
+    <string name="s_sub_2">Make sure your ID photo fill the photo frame area</string>
+    <string name="s_sub_3">Upload Product photos</string>
+    <string name="dialog_upgrade">Congratulations your data has been sent, validation process will take maximum of 2X24 hours, if the data matches then your account will upgraded automatically</string>
+
+    <string name="message_transaction_success">Transaction Success</string>
+    <string name="message_transaction_failed">Transaction Failed</string>
+
+    <string name="qrdialog">Show the QR code below to the buyer, and make sure the amount is correct.</string>
+
+    <string name="coming_soon_message">Coming Soon</string>
+
+    <!-- General -->
+    <string name="loading_message">Please wait</string>
+    <string name="msg_check_internet_connection">Please check your connection</string>
+    <string name="ppob_msg_eemail_is_not_valid">Invalid Email</string>
+
+    <!-- PPOB -->
+    <string name="ppob_pendidikan_label_informasi">Information</string>
+    <string name="ppob_msg_transaction_in_progress">- Request in progress</string>
+    <string name="ppob_hint_email">Email Address</string>
+    <string name="ppob_cb_save_to_favorite">Save to favorite</string>
+    <string name="ppob_hint_Mobile">Mobile number</string>
+    <string name="ppob_btn_favorite">Favourite Number</string>
+    <string name="ppob_msg_share_it">Share to …</string>
+    <string name="ppob_btn_favorite_list">See Favorites</string>
+    <string name="ppob_voucher_game_note_full">Examples of Game UserID Formats : UserID (ServerID) = 85186388 (22224) Please pay attention to the process of filling in the User ID and Server ID. Make sure to fill in the ID number accordingly, avoid using spaces, or using other symbol* # !.</string>
+    <string name="ppob_voucher_game_note_full_rolename">Examples of Game UserID Formats : UserID (ServerID) = 85186388 (22224) Please pay attention to the process of filling in the User ID, Role Name and Server ID. Make sure to fill in the ID number accordingly, avoid using spaces, or using other symbol* # !.</string>
+    <string name="ppob_voucher_game_note_less">Please pay attention when fill User ID . Make sure to the ID number is correct, avoid using spaces, or using other symbol * # !.</string>
+    <string name="ppob_voucher_game_note_id">Make sure enter correct User ID</string>
+    <string name="ppob_voucher_game_note_server">Make sure enter correct User ID and Server ID</string>
+    <string name="ppob_voucher_game_note_role">Make sure enter correct User ID, Role Name, and Server ID</string>
+    <string name="ppob_msg_invalid_email_address">Invalid email</string>
+    <string name="ppob_msg_phone_is_not_valid">Invalid Mobile number</string>
+    <string name="ppob_msg_phone_not_found">Customer ID not found</string>
+    <string name="ppob_label_email">Input customer email (optional)</string>
+    <string name="ppob_label_email_desc">If email provided, payment receipt will be sent to customer email</string>
+    <string name="ppob_label_spj_desc">* Example: SPJ 1234567 for March 2019, then enter 12345670319</string>
+    <string name="ppob_msg_phone_is_required">Mobile Number is mandatory</string>
+    <string name="ppob_msg_no_meter_is_required">Meter number is mandatory</string>
+    <string name="ppob_msg_no_meter_invalid">Invalid meter number</string>
+    <string name="ppob_please_select_payment_method">Choose payment type!</string>
+    <string name="ppob_please_select_payment_method_dot">Choose payment type…</string>
+    <string name="ppob_label_payment_method">Payment Type</string>
+    <string name="ppob_hint_role_name">Role Name</string>
+
+    <!-- PPOB v3.0-->
+    <string name="ppob_hint_server_id">Server ID</string>
+    <string name="ppob_hint_user_id">User ID</string>
+    <string name="ppob_server_id_is_required">Server ID is mandatory!</string>
+    <string name="ppob_role_name_is_required">Role Name is mandatory!</string>
+    <string name="ppob_label_select_wallet">Choose Service…</string>
+    <string name="ppob_label_select_product">Choose Service…</string>
+    <string name="ppob_top_up_select_wallet_title">Choose Servicen</string>
+    <string name="ppob_top_up_select_product_title">Choose Service</string>
+    <string name="ppob_hint_id_pelanggan">Customer Number *</string>
+    <string name="ppob_id_pelanggan_is_required">Customer ID is mandatory!</string>
+    <string name="ppob_game_not_available">Game not available</string>
+    <string name="ppob_label_field_is_required">*) mandatory</string>
+    <string name="ppob_tab_listrik_pln">Prepaid Electricity</string>
+    <string name="ppob_tab_tagihan_pln">Postpaid Electricity</string>
+    <string name="title_activity_show_payment_code">Pay with QR</string>
+    <string name="ppob_label_product_price_prepaid">Price</string>
+    <string name="ppob_label_product_price_postpaid">Bills</string>
+    <string name="ppob_btn_refund">Refund request</string>
+
+    <!-- Show Payment QR -->
+    <string name="show_payment_code_label_title">Pay with QR</string>
+    <string name="show_payment_code_desc">Please show QR code, Barcode, or mention the token code to the clerk or cashier to make a payment.</string>
+    <string name="show_payment_code_desc_oc">Please show the Payment Code to the clerk or cashier at the convenience store to make a payment</string>
+    <string name="show_payment_code_label_timer">Time left</string>
+    <string name="show_payment_code_label_kode_token">Token Code :</string>
+    <string name="show_payment_code_label_barcode">Barcode:</string>
+
+    <!-- Activattion Confirmation -->
+    <string name="activation_confirmation_tittle">OttoPay</string>
+    <string name="activation_confirmation_msg_conf_questtion">Activate %1$s Dompet Kamu ?</string>
+    <string name="activation_confirmation_msg_conf_oc">Activate %1$s OttoCash Account ?</string>
+    <string name="activation_confirmation_tac_ottopay"><![CDATA[ I have read and agree to the Ottokonek <font color="#d04a55">
+                Terms & Conditions. </font> ]]></string>
+    <string name="activation_confirmation_tac_ottocash"><![CDATA[ Saya telah membaca dan setuju dengan <font color="#d04a55">
+                Syarat & Ketentuan </font> OttoCash yang berlaku. ]]></string>
+    <string name="activation_confirmattion_msg_tac_ottopay_required"><![CDATA[Anda harus menyetujui syarat & ketentuan OttoPay]]></string>
+    <string name="activation_confirmattion_msg_tac_ottocash_required"><![CDATA[Anda harus menyetujui syarat & ketentuan OttoCash]]></string>
+    <string name="donasi_menu">Donasi</string>
+
+
+    <!-- Donasi -->
+    <string name="donasi_msg_nama_donatur_required">Donor Name is Mandatory</string>
+    <string name="donasi_msg_amount_required">Enter donation amount</string>
+    <string name="donasi_msg_email_required">Email is mandatory</string>
+    <string name="donasi_msg_email_invalid">Invalid email</string>
+    <string name="donasi_msg_phone_required">Mobile Number is mandatory</string>
+    <string name="donasi_msg_phone_invalid">Invalid Mobile Number</string>
+    <string name="title_activity_inbox">Inbox</string>
+
+    <!-- Share QR -->
+    <string name="share_qr_msg_download_success">Success save QR image</string>
+
+    <!-- Inbox Edit -->
+    <string name="title_activity_inbox_edit">Inbox</string>
+    <string name="inbox_edit_labeel_counter">%1$d Selected</string>
+    <string name="btn_bayar">Pay</string>
+
+    <string name="error_ms_no_internet_connection">The Connection was reset, please try again</string>
+
+    <!-- Error Message -->
+    <string name="error_msg_internet_connection_lost">The Connection was reset, please try again</string>
+    <string name="error_msg_response_error_title">Failed to connect with server</string>
+    <string name="error_msg_response_error">If problem occurred please contact OttoKonek customer service (639501938743)</string>
+    <string name="error_msg_something_wrong">Something went wrong</string>
+    <string name="error_msg_something_wrong_desc">Please try again later</string>
+    <string name="error_msg_service_not_available">Service not available, please try again later</string>
+
+    <string name="syarat_dan_ketentuan"><u>Terms and Condition</u></string>
+
+    <string name="pengaturan_pin"><u>PIN Setting</u></string>
+    <string name="dashboard_fragment_label_ottopoint">OttoPoint</string>
+
+    <!-- Dashboard Fragmentt -->
+    <string name="profile_menu_contact_us">Contact us</string>
+    <string name="profile_menu_help_center">Help Center</string>
+
+    <!-- Omzet -->
+    <string name="omzet_tooltip_message">Revenue is an the OttoPay feature that used to accommodate QRIS-based transactions, it cannot be used for transaction, but can be disbursed through BANK and VA Bank INA</string>
+    <string name="deposit_tooltip_message">Deposit is an OttoPay feature  that is used for transaction at a Retail Store, Payment , Bills, &amp; Online stores, it can be top-up through a BANK but cannot be cashed</string>
+
+    <!-- Profile -->
+    <string name="profile_menu_faq">FAQ</string>
+    <string name="profile_menu_term_and_condition">Terms and Condition</string>
+    <string name="profile_menu_privacy_policy">Privacy Policy</string>
+    <string name="profile_menu_security_information">Security Information</string>
+    <string name="profile_menu_edit_profile">Account Setting</string>
+    <string name="profile_menu_sign_out">Logout</string>
+    <string name="title_activity_activation_selector">Activation Selector</string>
+    <string name="channel_name">OttoPay</string>
+    <string name="channel_description">OttoPay</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="tncOlshop">
+        Terms and condition\n\n
+        1. The Acknowledgement of Receipt of Goods: delivery status will be considered as complete if there is no confirmation within 3 days after delivery is complete.\n\n
+        2. Exchange Process: For questions or suggestions about your order and experience, please contact OttoPay customer service Mobile: 1500-749WhatsApp: 0811-1678-894Email: halo@ottopay.id\n\n
+        3. Goods that have been purchased cannot be exchanged.http: //www.elevenia.co.id/static/return-policies.do
+    </string>
+
+    <string name="err_nophone_title">Mobile feature not detected</string>
+
+    <string name="err_nophone_content">Mobile feature not detected in your Android system</string>
+    <string name="title_activity_checkout">Please check your order</string>
+    <string name="checkout_data_pengiriman">Shipping Information</string>
+    <string name="checkout_label_pesanan">Order</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_indomaret_qrpayment">Indomaret</string>
+
+
+    <!-- Activity Title -->
+    <string name="title_activity_voucher_game">Voucher Game</string>
+    <string name="title_activity_search_voucher_game">Search Voucher Game</string>
+    <string name="title_activity_vouher_game_payment">Vouher Game Payment</string>
+    <string name="title_activity_re_order">Order List</string>
+    <string name="title_activity_cart">Retail Store Order List</string>
+    <string name="title_activity_process_qrpayment">QR Payment Process</string>
+    <string name="title_activity_order_history">Order History</string>
+    <string name="title_activity_order_history_detail">Order Detail</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_ppob_category">Choose</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_ppob_product_type">Biller Product Type</string>
+    <string name="title_activity_ppob_product_input">Biller Product Input</string>
+    <string name="title_activity_ppob_favorite_list">Favorite</string>
+    <string name="title_activity_ppob_denom">Select Amount</string>
+    <string name="title_activity_ppob_confirmation">Confirm</string>
+    <string name="title_activity_ppob_payment_success">Payment Success</string>
+    <string name="title_activity_ppob_payment_detail">Transaction Detail</string>
+    <string name="title_activity_ppob_pulsa_product_input">Mobile Credit</string>
+    <string name="title_activity_ppob_listrik_product_input">Electricity</string>
+    <string name="title_activity_ppob_air_product_input">Water</string>
+    <string name="title_activity_ppob_provider">Select Provider</string>
+    <string name="title_activity_ppob_top_up_product_input">Wallet Credit</string>
+    <string name="title_activity_ppob_bpjs_product_input">Health Insurance</string>
+    <string name="title_activity_ppob_donasi_product_list">Donation</string>
+    <string name="title_activity_ppob_donasi_product_input">Donation</string>
+    <string name="title_activity_ppob_game_product_input">Game</string>
+    <string name="title_activity_show_qr">Show QR</string>
+    <string name="title_activity_scan_qr">Scan Qr</string>
+    <string name="title_activity_show_dynamic_qr">Input Amount</string>
+    <string name="title_activity_qr_payment">QR Payment</string>
+    <string name="title_activity_omzet">OttoPay</string>
+    <string name="msg_tnc_confirmation"><![CDATA[All transactions are fast and secure.<BR> By proceeding,you have agreed to the our <b>Terms & Conditions</b>]]></string>
+
+    <string name="qr_payment_amount_is_required">Enter payment amount</string>
+    <string name="omzett_transfer_desc">You can withdraw Non-Cash income into your bank account or into your wallet</string>
+    <string name="title_activity_wallet_ottocash">OttoCash</string>
+    <string name="title_activity_wallet_ottopay">OttoPay</string>
+    <string name="msg_wrong_phone_format">Invalid Mobile number format</string>
+    <string name="title_activity_activation_input_pin">OttoPay</string>
+
+    <string name="activation_input_pin_desc">Enter OttoKonek PIN</string>
+    <string name="activattion_input_pin_label_pin">Enter a 6-digit OttoKonek PIN </string>
+    <string name="title_activity_transfer_bank">Settlement</string>
+    <string name="ppob_id_pelanggan_bpjs_is_invalid">Invalid customer ID</string>
+    <string name="transfer_bank_msg_amount_is_required">Settlement amount is mandatory</string>
+    <string name="title_activity_transfer_bank_confirmation">Confirmation</string>
+    <string name="title_activity_withdraw_confirmation">Settlement Confirmation</string>
+    <string name="title_activity_otp_verification">OTP Confirmation</string>
+    <string name="otp_verification_phone_info">Enter a 6-digit OTP code sent to Mobile number %1$s.</string>
+    <string name="title_syarat_ketentuan">OttoPoint Register</string>
+
+    <string name="title_syarat_ketentuan_two">Term &amp; Condition</string>
+    <string name="title_kode_verifikasi">Verification code</string>
+    <string name="empty_string">…</string>
+
+    <!-- empty value -->
+    <string name="empty_poin">0</string>
+    <string name="empty_poin_two">0 points</string>
+    <string name="empty_poin_three">-</string>
+    <string name="empty_number">0</string>
+    <string name="empty_countdown">00:00</string>
+    <string name="empty_currency">Rp 0</string>
+    <string name="empty_button_tukar_poin">Redeem 0 point</string>
+    <string name="empty_voucher">0 voucher</string>
+    <string name="empty_button_beli_voucher">Buy - 0 point</string>
+    <string name="menu_ottomart">OttoPay</string>
+
+    <!-- menu -->
+    <string name="menu_total_poin">Total Points</string>
+    <string name="menu_active_poin_menu">Activate Point</string>
+    <string name="menu_active_poin">Activation</string>
+    <string name="menu_active_poin_verifikasi">Verification Code</string>
+    <string name="menu_tukar_kupon">Coupon Redeem</string>
+    <string name="menu_riwayat_kupon">Coupon History</string>
+    <string name="menu_deals">Deals</string>
+    <string name="menu_riwayat_transaksi">Point History</string>
+    <string name="menu_voucher_saya">My Vouchers</string>
+    <string name="menu_voucher_detail">Voucher Details</string>
+    <string name="menu_point_voucher">Voucher Point</string>
+    <string name="menu_semua_kategori">All Categories</string>
+    <string name="label_total_poin">Total Points</string>
+
+    <!-- label -->
+    <string name="label_detail">Details</string>
+    <string name="label_otto_point">Otto Point</string>
+    <string name="label_point_kamu">My Points</string>
+    <string name="label_ottopay_point">OttoPay Point</string>
+    <string name="label_ottocash_point">OttoCash Point</string>
+    <string name="label_poin">Point</string>
+    <string name="label_voucher_saya">My Vouchers</string>
+    <string name="label_lihat_semua">See All</string>
+    <string name="label_promo_terbaru">Latest Voucher</string>
+    <string name="label_promo_produk_khusus">Other Product Promotion</string>
+    <string name="label_deals">Deals</string>
+    <string name="label_point_pede">Pede Point</string>
+    <string name="label_point_agen">Agent Point</string>
+    <string name="label_phone_number">Mobile Number</string>
+    <string name="label_code_phone_indo">+62</string>
+    <string name="label_riwayat">History</string>
+    <string name="label_saldo_ottopay">OttoPay Balance</string>
+    <string name="label_harga">Price</string>
+    <string name="label_currency">Rp</string>
+    <string name="label_kupon_saldo_ottopay">OttoPay Coupon Balance</string>
+    <string name="label_metode_pembayaran">Payment Method</string>
+    <string name="label_tukar">Redeem</string>
+    <string name="label_ya">Yes</string>
+    <string name="label_tidak">No</string>
+    <string name="label_promosi">Promotion</string>
+    <string name="label_berlaku_hingga">Valid to</string>
+    <string name="label_tersisa">Remaining</string>
+    <string name="label_deskripsi">Description</string>
+    <string name="label_syarat">Term</string>
+    <string name="label_cara_pakai">How to Use</string>
+    <string name="label_syarat_ketentuan">Term &amp; Condition</string>
+    <string name="label_beli_voucher">Buy Voucher</string>
+    <string name="label_total_harga">Total</string>
+    <string name="label_aktif">Active</string>
+    <string name="label_jumlah">Amount</string>
+    <string name="label_perhatian">Caution</string>
+    <string name="label_kode_voucher">Voucher Code</string>
+    <string name="label_qr_code">QR Code</string>
+    <string name="label_saldo">Balance</string>
+    <string name="label_status">Status</string>
+    <string name="label_terpakai">Used</string>
+    <string name="label_eksplore">Explore</string>
+    <string name="label_kupon_saya">My Coupons</string>
+    <string name="label_tidak_aktif">Inactive</string>
+    <string name="label_tambah_poin">Add Point</string>
+    <string name="label_kurang_poin">Reduce Point</string>
+    <string name="label_nomor_handphone">Mobile Number</string>
+    <string name="label_code_number">+62</string>
+    <string name="label_nomor_hp_terdaftar">Registered Mobile Number</string>
+    <string name="label_berhasil_digunakan_pada">Redeem at</string>
+    <string name="label_voucher">voucher</string>
+    <string name="label_urutkan">Sort</string>
+    <string name="label_lokasi">Location</string>
+    <string name="label_penawaran">Offering</string>
+    <string name="label_harga_minimum">Min price</string>
+    <string name="label_harga_maksimum">Max Price</string>
+    <string name="label_filter">Filter</string>
+    <string name="label_konfirmasi">Confirm</string>
+    <string name="label_lainnya">Others</string>
+    <string name="label_tanggal_berhasil_digunakan">Redeem at</string>
+    <string name="label_id_pelanggan">Customer ID</string>
+    <string name="label_nomor_token">Token Code</string>
+    <string name="place_holder_phone_number">Enter Mobile Number</string>
+    <string name="label_id_server">Server ID</string>
+
+    <string name="security_root_message">"An application that is not permitted on your Mobile has been detected. Please delete the application to continue.</string>
+
+    <!-- place holder -->
+    <string name="text_info_total_poin">The number of points in Otto Point is a combination of all your active points.</string>
+
+    <!-- text -->
+    <string name="text_under_construction">Under Construction</string>
+    <string name="text_info_active_point">Activate your account or register</string>
+    <string name="text_info_active_account_pede">Already registered in PEDE?\nPlease enter your Mobile number</string>
+    <string name="text_info_pin">Please input code sent to your Mobile</string>
+    <string name="text_kirim_ulang_kode">Resend Code</string>
+    <string name="text_success">Success!</string>
+    <string name="text_success_activation_account_pede">Your Pede Points has been successfully activated. Points have been combined into Otto Point</string>
+    <string name="text_pilih_kupon">Select the coupon that you want to convert to a balance.</string>
+    <string name="text_question_use_kupon">Use Coupon?</string>
+    <string name="text_title_banner">OttoPay Hasil Lebih</string>
+    <string name="text_desc_banner">Improving your Finance</string>
+    <string name="text_pembelian_berhasil">Success!</string>
+    <string name="text_berhasil_beli_voucher">Success redeem voucher Point</string>
+    <string name="text_success_kupon_1">Success Redeem</string>
+    <string name="text_success_kupon_2">Coupon</string>
+    <string name="text_cari_deals">Search Deals</string>
+    <string name="text_lokasi_saat_ini">Location:</string>
+    <string name="text_sample">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sem dolor. Praesent venenatis diam at porta gravida. Donec lobortis, ipsum id efficitur mattis, tortor nisi fringilla justo, ac iaculis sem magna vitae velit. Fusce at varius magna, non molestie nisl. Maecenas venenatis lectus eget semper dapibus.\n\nCurabitur tellus ipsum, hendrerit ac aliquet vitae, vestibulum at nulla. Duis tincidunt feugiat placerat. Donec auctor aliquet porttitor. Suspendisse blandit, ipsum id sodales condimentum, nisl nisl viverra dolor, ac hendrerit felis libero sed dolor. Ut vehicula ullamcorper nulla, id efficitur nibh tempor at.\nProin aliquet sit amet nisl vel pulvinar. Donec aliquam fermentum metus, quis congue turpis maximus vitae. Mauris ornare ultricies posuere.\n\nDonec rutrum, nunc quis blandit imperdiet, urna risus tempus augue, in tincidunt dolor ligula ut sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas porttitor odio lobortis nunc consequat cursus. Donec sed sagittis metus. Etiam eu lorem at purus molestie feugiat. Fusce elementum vitae urna ut vehicula. Nam eu orci vehicula, vulputate nulla in, luctus orci. Cras massa ante, dapibus ac commodo vitae, accumsan sed est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis arcu vel ex vulputate sagittis.</string>
+    <string name="text_question_buy_voucher">Are you sure you want to buy this voucher?</string>
+    <string name="text_success_beli_voucher">Success purchase voucher</string>
+    <string name="text_info_konfirmasi_voucher">To redeem the voucher\nPlease enter your Mobile number</string>
+    <string name="text_info_konfirmasi_voucher_game">To redeem the voucher\nplease enter your ID</string>
+    <string name="text_info_konfirmasi_voucher_token_listrik">To redeem the voucher\nplease enter your Token number</string>
+
+    <string name="text_voucher_digunakan">Voucher is Used!</string>
+    <string name="text_info_success_use_voucher">Success redeem Voucher</string>
+    <string name="text_coming_soon">Coming Soon!</string>
+    <string name="text_info_coming_soon_kategori">Coming Soon</string>
+    <string name="text_sample_deskripsi">Good news for those of you who like to eat KFC crispy fried chicken. Buy 9 pcs of chicken for only Rp 199,000. Applies to Hot Crispy Chicken (HCC), Original Recipe (OR), and Mix variants with the provision of 3 HCC + 2 OR. Promo valid for two days on January 21–22, 2019.</string>
+    <string name="text_sample_syarat">1. This Promo only valid for purchasing movie tickets through the CGV application\n2. Maximum deduction for Free Ticket are 50% of the payment price with a maximum Rp. 40,000\n3. Minimum purchase is 2 tickets. Promo valid for purchases and movie screenings on April 1–31, 2019</string>
+    <string name="text_sample_carapakai">1. Enter CGV application\n2. Select Movies tab\n3. Select the movie you want to watch\n4. Choose a location and showtime\n5. Choose the best seat you want then select the "Review Order" menu\n6. hen you will go to the Payment Page\n7. Select “Have promocode?”\n8. Enter the promo code NONTONCGV and then click "Apply"\n9. Bill will be deducted automatically, then complete the payment by pressing the "Order" button</string>
+    <string name="text_error_topup_ottofin">Top-Up Failed</string>
+    <string name="text_error_redeem_kupon">Redeem Failed</string>
+    <string name="text_empty_kupon">You don\'t have any coupons</string>
+    <string name="text_empty_voucher">You don\'t have any vouchers</string>
+    <string name="text_empty_riwayat_kupon">Empty Coupon history</string>
+    <string name="text_poin_tidak_cukup">Transaction failed, you don\'t have enough points</string>
+    <string name="text_gunakan_ottopoint">Use OttoPoint</string>
+    <string name="text_title_info_user_not_eligible">Coming Soon</string>
+    <string name="text_desc_info_user_not_eligible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor ex a molestie suscipit.\nNulla porta enim felis, ut tristique nisl malesuada eget.</string>
+    <string name="text_info_aktivasi_one">I am willing to use the registered mobile number</string>
+    <string name="text_info_aktivasi_two">I have read and agree to the Terms &amp; Conditions</string>
+    <string name="text_info_check_syarat_ketentuan">To cotinue, please agree to the Terms &amp; Conditions</string>
+    <string name="text_berhasil_daftar">Register Success</string>
+    <string name="text_berhasil_daftar_first_registration">Congratulations, You have successfully registered for OttoPoint \nyou will get a bonus</string>
+    <string name="text_title_earn_poin">point</string>
+    <string name="text_desc_earn_poin_one">Congratulations, You get</string>
+    <string name="text_desc_earn_poin_two">point\nfrom the purchase</string>
+    <string name="text_daftar">Activation</string>
+    <string name="text_berhasil">Success</string>
+    <string name="text_desc_konfirmasi_tukar_deals">Are you sure want to exchange :</string>
+    <string name="text_linking_registrasi_gagal">Sorry, you are not allowed to access this feature</string>
+    <string name="text_title_gagal_tukar_voucher">Ooopss! Redeem failed</string>
+    <string name="text_desc_gagal_tukar_voucher">You don\'t have any voucher</string>
+    <string name="text_phone_not_eligible">You are not allowed to access this feature. For more information please contact Customer Care and visit website at https://ottopay.id.</string>
+    <string name="text_failed_registration">You are not allowed to access this feature</string>
+    <string name="text_point_tidak_cukup">Points are not sufficient to make the transaction</string>
+    <string name="text_voucher_available">Insufficient voucher, avaiable vouchers</string>
+    <string name="text_success_buy_voucher">Number of success vouchers is *</string>
+    <string name="text_success_buy_voucher_extend">* Failed.</string>
+
+    <!-- button -->
+    <string name="button_daftar">Register</string>
+    <string name="button_masuk">Login</string>
+    <string name="button_cek_poin">Check Point</string>
+    <string name="button_tukar">Exchange</string>
+    <string name="button_pelajari_lebih_lanjut">Learn More</string>
+    <string name="button_lihat_voucher">See Voucher</string>
+    <string name="button_kembali">Back</string>
+    <string name="button_beli">Buy</string>
+    <string name="button_beli_voucher">Buy Voucher</string>
+    <string name="button_terpakai">Used</string>
+    <string name="button_expired">Expired</string>
+    <string name="button_slide_action_voucher">Please swipe >></string>
+    <string name="button_slide_action_konfirmasir">Confirmation >></string>
+    <string name="button_tutup">Close</string>
+    <string name="button_detail">Detail</string>
+    <string name="button_ok">OK</string>
+    <string name="button_aktivasi">Register</string>
+    <string name="button_bunakan_voucher">Use</string>
+    <string name="button_batal">Cnncel</string>
+    <string name="button_terapkan">Apply</string>
+    <string name="button_active_another_point">Activate Other Points</string>
+    <string name="button_lihat_semua">See More</string>
+    <string name="button_lanjut">Next</string>
+    <string name="button_yes_tukar">Yes, Exchange</string>
+    <string name="button_pakai">Use</string>
+    <string name="deal_all">All</string>
+
+    <!-- deals items -->
+    <string name="deal_near_me">Near Me</string>
+    <string name="deal_trending">Popular</string>
+    <string name="deal_kesehatan">Health</string>
+    <string name="deal_hiburan">Entertiment</string>
+    <string name="deal_makanan">Food</string>
+    <string name="deal_belanja">Shopping</string>
+    <string name="deal_transportasi">Transportation</string>
+    <string name="deal_edukasi">Education</string>
+    <string name="deal_hadiah">Gift</string>
+    <string name="deal_travel">Travel</string>
+    <string name="deal_otomotif">Otomotif</string>
+    <string name="deal_olahraga">Sports</string>
+    <string name="deal_fashion">Fashion &amp; Accessories</string>
+    <string name="deal_semua_kategori">All\nCategori</string>
+    <string name="deal_perlengkapan_bayi">Baby\nGear</string>
+    <string name="deal_investasi">Investation</string>
+    <string name="deal_pulsa">Mobile Credit</string>
+    <string name="deal_listrik">Electricity</string>
+    <string name="deal_games">Games</string>
+    <string name="error_empty_field">Please check your input and try again</string>
+
+    <!-- error -->
+    <string name="error_detail_id_empty">Data not found</string>
+    <string name="error_request">Something went wrong</string>
+    <string name="error_unauthorize">Login Session expired.</string>
+    <string name="error_forbiden">Unable access the data.</string>
+    <string name="error_notfound">Data not found.</string>
+    <string name="error_empty_input">Please complete the following form</string>
+    <string name="error_server">System error occurred</string>
+
+    <string-array name="pendapatan">
+        <item>Transfer to Wallett</item>
+        <item>Transfer to Bank</item>
+    </string-array>
+
+    <string name="ppob_label_cashback">Cashback</string>
+
+    <string-array name="items_order_deals">
+        <item>Newest</item>
+        <item>Oldest</item>
+        <item>Lowest Point</item>
+        <item>Highest Point</item>
+        <item>Oldest Expired</item>
+        <item>Nearby Expired</item>
+    </string-array>
+
+    <string-array name="items_order_voucher_saya">
+        <item>Newest</item>
+        <item>Oldest</item>
+        <item>Lowest Poin</item>
+        <item>Highest Poin</item>
+    </string-array>
+
+    <string name="title_activity_refund_confirrmation">Confirmation</string>
+    <string name="title_activity_kyc_success">Kyc Success</string>
+    <string name="url_tnc_ottocash">https://opv3.s3-ap-southeast-1.amazonaws.com/tnc/tnc.html</string>
+    <string name="title_activity_withdraw">Withdraw to Account</string>
+    <string name="title_activity_share_qr">Share Qr</string>
+    <string name="title_activity_hiburan_denom">HiburanDenomActivity</string>
+    <string name="home_ppob_menu_title">Payment &amp; Bills</string>
+    <string name="home_ppob_menu_desc">Low price, abundant bonus!</string>
+    <string name="home_label_app_name">Mitra OttoPay</string>
+    <!--    <string name="ppob_producttt_name_pulsa">Mobile Credit</string>-->
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="home_label_powered_by">by OttoPay</string>
+    <!--    <string name="ppob_product_name_paket_data">Mobile Data</string>-->
+    <string name="label_tnc_oc"><![CDATA[I have read and agree to the OttoCash Terms & Conditions.]]></string>
+    <string name="label_another_address">Other Address</string>
+    <string name="produk">Product</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="dash">-</string>
+    <string name="text_deposit">Account (PHP)</string>
+    <string name="text_take_cash_from_buyer">Don\'t Forget, Ask for Cash from the Buyer</string>
+    <string name="text_welcome_login">Welcome to OttoPay, Enter your mobile number</string>
+    <string name="text_save_phone_number">Save Mobile Number / Customer Number</string>
+    <string name="text_increase_bussiness_with_op">Upgrade your business with OttoPay</string>
+    <string name="text_search_address">Search address</string>
+    <string name="text_notice">Information</string>
+    <string name="text_scan_qr">Scan QR</string>
+    <string name="text_ottocash_token">OttoCash Token</string>
+    <string name="text_done">Done</string>
+    <string name="text_pay_code">Payment Code</string>
+    <string name="text_input_pin_6_digit">Enter a 6-digit PIN code</string>
+    <string name="text_forgot_pin">Forgot Pin</string>
+    <string name="text_input_pin_chance">Your</string>
+    <string name="text_anda_tinggal">Current PIN attempts</string>
+    <string name="text_3_kali">3 times left</string>
+    <string name="text_off">OFF</string>
+    <string name="text_profil">Profile</string>
+    <string name="text_my_profil">My Profile</string>
+    <string name="text_bank_account">Bank Account</string>
+    <string name="button_upgrade_accouint">Upgrade Akun</string>
+    <string name="text_qr_code">QR Code</string>
+    <string name="text_register">Register</string>
+    <string name="text_input_phone_number">Please enter your mobile number that is already registered by the sales</string>
+    <string name="text_upgrade_ottocash_plus">Upgrade OttoCash Plus</string>
+    <string name="text_powered_by">Powered by</string>
+    <string name="text_ottopay">OttoPay</string>
+    <string name="text_withdraw_omzet">Withdraw Revenue?</string>
+    <string name="text_no">No</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_total_max_withdraw_omzet">Revenue amount that can be withdrawn</string>
+    <string name="text_bank_to_bank">Pay to Bank</string>
+    <string name="text_transfer_balance">Balance Transfer</string>
+    <string name="text_tnc">Terms and Conditions</string>
+    <string name="text_propose_upgrade_account">Upgrade Account</string>
+    <string name="text_choose_wallet">Select Wallet</string>
+    <string name="text_withdraw_cash">Cash withdrawal</string>
+    <string name="text_withdraw_cash_colon">Cash withdrawal : </string>
+    <string name="text_barcode">Barcode</string>
+    <string name="text_withdraw_cash_indomaret">Cash withdrawal via Indomaret</string>
+    <string name="text_show_qr_to_indomaret_staff">Show QR code or Token Code to Indomaret Cashier</string>
+    <string name="text_withdraw_cash_atm">Cash withdrawal via ATM</string>
+    <string name="message_product_added_to_cart">Item was successfully added to your cart.</string>
+    <string name="text_payment_qr">OR Payment</string>
+    <string name="text_cash">Cash</string>
+    <string name="text_payment">Payment</string>
+    <string name="text_balance">Balance:</string>
+    <string name="text_another_wallet">Others Wallet</string>
+    <string name="text_phone_ex">08xxxxxxx *</string>
+    <string name="text_amount_ex_asteriks">Rp0 *</string>
+    <string name="text_amount_ex">PHP 0</string>
+    <string name="text_zakat">Zakat</string>
+    <string name="text_infaq">Infaq</string>
+    <string name="text_npwp">npwp</string>
+    <string name="text_address">Address</string>
+    <string name="message_verification_on_3x24">We will do verification process in 3x24 hours</string>
+    <string name="text_ketentuan">Condition</string>
+    <string name="text_history_transaction">Transaction History</string>
+    <string name="text_currency_parenthesis">(PHP)</string>
+    <string name="text_payment_details">Payment Details</string>
+    <string name="text_comission">Commission</string>
+    <string name="text_search">Search…</string>
+    <string name="text_pay_with">Pay with</string>
+    <string name="text_variant_ex">(example; color, size)</string>
+    <string name="text_category">Category</string>
+    <string name="text_search_game">Search game</string>
+    <string name="text_printed_by_oc">Printed By: OttoCash</string>
+    <string name="text_add">Add</string>
+    <string name="text_usability_oc_token_in_indomaret_alfamart"><![CDATA[OttoCash Token is used to top up your OttoCash balance at Indomaret and can also be use for shopping at Indomaret & Alfamart.]]></string>
+    <string name="text_steps">Here are the steps:</string>
+    <string name="text_op_token_nl">OttoPay \nToken</string>
+    <string name="text_input_nominal">Input \nAmount</string>
+    <string name="text_download_qr">Download</string>
+    <string name="text_share_qr">Share</string>
+    <string name="text_wallet_colon">Wallet:</string>
+    <string name="text_transfer">Transfer</string>
+    <string name="text_verification_onprocess">Verification in process</string>
+    <string name="text_upgrade">Upgrade</string>
+    <string name="text_oc_email">halo@ottocash.id</string>
+    <string name="text_oc_phone">021 5020 0909</string>
+    <string name="text_website">Website</string>
+    <string name="text_oc_url">ottocash.id</string>
+    <string name="text_working_hour">Monday – Friday (08.00 – 20.00), Saturday (08.00 – 18.00))</string>
+    <string name="text_biaya_rp_0">- Service Fee Rp 0</string>
+    <string name="text_masuk_ke_bank_secara_real_time">- Transfer funds real time</string>
+    <string name="text_eta_shipping_3_days">Delivery estimates no more than 3 working days</string>
+    <string name="text_toko_ottopay">Retail Store</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_scan_buyer_qr">Please scan buyer QR Code \nfor payment process</string>
+    <string name="text_return">Back</string>
+    <string name="text_currency">PHP</string>
+    <string name="text_toko_grosir">Retail Store</string>
+    <string name="text_header_biller"><![CDATA[Payment & Bills]]></string>
+    <string name="text_toko_online">Online Store</string>
+    <string name="text_message">Message</string>
+    <string name="text_another_info">Other Info</string>
+    <string name="text_ottocash">OttoCash</string>
+    <string name="text_date">Date &amp; Time</string>
+    <string name="text_price_range">Price Limit (Rp)</string>
+    <string name="text_min">Min</string>
+    <string name="text_max">Max</string>
+    <string name="text_rp0_rp75rb">Rp0 - Rp75rb</string>
+    <string name="text_rp75rb_rp150rb">Rp75rb - Rp150rb</string>
+    <string name="text_rp150rb_rp200rb">Rp150rb - Rp200rb</string>
+    <string name="text_point_usage">Used Point</string>
+    <string name="text_oc_usage">Used OttoCash</string>
+    <string name="text_set_commission">Decide your selling price \nto buyer</string>
+    <string name="text_details">Details</string>
+    <string name="text_harga_jual_berpengaruh_terhadap_nkeuntungan_kamu">Selling price will affects your profits</string>
+    <string name="text_expedition_service">Shipping method</string>
+    <string name="text_sort">Sort</string>
+    <string name="text_pendapatan_non_tunai">Non-Cash Income</string>
+    <string name="text_status">Status</string>
+    <string name="text_shipping_insurance">Insurance</string>
+    <string name="text_wait_for_payment">Waiting for\nPayment Process</string>
+    <string name="text_transaction_success">Transaction\nSuccess</string>
+    <string name="text_on_packing">In\nPacking</string>
+    <string name="text_on_delivery">Shipping</string>
+    <string name="text_input_here">Fill Here</string>
+    <string name="text_unit_price">Unit price</string>
+    <string name="text_amount_piece">Quantity (pcs)</string>
+    <string name="text_diterima_dalam_2_3_hari">Received in 2–3 Days</string>
+    <string name="text_higher_price">Highest Price</string>
+    <string name="text_order_from_distributor">Distributor</string>
+    <string name="text_short_point">pt</string>
+    <string name="text_merchant_copy_print">- - - Merchant Copy - - -</string>
+    <string name="text_hallo_ottopay_print">OTTOKONEK CARE</string>
+    <string name="text_short_whatsapp">WA</string>
+    <string name="text_guidance_upgrade_oc">Upgrade OttoCash Plus is very easy! first, just take a photo of your KTP, and then take a selfie with your KTP from your cellMobile</string>
+    <string name="text_search_stuff">Seacrh Item</string>
+    <string name="text_search_product">Search Product</string>
+    <string name="text_payment_method">Payment Method</string>
+    <string name="text_pendapatan_omzet">Revenue Income</string>
+    <string name="text_tidak_bisa_dicairkan">Disburment not allowed</string>
+    <string name="text_upgrade_akun_kamu_untuk_bisa_menikmati_keuntungan_keuntungan_berikut">Enjoy the following benefits with Upgraded Account :</string>
+    <string name="text_transfer_saldo_ke_sesama_pengguna_ottopay">Transfer balances to fellow OttoPay users</string>
+    <string name="text_kirim_saldo_ke_rekening_bank_atas_nama_pemilik_akun_ottopay">Transfer balance to your own Ottopay account</string>
+    <string name="text_maksimal_saldo_dompet_hingga_10_juta_rupiah">Maximum wallet balance is up to 10 million rupiah</string>
+    <string name="text_upgrade_akun_gratis">Free Upgrade Account!</string>
+    <string name="text_skip">Skip</string>
+    <string name="text_tunjukan_kode_qr_kepada_pembeli_yang_akan_melakukan_pembayaran_pastikan_nominal_sesuai">Make Sure to create PIN code with a random combination, a same number, consecutive number and date of birth PIN is not allowed.</string>
+    <string name="text_semua_transaksi_cepat_dan_aman_dengan_melanjutkan_maka_kamu_telah_menyetujui_syarat_amp_ketentuan_yang_berlaku"><![CDATA[All transactions are fast and secure. By continuing, you have agreed to the ourTerms & Conditions]]></string>
+    <string name="text_choose_transfer_method">Select Transfer Method</string>
+    <string name="text_set_ulang_pin">Reset PIN</string>
+    <string name="text_mohon_membuat_kode_pin_dengan_kombinasi_random_kombinasi_pin_yang_tidak_diperkenankan_angka_tidak_boleh_sama_berurutan_dan_tanggal_lahir">Make Sure to create PIN code with a random combination, a same number, consecutive number and date of birth PIN is not allowed</string>
+    <string name="text_saya_setuju_dengan">I have read and agree to </string>
+    <string name="text_syarat_amp_ketentuan_yang_berlaku"><![CDATA[Term and Condition]]></string>
+    <string name="text_buat_akun">Create Account</string>
+    <string name="text_kode_bayar_digunakan_untuk_isi_ulang_saldo_ottocash_di_indomaret_bayar_belanja_di_indomaret_amp_alfamart"><![CDATA[Paymen Code is used to top up your OttoCash balance at Indomaret and can also be use for shopping at Indomaret & Alfamart.]]></string>
+    <string name="text_pilih_jenis_e_money_tujuan">Select e-money receiver</string>
+    <string name="text_pilih_jenis_transfer">Select transfer method</string>
+    <string name="text_transfer_ke_e_money">Transfer to E-money</string>
+    <string name="text_tekan_tombol_dibawah_bila_anda_setuju_untuk_melakukan_pembayaran">Once your are ready to make payment, please press button below</string>
+    <string name="text_transfer_ke_bank">Bank Transfer</string>
+    <string name="text_harap_tanyakan_kepada_pembeli_mau_bayar_dengan_apa">Please ask the buyer,\nwhat kind of payment method would he/she like?</string>
+    <string name="text_stock_availibity_pcs">Available stock: %d pcs</string>
+    <string name="text_edit_alamat">Change Address</string>
+    <string name="text_delete_address">Delete Address?</string>
+    <string name="text_delete_address_confirmation">Are you sure you want to delete this address?</string>
+    <string name="text_show_token_to_mini_market_staff">Please show the OttoCash Token to the clerk or cashier at the convenience store to make a payment.</string>
+    <string name="text_op_token">OttoPay Token</string>
+    <string name="text_token_for_topup_deposit">OttOttoPay Token is used to top up your Deposit balance at Indomaret.</string>
+    <string name="text_show_op_token_to_mini_market_staff">Please show the OttoPay Token to the clerk or cashier at indomaret to top-up your balance. OttoPay Token cannot be used for payment transactions.</string>
+    <string name="text_barcode_and_token"><![CDATA[Barcode & Token Code]]></string>
+    <string name="text_pin_op_confirmation">PIN Confirmation</string>
+    <string name="text_input_6_digit_confirm_op">Enter a 6-digit OttoPay PIN </string>
+    <string name="text_message_reset_pin">This PIN will be used for all activities on the OttoKonek and it also applies as your OttoCash PIN.</string>
+    <string name="text_status_format">Status: %s</string>
+    <string name="text_main_withdraw_bank_account">Settlement Account (Primary))</string>
+    <string name="text_another_withdraw_bank_account">Others Settlement Account</string>
+    <string name="text_bank_list">Bank List</string>
+    <string name="text_wallet_main_transaction">Primary Transaction Wallet</string>
+    <string name="text_wallet_another_transaction">Other Transaction Wallet</string>
+    <string name="text_cart">Cart</string>
+    <string name="text_delete_selected_item">Are you sure want to delete the selected item?</string>
+    <string name="text_checkout">Checkout</string>
+    <string name="text_disagree">Disagree</string>
+    <string name="text_agree">Agree</string>
+    <string name="text_another_product">Other Product</string>
+    <string name="text_input_address_first">Enter Address first</string>
+    <string name="text_recipient_name_mandatory">Recipient name is mandatory</string>
+    <string name="text_phone_mandatory">Mobile number is mandatory</string>
+    <string name="text_add_shipping_address">Shipping address is mandatory</string>
+    <string name="text_choose_shipping_method">Select Shipping Method</string>
+    <string name="invoice_already_paid">Bill already paid</string>
+    <string name="payment_journal_failed">Failed Payment Journal</string>
+    <string name="text_telephone">Mobile</string>
+    <string name="text_error">Error</string>
+    <string name="text_wrong_answer">Wrong answer</string>
+    <string name="text_all_product">All Product</string>
+    <string name="text_not_reach_min_order">Minimum order amount has not been reached</string>
+    <string name="text_order_history">Order History</string>
+    <string name="text_shop_wholsale">Retail Store</string>
+    <string name="text_unregister">Not Registered</string>
+    <string name="text_unlinked_to_supplier">You are not registered for this supplier. For registration please contact OttoPay (021) 1500–749</string>
+    <string name="text_order_detail">Order Detail</string>
+    <string name="text_stock_unavailable">Stok Unavailable</string>
+    <string name="title_activity_nearby_merchant_detail">Nearest Merchant Details</string>
+    <string name="text_input_otp">Please enter OTP Code</string>
+    <string name="message_otp_exp">Your OTP has expired,\n please try again</string>
+    <string name="text_bukti_transaksi">Receipt</string>
+    <string name="text_invoice_detail">Bill Details</string>
+    <string name="message_refund_success">Refunds Success</string>
+    <string name="text_refund_amount">Returned Funds</string>
+    <string name="button_reset_pin_code">Change Pin</string>
+    <string name="text_minimum_order_mandatory">*Min. Order</string>
+    <string name="text_buy_from">Shop from</string>
+    <string name="text_history_space">History</string>
+    <string name="text_omzet">Sales (PHP)</string>
+    <string name="text_deposite">Account</string>
+    <string name="text_transaction_time">Transaction Time :</string>
+
+    <string name="text_topup_va">Top Up VA</string>
+    <string name="text_instant_max_5k">Instant (Max Fee Rp 5.000)</string>
+    <string name="text_instant_transfer">Disbursement will be processed right now</string>
+    <string name="text_next_day_2k">Next Day (Fee Rp 2000)</string>
+    <string name="text_next_day_after_transfer">Disbursement will be processed max. 1 working days</string>
+    <string name="text_instant_max_6500">Instant (Fee Rp6.500)</string>
+    <string name="text_next_day_upcoming">Next Day (Coming Soon)</string>
+    <string name="text_withdraw_destination">Disbursement Destination</string>
+    <string name="text_account_number">Account Number</string>
+    <string name="text_account_name">Account Holder Name</string>
+    <string name="text_transfer_method">Transfer Method</string>
+    <string name="text_payment_fee">Fee</string>
+    <string name="text_transfer_deposite">Deposit Transfer</string>
+    <string name="text_transfer_omzet">Revenue Transfer</string>
+    <string name="text_recieve">Received</string>
+    <string name="text_in_process">In Process</string>
+    <string name="text_upcoming_feature">Coming Soon</string>
+    <string name="text_min_order">Minimum Order</string>
+    <string name="text_set_sell_price">Determine the Selling Price</string>
+    <string name="text_print_version">Print Version :</string>
+    <string name="text_total_peyment_mandatory">Total Payment is mandatory</string>
+    <string name="text_upgrade_ottopay_plus">Upgrade OttoPay Plus</string>
+    <string name="text_upload_ktp_and_merchant_picture"><![CDATA[Upload Selfie with ID Card]]></string>
+    <string name="text_upload_etalase_picture">Upload Storefront Photo</string>
+    <string name="text_store_data">Store Data</string>
+    <string name="text_edit_pin">Change PIN</string>
+    <string name="text_save_pin">Save</string>
+    <string name="text_pin_saved">PIN is Saved</string>
+    <string name="text_guidance_upgrade_op">To upgrade to OttoPay Plus, first take your ID Card photo, second take selfie with ID Card</string>
+    <string name="text_guidance_topup_deposit">Follow the steps below to top up your OttoPay balance through ATM, Mobile / internet Banking and Indomaret</string>
+    <string name="text_guidance_topup_oc">Follow the steps below to top up your OttoCash balance through ATM, Mobile / internet Banking and Indomaret</string>
+    <string name="text_topup_oc">Top Up OttoCash</string>
+    <string name="text_topup_oc_balance">Top Up OttoCash Balance</string>
+    <string name="text_transaction">Transaction </string>
+    <string name="text_transaction_success_nl">Transaction Success</string>
+    <string name="text_min_transfer_100">Minimum Rp 100,000</string>
+    <string name="text_main_wallet">Primary Wallet</string>
+    <string name="text_phone_oc_value">02150200909</string>
+    <string name="text_close_app_confirmation">Are you sure you want to exit?</string>
+    <string name="text_loading">Loading</string>
+    <string name="text_hint_input_phone_number">Enter Mobile Number</string>
+    <string name="text_subtitle_login">Increase your business with OttoPay</string>
+
+    <string name="dialog_msg_ask_permission_location">GPS permission denied! Please allow GPS location permission </string>
+    <string name="dialog_btn_permission_location">Allow</string>
+    <string name="dialog_msg_ask_enable_gps">GPS not active, Please Activate your GPS / Location.</string>
+    <string name="dialog_btn_enable_gps">Activate</string>
+    <string name="dialog_msg_coming_soon">Coming Soon</string>
+    <string name="title_oasis">oasis</string>
+
+    <!-- PPOB Menu -->
+    <string name="ppob_product_name_pulsa">Phone Credit</string>
+    <string name="ppob_product_name_paket_data">Data Plan</string>
+    <string name="ppob_product_name_pln">Electricity</string>
+    <string name="ppob_product_name_game">Games</string>
+    <string name="ppob_product_name_voucher">Voucher</string>
+    <string name="ppob_product_name_bpjs">Health Insurance</string>
+    <string name="ppob_product_name_telkom">Telkom</string>
+    <string name="ppob_product_name_top_up">Top Up</string>
+    <string name="ppob_product_name_air_pdam">Water</string>
+    <string name="ppob_product_name_internet">Internet</string>
+    <string name="ppob_product_name_asuransi">Insurance</string>
+    <string name="ppob_product_name_donasi">Donation</string>
+    <string name="ppob_product_name_pendidikan">Education</string>
+    <string name="ppob_product_name_cicilan">Installment</string>
+    <string name="title_activity_setting">Settings</string>
+
+    <string name="setting_menu_edit_profile">My Profile</string>
+    <string name="setting_menu_language">Language Setting</string>
+    <string name="setting_menu_about_ottopay">About OttoPay</string>
+    <string name="setting_menu_tnc">Term and Condition</string>
+    <string name="setting_menu_privacy_policy">Privacy Policy</string>
+    <string name="setting_menu_review_ottopay">Like OttoPay? Rate Us!</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="fragment_profile_tiitle">Profile</string>
+    <string name="msg_save_member_card">Success Save Member Card</string>
+    <string name="msg_download_member_card_success">Success Download Member Card</string>
+    <string name="msg_download_member_card_failed">Failed Download Member Card</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="label_edit_account">Edit Bank Account</string>
+    <string name="text_account">Bank Account</string>
+    <string name="ppob_hint_nominal_isi_saldo">Top Up Balance</string>
+    <string name="ppob_nominal_isi_saldo_is_required">Top Up Balance must be filled</string>
+
+    <string name="text_approved">Approved</string>
+    <string name="text_choose_bank_account">Choose Bank Account</string>
+    <string name="text_bank_account_on_process">Bank Account on Process</string>
+    <string name="text_delete_bank_account">Delete Bank Account</string>
+    <string name="message_delete_bank_account">Delete Selected Bank Account?</string>
+    <string name="text_delete_yes">Yes, delete</string>
+    <string name="text_on_verification">Verification on Process</string>
+    <string name="ppob_top_up_manual_input_nominal_produk">Product Amount</string>
+    <string name="ppob_top_up_manual_input_biaya_admin">Exclude admin fee %1$s</string>
+    <string name="ppob_top_up_manula_input_hint_amount">example Rp15.000</string>
+    <string name="ppob_top_up_manual_input_msg_amount_is_required">Product amount is Mandatory!</string>
+    <string name="text_mark">Read All</string>
+    <string name="search_label_tab_all">All</string>
+    <string name="search_label_tab_ppob"><![CDATA[Payment & Bills]]></string>
+    <string name="btn_pay">Pay</string>
+    <string name="informasi_keamanan">Security Information</string>
+    <string name="ppob_product_name_kirim_uang">Send Money</string>
+    <string name="ppob_product_name_emas">Gold</string>
+    <string name="ppob_product_name_umroh">Umroh</string>
+    <string name="ppob_product_name_oasis_pesan_barang">Order\nSupplies</string>
+    <string name="ppob_product_name_oasis_riwayat_pesanan">Order\nHistory</string>
+    <string name="ppob_product_name_oasis_bayar_pesanan">Order\nPayment</string>
+    <string name="label_voucher_game_pod">Voucher Game POD</string>
+    <string name="text_process">Process</string>
+    <string name="text_choose_shipping_address">Choose Shipping Address</string>
+    <string name="search_label_tab_financial">Financial</string>
+    <string name="search_label_tab_tokoonline">Online Store</string>
+    <string name="btn_login">Login</string>
+    <string name="label_set_main_address">Save as Primary Address</string>
+    <string name="login_label_login_or_register">Or</string>
+    <string name="take_profile_picture">Take Profile Picture</string>
+    <string name="label_title_payment_option">Pay</string>
+    <string name="label_payment_menu_scan_qr">Scan QR</string>
+    <string name="label_payment_menu_show_qr">Show QR</string>
+
+    <string name="label_payment_menu_cash_out">Cash Out</string>
+    <string name="title_activity_cash_out_menu">Cash Out</string>
+    <string name="title_activity_cash_out_qr_list">QR Code List</string>
+    <string name="title_activity_cash_out_qr_detail">Cash Out Qr Detail</string>
+    <string name="title_activity_qr_payment_otto_konek">Payment</string>
+    <string name="label_cash_out_date_and_time">Date and Time</string>
+    <string name="label_cash_out_order_number">Order Number</string>
+    <string name="label_cash_out_amount">Amount</string>
+
+    <string name="title_bank_account_list">Bank Account List</string>
+    <string name="message_new_bank_account_process">Requests to add/edit accounts will be processed within 2x24 hours on working day (excluding Saturday, Sunday and holiday)</string>
+    <string name="text_on_process">On Process</string>
+    <string name="text_rejected">Rejected</string>
+    <string name="text_please_wait">Please Wait</string>
+    <string name="message_discard">Your changes will be lost if you leave this page. Are you sure want to leave this page?</string>
+    <string name="message_add_bank">Are you sure want to add this bank account?</string>
+    <string name="message_edit_bank">Are you sure want to change this bank account?</string>
+    <string name="title_merchant_phone_confirm">Store Information</string>
+    <string name="title_register_photo_merchant">Take Photo</string>
+    <string name="text_confirmation">Confirmation</string>
+    <string name="text_make_new_pin">Make new PIN</string>
+    <string name="text_beneficiary_name">Account Holder Name</string>
+    <string name="title_activity_cash_out_select_amount">Select Amount</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_cash_out_bank_list">Bank Account List</string>
+    <string name="title_activity_cash_out_bank_list_2">Linked Account List</string>
+    <string name="title_activity_cash_out_confirmation">Confirmation</string>
+    <string name="store_address">Store Address</string>
+    <string name="setting_menu_security_information">Security Information</string>
+    <string name="bank_type">Bank Type</string>
+    <string name="nama_alamat_wajib_diisi">Address Name is Mandatory</string>
+    <string name="alamat_lengkap_wajib_diisi">Address is Mandatory</string>
+    <string name="alamat_berhasil_dihapus">Delete Address Success</string>
+    <string name="delivery_method">Delivery Method</string>
+    <string name="pick_up_at_the_store">Pick up at the store</string>
+    <string name="sent_by_courier">Sent by courier</string>
+    <string name="text_phone">Phone</string>
+    <string name="text_main_store">Main Store</string>
+    <string name="msg_app_cloner_detected">You are not allowed to open OttoKonek from app cloner, please open OttoKonek from normal Android app drawer/shortcut</string>
+    <string name="msg_session_expired">Your session has expired. please login again</string>
+    <string name="text_linked_account_s">Linked Account(s)</string>
+    <string name="text_enter_amount">Enter amount</string>
+    <string name="text_account_label">Account</string>
+    <string name="text_to_account">To Account</string>
+    <string name="text_select_account">Select Account</string>
+    <string name="text_select_bank_name">Select bank name</string>
+    <string name="text_add_link_account">Add Link Account</string>
+    <string name="text_are_you_sure_want_to_add_this_link_account">Are you sure want to add this link account?</string>
+    <string name="label_account_info">Account Info</string>
+    <string name="label_link_bank_account">Link Bank Account</string>
+    <string name="label_payment_detail">Payment Detail</string>
+    <string name="label_confirm">Confirm</string>
+    <string name="label_bank_account_info">Bank Account Info</string>
+    <string name="label_bank_account_number">Bank Account Number</string>
+    <string name="label_close">Close</string>
+    <string name="label_to_bank_account">To Bank Account</string>
+    <string name="label_account_holder_name">Account Holder Name</string>
+    <string name="label_from_bank_account">From Bank Account</string>
+    <string name="label_transfer_fee_et">Transfer Fee</string>
+    <string name="label_transfer_amount">Transfer Amount</string>
+    <string name="label_total_payment_text">Total Payment</string>
+
+
+    <string name="text_sel_pay_method">Select payment method</string>
+
+
+    <string name="prominent_3">Ottokonek require access to your contact and contact list information for features as follows,
+\n1. Your own phone number for registration, account activation and OTP
+\n2. Your own phone number for points, vouchers redeem and/or used in transactions
+\n3. Your own phone number to be registered and to activate loan feature from our partners
+\n4. Your contact list data to enable automated input in telephone transaction and sending money to other e-wallets
+\n5. Your contact list data to gift vouchers to others</string>
+</resources>

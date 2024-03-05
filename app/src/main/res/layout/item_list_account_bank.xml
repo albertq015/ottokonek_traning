@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/margin_medium"
+    android:paddingTop="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_small">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/iv_logo_bank"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/iv_logo_bank" />
+
+    <LinearLayout
+        android:id="@+id/layout_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_toStartOf="@id/radioButton"
+        android:layout_toEndOf="@id/iv_logo_bank"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CARD BANK"
+                android:textColor="#1F282E"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tv_name_bank"
+                android:background="@drawable/bg_grey_rounded"
+                android:paddingHorizontal="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="Matapat"
+                    android:textColor="#2CC885" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_no_rekening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginTop="3dp"
+            android:text="101**********765"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/llTotalUangBg"
+                layout="@layout/item_text_loading_shimmer" />
+
+            <TextView
+                android:id="@+id/tv_total_uang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="250,000 PHP dummy"
+                android:textColor="#006841"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_custom"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="this is dummy error message" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/grey_soft_two" />
+
+</RelativeLayout>

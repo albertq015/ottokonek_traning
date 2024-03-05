@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ocean_blue_4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin"
+                android:paddingEnd="20dp"
+                android:paddingBottom="@dimen/margin_small">
+
+                <ImageView
+                    android:id="@+id/imgHeaderLogo"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_ottopay_logo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGroupMerchantName"
+                        style="@style/FontOpenSansSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_label_app_name"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvLabelByOttoPay"
+                        style="@style/FontOpenSansSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_label_powered_by"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgBtnSearch"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="4dp"
+                    android:src="@drawable/icon_search_white" />
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp">
+
+                        <LinearLayout
+                            android:id="@+id/header_bg"
+                            android:layout_width="1080dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="-60dp"
+                            android:layout_marginTop="-30dp"
+                            android:layout_marginRight="-60dp"
+                            android:background="@drawable/circle_header_home_bg"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="4dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:clickable="true"
+                                        android:layout_marginEnd="10dp"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="@dimen/margin">
+
+                                        <RelativeLayout
+                                            android:id="@+id/btn_omzet"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:clickable="true"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_revenue_label"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:text="@string/text_omzet"
+                                                android:textColor="@color/grey_text"
+                                                android:textSize="14sp" />
+
+
+                                            <TextView
+                                                android:id="@+id/tv_income"
+                                                style="@style/TextView16spboldBlack"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/iv_right"
+                                                android:textColor="@color/dark_grey_blue"
+                                                tools:text="299.378.000" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_right"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_centerVertical="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginStart="@dimen/margin_super_small"
+                                                android:src="@drawable/ic_arrow_right" />
+
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/btn_account"
+                                            android:layout_marginTop="10sp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/border_green_line">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/text_linked_account_s"
+                                            android:layout_centerInParent="true"
+                                            android:textSize="14sp"
+                                            android:textColor="#006841"/>
+                                        </RelativeLayout>
+
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="@dimen/margin"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:id="@+id/walletLayout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:clickable="true"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_balance_label"
+                                                style="@style/TextView10sp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/margin_small"
+                                                android:text="@string/text_deposit"
+                                                android:textColor="@color/text_blue" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/margin_small"
+                                                android:layout_marginTop="6dp"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:layout_marginRight="@dimen/margin_super_small"
+                                                    android:src="@drawable/ic_ottocash_logo"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    style="@style/TextView12sp"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:text="@string/text_currency"
+                                                    android:textColor="@color/dark_grey_blue"
+                                                    android:textSize="8sp"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_saldo"
+                                                    style="@style/TextView12spbold"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:gravity="center_vertical"
+                                                    android:text="-"
+                                                    android:textColor="@color/dark_grey_blue"
+                                                    tools:text="229.378.000" />
+
+                                                <ImageView
+                                                    android:layout_width="16dp"
+                                                    android:layout_height="16dp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginLeft="@dimen/margin_super_small"
+                                                    android:src="@drawable/ic_arrow_right" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:visibility="gone"
+                        app:cardCornerRadius="@dimen/card_view_border_radius"
+                        app:cardElevation="@dimen/card_view_elevation">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_white_grey_selector_two"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/margin"
+                            android:paddingRight="@dimen/margin">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="@dimen/margin_small"
+                                android:src="@drawable/ic_ottopoint_logo" />
+
+                            <TextView
+                                style="@style/TextView10spbold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="@string/dashboard_fragment_label_ottopoint"
+                                android:textColor="@color/blue_grey" />
+
+                            <TextView
+                                android:id="@+id/tv_point"
+                                style="@style/TextView12spbold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/blue_grey"
+                                tools:text="@string/empty_poin_three" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginLeft="@dimen/margin"
+                                android:src="@drawable/ic_arrow_right" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_top_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:layout_marginBottom="@dimen/margin">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/oasisContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvOasisMenuTitle"
+                            style="@style/TextView16spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin"
+                            android:textColor="@color/text_blue"
+                            tools:text="@string/home_ppob_menu_title" />
+
+                        <TextView
+                            android:id="@+id/tvOasisMenuDesc"
+                            style="@style/TextView12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin"
+                            android:textColor="@color/text_grey"
+                            tools:text="@string/home_ppob_menu_desc" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvOasisMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:layout_marginBottom="@dimen/margin">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ppobContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/margin"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/very_light_grey" />
+
+                        <TextView
+                            android:id="@+id/tvPpobMenuTitle"
+                            style="@style/TextView16spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/margin"
+                            android:text="@string/home_ppob_menu_title"
+                            android:textColor="@color/text_blue" />
+
+                        <TextView
+                            android:id="@+id/tvPpobMenuDesc"
+                            style="@style/TextView12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin"
+                            android:text="@string/home_ppob_menu_desc"
+                            android:textColor="@color/text_grey" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:layout_marginBottom="@dimen/margin">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/iclSpecialEvent"
+                        layout="@layout/content_tokoonline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:visibility="gone" />
+
+                    <ViewAnimator
+
+                        android:id="@+id/view_animator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateFirstView="true">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+                        <RelativeLayout
+                            android:id="@+id/banner_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="16dp">
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/view_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </androidx.viewpager.widget.ViewPager>
+
+                            <com.otto.mart.support.util.widget.viewpagerIndicator.CirclePageIndicator
+                                android:id="@+id/indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:padding="10dip"
+                                app:fillColor="@color/colorPrimaryDark"
+                                app:pageColor="@color/colorWhite"
+                                app:radius="3dp"
+                                app:strokeColor="@color/colorPrimaryDark"
+                                app:strokeWidth="1dp" />
+
+                        </RelativeLayout>
+
+                    </ViewAnimator>
+
+                    <LinearLayout
+                        android:id="@+id/tokoOnlineContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvOlShopTitle"
+                            style="@style/TextView16spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin"
+                            android:text=""
+                            android:textColor="@color/text_blue" />
+
+                        <TextView
+                            android:id="@+id/tvOlShopSubTitle"
+                            style="@style/TextView12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin"
+                            android:text=""
+                            android:textColor="@color/text_blue" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/categoryOlshopList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ppobFinanceContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/very_light_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvPpobFinanceMenuTitle"
+                                    style="@style/TextView16spbold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin"
+                                    android:layout_marginRight="@dimen/margin"
+                                    android:text="@string/home_ppob_menu_title"
+                                    android:textColor="@color/text_blue" />
+
+                                <TextView
+                                    android:id="@+id/tvPpobFinanceMenuDesc"
+                                    style="@style/TextView12sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin"
+                                    android:layout_marginRight="@dimen/margin"
+                                    android:text="@string/home_ppob_menu_desc"
+                                    android:textColor="@color/text_grey" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginRight="26dp"
+                                android:src="@drawable/ic_question_cirlce" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPpobFinanceMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:layout_marginBottom="@dimen/margin">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/toko_ottopay_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/color_white"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:visibility="gone">
+
+                        <include
+                            layout="@layout/content_home_toko_ottopay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

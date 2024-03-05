@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_grey_blue">
+
+        <LinearLayout
+            android:id="@+id/backhitbox"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow_left_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/text_omzet"
+            android:textColor="@color/colorWhite" />
+
+    </FrameLayout>
+
+    <ViewAnimator
+        android:id="@+id/view_animator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateFirstView="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/successMessage"
+                style="@style/TextView14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ocean_blue"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp"
+                android:paddingTop="16dp"
+                tools:text="Berhasil memindahkan Rp 400.000 ke dompet"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/dailyOmzet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:customLayout="@layout/cw_textview_p"
+                            app:text="@string/dash"
+                            app:title="Omzet Hari Ini" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/white_six" />
+
+                        <com.otto.mart.ui.component.HideableSpinnerView
+                            android:id="@+id/hsv_bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            app:isHidden="false"
+                            app:title="" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/white_six" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="32dp"
+                            android:text="@string/text_total_max_withdraw_omzet" />
+
+                        <TextView
+                            android:id="@+id/allOmzet"
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/dash"
+                            android:textColor="@color/ocean_blue" />
+
+                        <com.otto.mart.ui.component.LazyEdittext
+                            android:id="@+id/amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            app:customLayout="@layout/cw_edittext_roundedbg_currency"
+                            app:title="Masukkan nominal pencairan" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/amountPick"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:paddingEnd="16dp"
+                            android:paddingStart="16dp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/isUseAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/button_move_all"
+                            app:thumbTint="@color/white_six"
+                            app:trackTint="@drawable/background_track_switch" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/bankContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16sp"
+                            android:visibility="gone">
+
+                            <View
+                                android:id="@+id/topLine"
+                                android:layout_width="0dp"
+                                android:layout_height="8dp"
+                                android:background="@color/white_six"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/bank_image"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/topLine"
+                                app:srcCompat="@drawable/bca_logo_svg" />
+
+                            <TextView
+                                android:id="@+id/bank_name"
+                                style="@style/TextView12spbold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="PT Bank Central Asia Tbk"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintStart_toStartOf="@+id/bank_image"
+                                app:layout_constraintTop_toBottomOf="@+id/bank_image" />
+
+                            <TextView
+                                android:id="@+id/account_number"
+                                style="@style/TextView12sp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="8371406394"
+                                app:layout_constraintEnd_toEndOf="@+id/bank_name"
+                                app:layout_constraintStart_toStartOf="@+id/bank_name"
+                                app:layout_constraintTop_toBottomOf="@+id/bank_name" />
+
+                            <TextView
+                                android:id="@+id/beneficiary_name"
+                                style="@style/TextView12sp"
+                                android:layout_width="0dp"
+                                android:layout_height="19dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="4dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/dash"
+                                app:layout_constraintBottom_toTopOf="@+id/bottomLine"
+                                app:layout_constraintEnd_toEndOf="@+id/account_number"
+                                app:layout_constraintStart_toStartOf="@+id/account_number"
+                                app:layout_constraintTop_toBottomOf="@+id/account_number" />
+
+                            <View
+                                android:id="@+id/bottomLine"
+                                android:layout_width="0dp"
+                                android:layout_height="8dp"
+                                android:background="@color/white_six"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toTopOf="@+id/bottomLine"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/topLine"
+                                app:srcCompat="@drawable/icon_next_biru" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/send"
+                            style="@style/TextView16spbold"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="24dp"
+                            android:background="@drawable/button_blue"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/button_send"
+                            android:textColor="@color/color_white" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </ViewAnimator>
+
+</LinearLayout>
+

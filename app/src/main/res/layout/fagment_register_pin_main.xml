@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/layout_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_pin"
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_create_pin_code"
+                    android:textColor="@color/colorBlack"
+                    android:transitionName="kucing_transition" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white_seven" />
+
+                <ImageView
+                    android:id="@+id/imgvj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/icon_next_biru" />
+
+                <TextView
+                    android:id="@+id/tv_hund"
+                    style="@style/TextView12spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:text="@string/text_set_ulang_pin"
+                    android:textColor="@color/ocean_blue"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/TextView12sp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5a623"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:padding="8dp"
+                android:text="@string/text_mohon_membuat_kode_pin_dengan_kombinasi_random_kombinasi_pin_yang_tidak_diperkenankan_angka_tidak_boleh_sama_berurutan_dan_tanggal_lahir"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_seven" />
+
+            <LinearLayout
+                android:id="@+id/sec_q_cuntainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white_three" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="left"
+                        android:text="@string/label_choose_question"
+                        android:textColor="@color/charcoal_grey"
+                        android:transitionName="kucing_transition" />
+
+                    <FrameLayout
+                        android:id="@+id/pin_q_next"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right">
+
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:src="@drawable/icon_tariktunai_next" />
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white_three" />
+
+            </LinearLayout>
+
+            <com.otto.mart.ui.component.LazyEdittext
+                android:id="@+id/pin_answ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:customLayout="@layout/cw_edittext_roundedbg_e"
+                app:title="Jawaban" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_tos"
+                    style="@style/TextView10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_saya_setuju_dengan"
+                    android:textColor="@color/cool_grey" />
+
+
+                <TextView
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/action2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView10sp"
+                    android:text="@string/text_syarat_amp_ketentuan_yang_berlaku"
+                    android:textColor="@color/cool_grey"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/action"
+        style="@style/TextView16spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_blue"
+        android:paddingBottom="10dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="10dp"
+        android:text="@string/text_buat_akun"
+        android:textColor="@color/color_white"
+        android:visibility="gone" />
+</LinearLayout>

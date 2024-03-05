@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ottopoint.DetailVoucherActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- banner -->
+        <RelativeLayout
+            android:id="@+id/view_banner"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_gradient_black_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </RelativeLayout>
+
+        <!-- oasis_toolbar -->
+        <com.otto.mart.ui.component.ActionbarOttopointTransparentWhite
+            android:id="@+id/view_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:aotw_is_show_title="false"
+            app:aotw_is_show_menu_left="true"
+            app:aotw_is_show_menu_right="false"/>
+
+        <!-- body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_banner"
+            android:orientation="vertical"
+            android:paddingTop="58dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    style="@style/Text"
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey_dark"
+                    android:text="@string/empty_string" />
+
+                <TextView
+                    style="@style/Text.Small"
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/grey_dark"
+                    android:textStyle="normal"
+                    android:text="@string/label_berlaku_hingga" />
+
+                <TextView
+                    style="@style/Text"
+                    android:id="@+id/tv_expired_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_sky_blue"
+                    android:text="@string/empty_string" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/grey_soft_three"/>
+
+            <!-- detail info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_gradient_black_transparent_bottom"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_tab_default"
+                    app:tabBackground="@android:color/white"
+                    app:tabTextColor="@color/tab_text_color"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabIndicatorColor="@color/dark_sky_blue"
+                    app:tabTextAppearance="@style/TablayoutText"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/bg_gradient_black_transparent_top"/>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- company info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="138dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/card_view_border_radius">
+
+                <ImageView
+                    android:id="@+id/img_company"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/image_placeholder"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/tv_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:gravity="bottom"
+                    android:textColor="@color/grey_dark"
+                    android:textAlignment="gravity"
+                    android:textStyle="normal"
+                    android:text="@string/empty_string"
+                    style="@style/Text.Medium"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            style="@style/ButtonBlueSoftTwo"
+            android:id="@+id/btn_gunakan_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="16sp"
+            android:text="@string/button_bunakan_voucher"/>
+    </RelativeLayout>
+</LinearLayout>

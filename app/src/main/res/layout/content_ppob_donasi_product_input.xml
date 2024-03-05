@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.ppob.product.donasi.PpobDonasiProductInputActivity"
+    tools:showIn="@layout/activity_ppob_donasi_product_input"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNext">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/selectProviderLayout"
+                layout="@layout/ppob_button_provider"/>
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/productLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextView10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_brown"
+                        tools:text="Jenis Donasi"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_super_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvProductName"
+                            style="@style/TextView14spbold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_blue"
+                            tools:text="NU CARE-LAZISNU"/>
+
+                        <ImageView
+                            android:id="@+id/imgProductLogo"
+                            android:layout_width="48dp"
+                            android:scaleType="centerInside"
+                            android:layout_height="24dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/content_donasi_jago_sodaqoh_form"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/content_donasi_lezis_nu_form"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/TextView14spbold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_primary_selector"
+        android:text="@string/label_next"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+</RelativeLayout>

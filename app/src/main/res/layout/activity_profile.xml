@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_grey_blue">
+
+        <LinearLayout
+            android:id="@+id/backhitbox"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow_left_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/text_profil"
+            android:textColor="@color/colorWhite" />
+
+
+    </FrameLayout>
+
+    <ViewAnimator
+        android:id="@+id/view_animator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <com.otto.mart.ui.Partials.HeaderViewGroup
+                            android:id="@+id/header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:customLayout="@layout/partial_profile_header" />
+                    </FrameLayout>
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/white_six" />-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_six">
+
+                        <TextView
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:text="@string/text_my_profil" />
+
+                        <TextView
+                            android:id="@+id/edit_prof"
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="16dp"
+                            android:text="@string/button_edit_profil"
+                            android:textColor="@color/ocean_blue" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:paddingBottom="16dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="16dp">-->
+
+                    <!--<com.otto.mart.ui.component.LazyTextview-->
+                    <!--android:id="@+id/merc_id"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--app:customLayout="@layout/cw_textview_m"-->
+                    <!--app:text="934740202374730"-->
+                    <!--app:title="CheckMerchantResponseData ID" />-->
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/white_six" />-->
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="@string/label_main_phone_number" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/phoneContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/secondaryPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="@string/label_another_phone_number" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="Alamat Email" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="@string/label_dob" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/prod_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="@string/label_company_type" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp">
+
+                        <com.otto.mart.ui.component.LazyTextview
+                            android:id="@+id/prod_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:customLayout="@layout/cw_textview_m"
+                            app:text="@string/dash"
+                            app:title="@string/label_company_name" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/TextView12spbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_six"
+                        android:padding="16dp"
+                        android:text="@string/label_my_address" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_alamatcontainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextView12splight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:text="@string/label_main_address" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+
+                        <TextView
+                            android:id="@+id/address_name"
+                            style="@style/TextView12spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="16dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="8dp"
+                            android:text="@string/dash" />
+
+                        <TextView
+                            android:id="@+id/address"
+                            style="@style/TextView12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="8dp"
+                            tools:text="Jl. Wolter Monginsidi, Nomor 19, Kebayoran Baru, Jakarta Selatan, DKI Jakarta." />
+
+
+                        <TextView
+                            android:id="@+id/address1"
+                            style="@style/TextView12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="16dp"
+                            tools:text="Kota Jakarta Selatan - Kebayoran Baru DKI Jakarta" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white_six" />
+
+                    <RelativeLayout
+                        android:id="@+id/addressAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/right_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/icon_next_biru" />
+
+                        <TextView
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/right_icon"
+                            android:text="@string/button_open_addresses"
+                            android:textColor="@color/ocean_blue" />
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextView12spbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_six"
+                        android:padding="16dp"
+                        android:text="@string/text_bank_account" />
+
+                    <LinearLayout
+                        android:id="@+id/bank_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/TextView12splight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:text="@string/label_main_account"
+                            android:textColor="@color/cool_grey" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/white_six" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="16dp">
+
+                            <ImageView
+                                android:id="@+id/bank_image"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="16dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/beneficiary_name"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/bank_name"
+                                app:srcCompat="@drawable/bca_logo_svg" />
+
+                            <TextView
+                                android:id="@+id/bank_name"
+                                style="@style/TextView12spbold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                tools:text="PT Bank Central Asia Tbk"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/bank_image"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/account_number"
+                                style="@style/TextView12sp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                tools:text="8371406394"
+                                app:layout_constraintEnd_toEndOf="@+id/bank_name"
+                                app:layout_constraintStart_toStartOf="@+id/bank_name"
+                                app:layout_constraintTop_toBottomOf="@+id/bank_name" />
+
+                            <TextView
+                                android:id="@+id/beneficiary_name"
+                                style="@style/TextView12sp"
+                                android:layout_width="0dp"
+                                android:layout_height="16dp"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/dash"
+                                app:layout_constraintEnd_toEndOf="@+id/account_number"
+                                app:layout_constraintStart_toStartOf="@+id/account_number"
+                                app:layout_constraintTop_toBottomOf="@+id/account_number" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white_six" />
+
+                    <RelativeLayout
+                        android:id="@+id/bankAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/right_icon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/icon_next_biru" />
+
+                        <TextView
+                            android:id="@+id/bankAction_text"
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/right_icon1"
+                            android:text="@string/button_open_banks"
+                            android:textColor="@color/ocean_blue" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <!--<com.otto.indomarco.UI.Components.HintTextView-->
+                        <!--android:layout_margin="8dp"-->
+                        <!--android:id="@+id/limitleft"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--app:customLayout="@layout/cw_textview_w_hint_b"-->
+                        <!--app:hintText="Utang maksimal"-->
+                        <!--app:text="Rp 3.000.000"-->
+                        <!--app:title="Sisa Limit Kredit" />-->
+
+                        <!--<View-->
+                        <!--android:layout_width="1dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/white_six" />-->
+
+                        <!--<com.otto.indomarco.UI.Components.HintTextView-->
+                        <!--android:layout_margin="8dp"-->
+                        <!--android:id="@+id/limitmax"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--app:customLayout="@layout/cw_textview_w_hint_b"-->
+                        <!--app:hintText="Jumlah Maksimal per utang"-->
+                        <!--app:text="Rp 3.000.000"-->
+                        <!--app:title="Batas Kredit" />-->
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/white_six" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="24dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="24dp">
+
+                        <TextView
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_pin_code"
+                            android:textColor="@color/charcoal_grey" />
+
+                        <TextView
+                            android:id="@+id/gantipin"
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="@string/button_edit"
+                            android:textColor="@color/ocean_blue" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white_six" />
+
+                    <!--<FrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingBottom="24dp"-->
+                    <!--android:paddingLeft="16dp"-->
+                    <!--android:paddingRight="16dp"-->
+                    <!--android:paddingTop="24dp">-->
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="16dp"
+                        android:paddingTop="24dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="24dp"
+                        android:text="@string/button_swith_on_notification"
+                        android:textColorLink="@color/white_six"
+                        app:thumbTint="@color/white_six"
+                        app:trackTint="@drawable/background_track_switch"
+                        tools:checked="true" />
+
+                    <!--</FrameLayout>-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/white_six"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/hitbox_upgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="24dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="24dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/button_upgrade_accouint"
+                            android:textColor="@color/ocean_blue" />
+
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/white_six" />
+
+                    <FrameLayout
+                        android:id="@+id/logout_hitbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="24dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="24dp">
+
+                        <TextView
+                            style="@style/TextView14spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/button_logout"
+                            android:textColor="@color/ocean_blue" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </ViewAnimator>
+
+</LinearLayout>

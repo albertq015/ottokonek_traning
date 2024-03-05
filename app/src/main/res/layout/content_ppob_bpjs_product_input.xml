@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.ppob.product.paketData.PpobPaketDataProductInputActivity"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    tools:showIn="@layout/activity_ppob_bpjs_product_input">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bottomLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ppob_banner_air"
+                app:layout_constraintTop_toBottomOf="@+id/formLayout"
+                app:layout_constraintBottom_toTopOf="@+id/btnFavorite"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/btnFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/button_white_grey_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/icon_bookmark_active" />
+
+                <TextView
+                    style="@style/TextView10sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ppob_btn_favorite" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_margin="@dimen/margin"
+                    android:src="@drawable/ic_arrow_right" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/ppob_button_provider"/>
+
+            <LinearLayout
+                android:id="@+id/formLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/margin_large"
+                android:paddingBottom="@dimen/margin_large"
+                android:paddingLeft="@dimen/margin_large"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TextView12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/ppob_label_field_is_required"
+                    android:textColor="@color/text_brown" />
+
+                <EditText
+                    android:id="@+id/etCustNumber"
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin"
+                    android:paddingRight="@dimen/margin"
+                    android:hint="@string/ppob_hint_id_pelanggan"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_grey_rounded_bg"
+                    android:maxLength="16"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textColorHint="@color/greyish"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvCustNumberError"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_super_small"
+                    android:textColor="@color/text_error"
+                    android:visibility="gone"/>
+
+                <CheckBox
+                    android:id="@+id/cbFavorite"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_super_small"
+                    android:text="@string/ppob_cb_save_to_favorite"
+                    android:button="@drawable/checkbox_selector"
+                    android:textColor="@color/text_blue" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@drawable/edittext_grey_rounded_bg"
+                    android:hint="@string/ppob_hint_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/margin"
+                    android:paddingRight="@dimen/margin"
+                    android:textColor="@color/dark_grey_blue"
+                    android:textColorHint="@color/greyish"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvEmailError"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_super_small"
+                    android:textColor="@color/text_error"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@drawable/edittext_grey_rounded_bg"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spinPeriod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_white_grey_selected_bg"
+            android:textColor="@color/white"
+            android:text="@string/label_next"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

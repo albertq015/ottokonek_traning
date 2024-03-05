@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="keypad_tv_padding">12dp</dimen>
+
+    <dimen name="width_header_ottomart">320dp</dimen>
+    <dimen name="space_body_container">20dp</dimen>
+    <dimen name="height_tab_default">46dp</dimen>
+
+    <!-- text -->
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_default">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+
+    <!-- dialog -->
+    <dimen name="width_dialog_notice">280dp</dimen>
+
+    <!-- actionbar/oasis_toolbar -->
+    <dimen name="size_button_toolbar">32dp</dimen>
+    <dimen name="height_actionbar">56dp</dimen>
+
+    <!-- others -->
+    <dimen name="height_banner_ottomart">134dp</dimen>
+    <dimen name="space_banner_ottomart">42dp</dimen>
+    <dimen name="space_content_lr">20dp</dimen>
+    <dimen name="height_banner_deals">160dp</dimen>
+    <dimen name="space_card_top">10dp</dimen>
+    <dimen name="space_card_bottom">10dp</dimen>
+    <dimen name="space_card_bottom_extra">56dp</dimen>
+    <dimen name="space_card_left">20dp</dimen>
+    <dimen name="space_card_right">20dp</dimen>
+    <dimen name="space_card_left_two">18dp</dimen>
+    <dimen name="space_card_right_two">18dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+</resources>

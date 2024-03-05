@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shadow_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:minHeight="56dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tabMenuHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_white_grey_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/ivTabMenuHome"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_tab_menu_home" />
+
+            <TextView
+                android:id="@+id/tvTabMenuHome"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/brown_grey_4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMenuInbox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_white_grey_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_small">
+
+            <RelativeLayout
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:id="@+id/ivTabMenuInbox"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_tab_menu_inbox" />
+
+                <View
+                    android:id="@+id/inboxReadIndicator"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/circle_dark_sky_green" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTabMenuInbox"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:textColor="@color/brown_grey_4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMenuQr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_white_grey_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_small">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvTabMenuQr"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay"
+                android:textColor="@color/brown_grey_4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMenuKasir"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_white_grey_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_tab_menu_otto_kasir" />
+
+            <TextView
+                android:id="@+id/tvTabMenuWallet"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cashier"
+                android:textColor="@color/brown_grey_4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabMenuProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_white_grey_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/ivTabMenuProfile"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_tab_menu_profile" />
+
+            <TextView
+                android:id="@+id/tvTabMenuProfile"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textColor="@color/brown_grey_4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

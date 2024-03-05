@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/product_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <com.otto.mart.ui.component.SquareImageByWidth
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:id="@+id/ivProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                style="@style/TextView10sp"
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ellipsize="end"
+                tools:text="Women Shirt Branded - SLIM FIT CASUAL 6 WARNA / …" />
+
+            <com.otto.mart.ui.component.StrikeTextView
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:id="@+id/tvOldPrice"
+                style="@style/TextView8spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                tools:text="Rp 109.999"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_goneMarginTop="8dp"
+                android:id="@+id/tvPrice"
+                style="@style/TextView10spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rp 99.999"
+                android:textColor="@drawable/color_special_price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/discountBadge"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_alignEnd="@id/product_container"
+            android:background="@drawable/badge_dicount"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                style="@style/TextView10spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                tools:text="44%"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                style="@style/TextView10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/text_off"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

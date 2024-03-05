@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.profile.AddEditAddressActivity">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp">
+
+            <com.otto.mart.ui.component.LazyEdittext
+                android:id="@+id/addressName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/cw_edittext_a"
+                app:text=""
+                app:title="@string/label_address_name" />
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+            </FrameLayout>
+
+            <CheckBox
+                android:id="@+id/cbMainAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_set_main_address" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/saveAction"
+                style="@style/TextView16spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_blue_rounded_bg"
+                android:paddingBottom="8dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="8dp"
+                android:text="@string/button_save"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@+id/deleteAction"
+                style="@style/TextView16spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_anjk"
+                android:paddingBottom="8dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="8dp"
+                android:text="@string/button_delete"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

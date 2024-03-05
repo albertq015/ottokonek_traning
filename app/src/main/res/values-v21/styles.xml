@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/dark_blue_green</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+
+    <!-- Font Style -->
+
+    <style name="TextView8spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">8sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView8sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">8sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView10spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView10sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView12spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView12splight" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontPath">fonts/ClanOT-Thin.otf</item>
+    </style>
+
+    <style name="TextView12sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView14spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView14sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView16spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView22spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView16sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView18spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView18sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView20spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView20sp" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="fontPath">fonts/ClanOT-News.otf</item>
+    </style>
+
+    <style name="TextView24spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+    <style name="TextView28spbold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">28sp</item>
+        <item name="fontPath">fonts/ClanOT-Medium.otf</item>
+    </style>
+
+
+    <!-- Courier New -->
+
+    <style name="TextView10spBoldCurrier" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="fontPath">fonts/courbd.ttf</item>
+    </style>
+
+    <style name="TextView10spCurrier" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="fontPath">fonts/cour.ttf</item>
+    </style>
+
+    <!-- End Courier New -->
+
+    <!-- Roboto -->
+
+    <!-- End Roboto -->
+
+    <!-- OpenSans -->
+
+    <style name="FontOpenSansReguler" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontPath">fonts/open_sans/OpenSans-Regular.ttf</item>
+    </style>
+
+    <style name="FontOpenSansSemiBold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontPath">fonts/open_sans/OpenSans-SemiBold.ttf</item>
+    </style>
+
+    <style name="FontOpenSansBold" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="fontPath">fonts/open_sans/OpenSans-Bold.ttf</item>
+    </style>
+
+    <!-- End OpenSans -->
+
+    <!-- End Font Style -->
+
+
+    <!--<style name="switch" parent=""-->
+
+    <!-- Tab Layout Active Style -->
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabMaxWidth">300dp</item>
+        <item name="tabIndicatorColor">@color/ocean_blue_4</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabPaddingStart">@dimen/margin</item>
+        <item name="tabPaddingEnd">@dimen/margin</item>
+        <item name="tabBackground">@color/white</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/ocean_blue_4</item>
+    </style>
+
+    <!-- Tab Layout Default Style -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/cool_grey</item>
+        <item name="fontPath">fonts/open_sans/OpenSans-SemiBold.ttf</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+</resources>

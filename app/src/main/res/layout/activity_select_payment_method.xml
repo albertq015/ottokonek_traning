@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.cashOut.CashOutBankListActivity">
+
+    <include layout="@layout/toolbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/btn_pay_at_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_title_pao"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#212A31"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Pay at Order" />
+
+        <TextView
+            android:id="@+id/tv_sub_title_pao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_pao"
+            android:layout_marginTop="3dp"
+            android:text="You can make payment in advance when ordering products"
+            android:textColor="#526A7A"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_sub_title_pao"
+            android:layout_marginTop="15dp"
+            android:background="#c0c0c0" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_pay_at_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_title_pad"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#212A31"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Pay at Delivery" />
+
+        <TextView
+            android:id="@+id/tv_sub_title_pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_pad"
+            android:layout_marginTop="3dp"
+            android:text="You can make payments on the back when the products arrive at their destination"
+            android:textColor="#526A7A"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_sub_title_pad"
+            android:layout_marginTop="15dp"
+            android:background="#c0c0c0" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"/>
+
+        <EditText
+            android:id="@+id/etPinOld"
+            style="@style/TextView12spbold"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:background="@drawable/edittext_grey_rounded_bg"
+            android:hint="@string/label_input_old_pin"
+            android:inputType="numberPassword"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:textColor="@color/dark_grey_blue"
+            android:textColorHint="@color/greyish"
+            android:maxLength="6"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etNewPin"
+            style="@style/TextView12spbold"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:background="@drawable/edittext_grey_rounded_bg"
+            android:hint="@string/label_input_new_pin"
+            android:inputType="numberPassword"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:textColor="@color/dark_grey_blue"
+            android:textColorHint="@color/greyish"
+            android:maxLength="6"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etNewPinConfirm"
+            style="@style/TextView12spbold"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:background="@drawable/edittext_grey_rounded_bg"
+            android:hint="@string/label_confirm_new_pin"
+            android:inputType="numberPassword"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:textColor="@color/dark_grey_blue"
+            android:textColorHint="@color/greyish"
+            android:maxLength="6"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/margin_large"
+            android:background="@drawable/button_blue_rounded_bg"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+            android:text="@string/button_save"/>
+
+</LinearLayout>

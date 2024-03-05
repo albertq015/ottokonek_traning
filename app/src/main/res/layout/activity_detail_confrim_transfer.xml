@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_label_from_account"
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_from_bank_account"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvFromAccountBank"
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#212A31"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="CARD BANK - 101**********963" />
+
+        <TextView
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_to_bank_account"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvToBankAccount"
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#212A31"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="CARD BANK - 101**********963" />
+
+        <TextView
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_account_holder_name"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvAccountHolderName"
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#212A31"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="CARD BANK - 101**********963" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_10"
+        android:layout_below="@id/layout_1"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/grey_soft_three" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FontOpenSansSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_payment_detail"
+            android:textColor="#212A31"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_transfer_account"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/label_transfer_amount"
+                android:textColor="#526A7A"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTransferAmount"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#212A31"
+                android:textSize="14sp"
+                tools:text="50.000 php" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_transfer_fee"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/label_transfer_fee_et"
+                android:textColor="#526A7A"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTransactionFee"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#212A31"
+                android:textSize="14sp"
+                tools:text="10 php" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/btnSubmit"
+        android:elevation="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardMaxElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/label_total_payment_text"
+                android:textColor="#212A31"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTotalPayment"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#212A31"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="50.000 php" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/TextView14spbold"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_primary_selector"
+        android:stateListAnimator="@null"
+        android:text="@string/label_confirm"
+        android:textColor="@color/white" />
+</RelativeLayout>

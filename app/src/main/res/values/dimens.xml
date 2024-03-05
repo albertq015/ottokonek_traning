@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="keypad_tv_padding">12dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_super_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <!-- Card View -->
+    <dimen name="card_view_elevation">1.5dp</dimen>
+    <dimen name="card_view_tab_menu_border_radius">12dp</dimen>
+    <dimen name="card_view_border_radius">10dp</dimen>
+    <dimen name="card_view_border_radius_small">8dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_height">58dp</dimen>
+
+    <dimen name="width_header_ottomart">320dp</dimen>
+    <dimen name="space_body_container">20dp</dimen>
+    <dimen name="height_tab_default">46dp</dimen>
+
+    <!-- text -->
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_small_two">12sp</dimen>
+    <dimen name="text_default">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+
+    <!-- dialog -->
+    <dimen name="width_dialog_notice">280dp</dimen>
+
+    <!-- actionbar/oasis_toolbar -->
+    <dimen name="size_button_toolbar">32dp</dimen>
+    <dimen name="height_actionbar">56dp</dimen>
+
+    <!-- space -->
+    <dimen name="space_default">16dp</dimen>
+
+    <!-- img -->
+    <dimen name="img_small">60dp</dimen>
+    <dimen name="img_icon_small">30dp</dimen>
+
+    <!-- others -->
+    <dimen name="height_banner_ottomart">94dp</dimen>
+    <dimen name="space_banner_ottomart">18dp</dimen>
+    <dimen name="space_content_lr">20dp</dimen>
+    <dimen name="height_banner_deals">160dp</dimen>
+    <dimen name="space_card_top">10dp</dimen>
+    <dimen name="space_card_bottom">10dp</dimen>
+    <dimen name="space_card_bottom_extra">56dp</dimen>
+    <dimen name="space_card_left">20dp</dimen>
+    <dimen name="space_card_right">20dp</dimen>
+    <dimen name="space_card_left_two">18dp</dimen>
+    <dimen name="space_card_right_two">18dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+</resources>

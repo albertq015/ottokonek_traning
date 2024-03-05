@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_caputure_image">Make sure your Face and ID match with the provided space</string>
+    <string name="message_grocery_eta_shipment">The delivery time approximately 1-3 working days</string>
+    <string name="message_pin_question">Please enter the security question answer to change the PIN Code</string>
+    <string name="message_answer_count">Max answer attempt</string>
+    <string name="message_product_not_found">Product not found.</string>
+    <string name="message_order_onprosess">Your order is being processed by our system. please check it later on the order status.</string>
+    <string name="message_feature_coming_soon">Coming soon</string>
+    <string name="message_show_oc_token">Position the QR code within the frame</string>
+    <string name="message_scan_qr_from_sales">Scan the QR Code obtained from OttoPay sales</string>
+    <string name="message_info_call_center">For further information, please contact OttoPay Customer Service at 1500-749</string>
+    <string name="message_recheck_store">Please check your store data, if it is correct please tap continue</string>
+    <string name="message_take_photo_with_id_card">Take photo with your id card</string>
+    <string name="message_account_addition_24h">New Bank Account requests will be processed maximum of 2x24 hours working days (excluding Saturdays, Sundays and holidays)</string>
+    <string name="message_shippment_auto_complete">If within 3 days of delivery there is no claims, the system wil mark your order as complete. Please contact OttoPay customer service for return policy</string>
+    <string name="message_easy_topup_op">It\'s easy to top up your OttoPay balance! follow the steps below to top up your balance through ATM, Mobile / internet Banking and Indomaret</string>
+    <string name="message_scan_qr_to_transfer">To transfer please scan your store QR</string>
+    <string name="message_ask_connect_op_with_oc">Click Activate to link into Ottocah Account</string>
+    <string name="message_banks_not_available">Bank register not available</string>
+    <string name="message_tnc_payment"><![CDATA[By clicking Pay Now you have agreed to the applicable Terms & Conditions]]></string>
+    <string name="message_tnc_jago_sodaqoh">Out of Rp1,000, Rp 500 will be distributed to sodaqoh and the rest will be distributed to Jagadiri life insurance and you will get accidental death benefit. Insurance terms and conditions can be obtained by contacting the Jagadiri call center in 1500660</string>
+    <string name="message_show_detail_to_indomaret_staff">Please mention these to the Indomaret cashier</string>
+    <string name="message_propose_oc_plus_success">OttoCash Plus Submission \nSuccessful</string>
+    <string name="message_transaction_not_found">No Transactions</string>
+    <string name="message_data_not_available">Data not available</string>
+    <string name="message_favorite_number_not_found">You don\'t have a favorite number yet</string>
+    <string name="message_save_changes">Save Changes ?</string>
+    <string name="message_transaction_onprocess">Processing Transaction</string>
+    <string name="message_not_message">Empty</string>
+    <string name="message_pin_format_unaccaptable">Avoid using repetitive and sequential combinations password (example : 111111/123456/123123).</string>
+    <string name="message_pin_confirmation_mismatch">PIN confirmation does not match</string>
+    <string name="message_feature_unavailable">Feature is not avaiable.\nIncrease your transaction in order to enable this feature</string>
+    <string name="message_choose_bank_account_withdraw">Choose Settlement Account!</string>
+    <string name="message_pin_invalid">PIN does not match\nPlease try again</string>
+
+    <string name="belanja_stok_barang_warung_disini">Shop Your Stock Here</string>
+    <string name="message_order_oasis">We will process your order as much as possible amid the Covid-19 conditions. If the order is canceled due to conditions in the Seller\'s area, your money will be automatically returned.</string>
+    <string name="toko_belum_memiliki_produk_lihat_produk_di_toko_lain">This distributor doesn\'t have any products yet. Please select other distributors</string>
+    <string name="maaf_produk_tidak_ditemukan">Sorry, Product Not Found</string>
+    <string name="mohon_coba_kata_kunci_lainnya">Please try another keyword.</string>
+    <string name="maaf_alamat_anda_belum_lengkap">Address not Complete</string>
+    <string name="nama_penerima_wajib_diisi">Recipient Name is Mandatory</string>
+    <string name="nomor_handphone_wajib_diisi">Phone Number is Mandatory</string>
+    <string name="konfirmasi_pesanan_diterima">Confirm Order Received</string>
+    <string name="saya_telah_memastikan">I have confirmed that I have received the product in good conditions. I will not submit a complaint or refund after this</string>
+    <string name="konfirmasi_penerimaan_barang_berhasil">Order Received Success</string>
+    <string name="saldo_deposit_tidak_mencukupi">Deposit Balance insufficient</string>
+    <string name="silahkan_pilih_alamat_pengiriman">Choose Shipping Address</string>
+    <string name="alamat_pengiriman_wajib_diisi">Shipping Address is Mandatory</string>
+    <string name="pengiriman_tidak_tersedia">Delivery not available in your area</string>
+    <string name="pesanan_kamu_sedang_diproses">Your Order is being process</string>
+    <string name="please_choose_shipping_method">Please choose shipping method</string>
+
+</resources>

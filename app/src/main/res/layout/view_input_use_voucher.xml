@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="25dp">
+
+    <TextView
+        android:id="@+id/tv_number_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/warm_grey"
+        android:textStyle="normal"
+        android:text="@string/label_nomor_handphone"
+        style="@style/Text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_code_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_code_number"
+            android:layout_marginEnd="8dp"
+            style="@style/LabelInput"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                style="@style/EditTextBottomLineGrey"
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:textColor="@color/dark_sky_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_phonebook"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="2dp"
+                android:background="?selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vector_phone_book"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_id_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/warm_grey"
+            android:textStyle="normal"
+            android:text="@string/label_id_server"
+            style="@style/Text"/>
+
+        <EditText
+            style="@style/EditTextBottomLineGrey"
+            android:id="@+id/edt_id_server"
+            android:layout_width="match_parent"
+            android:inputType="phone"
+            android:digits="1234567890"
+            android:textColor="@color/dark_sky_blue" />
+    </LinearLayout>
+</LinearLayout>

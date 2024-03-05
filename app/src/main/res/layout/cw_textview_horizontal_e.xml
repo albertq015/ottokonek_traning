@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        tools:text="@string/label_order_numb"
+        android:textColor="@color/charcoal_grey"
+        android:transitionName="kucing_transition" />
+
+
+    <TextView
+        android:id="@+id/contentContainer"
+        style="@style/TextView12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/title"
+        android:gravity="end"
+        tools:text="dasdasd87391837"
+        android:textColor="@color/ocean_blue" />
+</RelativeLayout>

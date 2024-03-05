@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="@color/brown_grey"
+        android:id="@+id/title"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        tools:ignore="HardcodedText" />
+
+
+    <EditText
+        android:textColor="@color/dark_blue_grey"
+        android:id="@+id/contentContainer"
+        style="@style/TextView14spbold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-4dp"
+        android:hint=""
+        android:maxLines="4"
+        android:paddingTop="8dp" />
+
+</LinearLayout>

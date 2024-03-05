@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.register.registerFromSales.ActivationConfirmationActivity"
+    tools:showIn="@layout/activity_activation_confirmation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginBottom="-100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wallet_header_bg" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="72dp"
+            android:src="@drawable/ic_ottopay_logo" />
+
+        <TextView
+            android:id="@+id/tvConfQuestion"
+            style="@style/TextView14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="@string/activation_confirmation_msg_conf_questtion"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            style="@style/TextView14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="@string/label_activation_benefit_oc"
+            android:textColor="@color/brown_grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/margin_large"
+            android:gravity="center"
+            android:text="@string/message_ask_connect_op_with_oc"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cbTacOttopay"
+            style="@style/TextView12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="@string/label_tnc_op" />
+
+        <CheckBox
+            android:id="@+id/cbTacOttocash"
+            style="@style/TextView12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="@string/label_tnc_oc" />
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@color/faded_red"
+            android:text="@string/button_active"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

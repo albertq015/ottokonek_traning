@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.ppob.product.paketData.PpobPaketDataProductInputActivity"
+    tools:showIn="@layout/activity_ppob_listrik_product_input">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btnTab1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTab1"
+                    style="@style/TextView12spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:text="Token Listrik"
+                    android:gravity="center"
+                    android:textColor="@color/text_blue" />
+
+                <View
+                    android:id="@+id/tabIndicator1"
+                    android:layout_width="30dp"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="@dimen/margin_super_small"
+                    android:layout_marginBottom="@dimen/margin_super_small"
+                    android:background="@drawable/button_blue_rounded_bg"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnTab2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTab2"
+                    style="@style/TextView12spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:text="Tagihan Listrik"
+                    android:gravity="center"
+                    android:textColor="@color/text_blue" />
+
+                <View
+                    android:id="@+id/tabIndicator2"
+                    android:layout_width="30dp"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="@dimen/margin_super_small"
+                    android:layout_marginBottom="@dimen/margin_super_small"
+                    android:background="@drawable/button_blue_rounded_bg"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

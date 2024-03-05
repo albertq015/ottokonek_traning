@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/DialogBottomStyle">
+
+    <ImageView
+        android:id="@+id/view_back"
+        android:layout_width="@dimen/img_icon_small"
+        android:layout_height="@dimen/img_icon_small"
+        android:padding="4dp"
+        app:srcCompat="@drawable/vector_cross"
+        android:tint="@color/dark_grey_blue"
+        android:layout_gravity="right"
+        tools:ignore="RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        style="@style/DialogContent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/vecto_golden_ticket"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/dark_sky_blue"
+            android:textStyle="bold"
+            android:text="@string/text_pembelian_berhasil"
+            style="@style/Text"/>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/text_small_two"
+            android:textColor="@color/greyish_brown"
+            android:text="@string/text_berhasil_beli_voucher"
+            style="@style/Text.Medium"/>
+
+        <Button
+            android:id="@+id/btn_lihat_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/button_lihat_voucher"
+            style="@style/ButtonBlueSoftRound"/>
+    </LinearLayout>
+</LinearLayout>

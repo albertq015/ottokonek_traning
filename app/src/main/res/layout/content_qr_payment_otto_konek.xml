@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNext">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                style="@style/FontOpenSansBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:textColor="@color/text_blue"
+                android:textSize="16sp"
+                tools:text="Uncle Manny Store" />
+
+            <TextView
+                style="@style/FontOpenSansBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="Account"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <include
+                android:id="@+id/bankLayout"
+                layout="@layout/button_select_bank" />
+
+
+            <TextView
+                style="@style/FontOpenSansReguler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:text="@string/label_input_total_payment"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/layoutAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+
+                <TextView
+                    android:id="@+id/label_amount"
+                    style="@style/FontOpenSansBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="PHP "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    style="@style/FontOpenSansBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_toEndOf="@id/label_amount"
+                    android:background="@color/transparent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="true"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="14"
+                    android:textColorHint="@color/light_blue_grey"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/very_light_grey" />
+
+            <TextView
+                android:id="@+id/tvAmountError"
+                style="@style/TextView10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_super_small"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:textColor="@color/text_error"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/TextView14spbold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_primary_selector"
+        android:text="@string/button_qr_payment_otto_konek"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

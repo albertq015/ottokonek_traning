@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.otto.mart">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" tools:node="remove"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".OttoMartApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_ottopay_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_ottopay_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.otto.mart.ui.activity.register.StoreLocationActivity"></activity>
+        <activity android:name="com.otto.mart.ui.activity.register.StoreInformationActivity" />
+
+        <service
+            android:name=".service.NotificationReceiverService"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b4694817a8c53e79c96ddfb7353d0a9bdfaa9cf7" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- Google Map -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDfSQafV_gzcBYD5kZEqzAYrnZE6MpjGsk" /> <!-- End Google Map -->
+        <!-- Netcore Smartech -->
+        <meta-data
+            android:name="SMT_APP_ID"
+            android:value="${netcoreAppId}" /> <!-- End Netcore Smartech -->
+        <activity
+            android:name="com.otto.mart.ui.activity.splash.SplashActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.registerPhotoInput.RegisterPhotoMerchantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.BankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.wallet.PaymentSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.dashboard.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.wallet.PayWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.ShareQrActivity"
+            android:label="@string/title_activity_share_qr"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.hiburan.PpobHiburanDenomActivity"
+            android:label="@string/title_activity_hiburan_denom"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.BankSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.withdraw.WithdrawActivity"
+            android:label="@string/title_activity_withdraw"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.BalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.ProfileDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.balance.OmzetActivity"
+            android:exported="true"
+            android:label="@string/title_activity_omzet"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="NOTIF_HISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.otto.mart.ui.activity.register.kyc.KycSuccessActivity"
+            android:label="@string/title_activity_kyc_success"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.refund.RefundConfirrmationActivity"
+            android:label="@string/title_activity_refund_confirrmation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.dashboard.DashboardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="NOTIF_OTHERS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.otto.mart.ui.activity.login.OtpVerificationActivity"
+            android:label="@string/title_activity_otp_verification"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.transferToBank.TransferBankConfirmationActivity"
+            android:label="@string/title_activity_transfer_bank_confirmation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.transferToBank.TransferBankActivity"
+            android:label="@string/title_activity_transfer_bank"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.barcode.BarCodeScan"
+            android:label="@string/scan_produk"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.ActivationInputPinActivity"
+            android:label="@string/title_activity_activation_input_pin"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.ActivationConfirmationActivity"
+            android:label="@string/activation_confirmation_tittle"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.ottocash.WalletOttocashActivity"
+            android:label="@string/title_activity_wallet_ottocash"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.balance.OmzetOldActivity"
+            android:label="@string/title_activity_omzet"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.payment.QrPaymentActivity"
+            android:label="@string/title_activity_qr_payment"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.show.ShowDynamicQrActivity"
+            android:label="@string/title_activity_show_dynamic_qr"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.scan.ScanQrActivity"
+            android:label="@string/title_activity_scan_qr"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.show.ShowQrActivity"
+            android:label="@string/title_activity_show_qr"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.game.PpobGameProductInputActivity"
+            android:label="@string/title_activity_ppob_game_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.registerPhotoInput.ShowKTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.registerPhotoInput.TakePictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.donasi.PpobDonasiProductInputActivity"
+            android:label="@string/title_activity_ppob_donasi_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.donasi.PpobDonasiProductListActivity"
+            android:label="@string/title_activity_ppob_donasi_product_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.bpjs.PpobBpjsProductInputActivity"
+            android:label="@string/title_activity_ppob_bpjs_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="quadrant"
+                android:value="ignore" />
+        </activity>
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.topUp.PpobTopUpProductInputActivity"
+            android:label="@string/title_activity_ppob_top_up_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobProviderActivity"
+            android:label="@string/title_activity_ppob_provider"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.registerPhotoInput.OpenCameraActivity"
+            android:label="@string/title_activity_ppob_provider"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.ppobWithProvider.PpobWithProviderProductInputActivity"
+            android:label="@string/title_activity_ppob_air_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.listrik.PpobListrikProductInputActivity"
+            android:label="@string/title_activity_ppob_listrik_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.pulsa.PpobPulsaProductInputActivity"
+            android:label="@string/title_activity_ppob_pulsa_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobPaymentDetailActivity"
+            android:label="@string/title_activity_ppob_payment_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobPaymentSuccessActivity"
+            android:label="@string/title_activity_ppob_payment_success"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobConfirmationActivity"
+            android:label="@string/title_activity_ppob_confirmation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobDenomActivity"
+            android:label="@string/title_activity_ppob_denom"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobFavoriteListActivity"
+            android:label="@string/title_activity_ppob_favorite_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.paketData.PpobPaketDataProductInputActivity"
+            android:label="@string/title_activity_ppob_product_input"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.PpobProductTypeActivity"
+            android:label="@string/title_activity_ppob_product_type"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.inbox.InboxEditActivity"
+            android:label="@string/title_activity_inbox_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.history.HistoryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.FragmentTestingActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.scan.QRScanSignUpActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.kyc.RegisterAccountActivationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.kyc.RegisterAccountActivationCamUsrActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.forgot.ForgotPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.forgot.ForgotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.forgot.ResetActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.RegisterParentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.RegisterAddressInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.SecurityQuestionPickerActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.RegisterAddRekeningActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.MapAddressPickerActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.syaratDanKetentuan.SnKActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.SecurityInformation.SecurityInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.faq.FaqActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.faq.FAQWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.inbox.MessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.QrReadScanOldActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.ProfileChangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.ProfileChangePinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.AddressListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.NearbyMerchant.NearbyMerchantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.HistoryTransaction"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="NOTIF_HISTORY_OC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.otto.mart.ui.activity.NearbyMerchant.NearbyMerchantDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.AddEditAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.BankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.EditBankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.TransactionCompleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.withdraw.WithdrawOldActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.PayQRDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.withdraw.WithdrawDetailOldActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.TransferOmzetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.forgot.RegisterPinResetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.TransactionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.TransferSaldoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.TransferSaldoQRActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.TransferSaldoQRDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.WalletListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.Topup.TopupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.PayQRDetailFailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.KYCActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.registerConfirmation.RegisterFromsalesConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.registerPhoneInput.RegisterPhoneInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.registerFromSales.RegisterFromsalesParentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.newfeature.NewFeatureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.deposit.WalletTypeListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.CheckoutOlshopActivity"
+            android:label="@string/title_activity_checkout"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.register.ActivationSelectorActivity"
+            android:label="@string/title_activity_activation_selector"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.CatalogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.ProductDetailActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.CartOlshopActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.linchaolong.android.imagepicker.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat">
+            <meta-data
+                android:name="quadrant"
+                android:value="ignore" />
+        </activity>
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.OrderStatusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.AddressOlshop"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.ThankYouPageActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.olshop.ShippingAddressActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.IndomaretQRPaymentActivity"
+            android:label="@string/title_activity_indomaret_qrpayment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.alfamart.AlfamartShowPaymentCodeActivity"
+            android:label="@string/title_activity_show_payment_code"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.tokoOttopay.CheckoutActivity"
+            android:label="@string/title_activity_checkout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.tokoOttopay.CartActivity"
+            android:label="@string/title_activity_cart"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.tokoOttopay.ReOrderActivity"
+            android:label="@string/title_activity_re_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.game.SearchVoucherGameActivity"
+            android:label="@string/title_activity_search_voucher_game"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ppob.product.game.VoucherGameActivity"
+            android:label="@string/title_activity_voucher_game"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.transaction.ProcessQRPaymentActivity"
+            android:label="@string/title_activity_process_qrpayment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.tokoOttopay.OrderHistoryDetailActivity"
+            android:label="@string/title_activity_order_history_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.tokoOttopay.OrderHistoryActivity"
+            android:label="@string/title_activity_order_history"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.webView.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.bogasari.cart.CartBogasariActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.otto.mart.ui.activity.bogasari.catalog.CatalogBogasariActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.otto.mart.ui.activity.bogasari.BogasariTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.OttomartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DetailPoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.ActivePointMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.ActivePointActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.ActivePointPinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.TukarKuponActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.RiwayatKuponActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DealsMainActivtiy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DetailDealsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.RiwayatTransaksiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.VoucherSayaMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DetailVoucherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DetailVoucherKonfirmasiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DetailKuponActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.SyaratKetentuanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.VerifikasiOtpOttopoint"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.DealsPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.ottopoint.SemuaKategoriActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.contact.ContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.settings.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.profile.BankDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.payment.QrPaymentOttoKonekActivity"
+            android:label="@string/title_activity_qr_payment_otto_konek"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.cashOut.CashOutQrListActivity"
+            android:label="@string/title_activity_cash_out_qr_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.cashOut.CashOutMenuActivity"
+            android:label="@string/title_activity_cash_out_menu"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.cashOut.CashOutQrDetailActivity"
+            android:label="@string/title_activity_cash_out_qr_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.cashOut.CashOutConfirmationActivity"
+            android:label="@string/title_activity_cash_out_confirmation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.cashOut.CashOutBankListActivity"
+            android:label="@string/title_activity_cash_out_bank_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.cashOut.CashOutSelectAmountActivity"
+            android:label="@string/title_activity_cash_out_select_amount"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectAccountMultiBankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.AddLinkAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.ListLinkedBankAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.ListBankTransferActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.DetailAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.AddBankAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectAccountActivityv2"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.TransferMenuAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectedAccountListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.DetailConfirmationTransferActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.AddBankAccountConfrimActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectAccountActivityForWithdraw"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectAccountPaymentScanQrActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectAccountQrActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.qr.DetailInquiryQrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.otto.mart.ui.activity.multibank.SelectAccountCashOutActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.paymentMethod.PaymentMethodActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.otto.mart.ui.activity.paymentMethod.PaymentSelectType"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.otto.mart.ui.activity.prominent.ProminentActivity"
+            android:screenOrientation="portrait" />
+
+
+        <receiver
+            android:name="com.netcore.android.notification.SMTBootPNReceiver"
+            android:exported="false"
+            tools:ignore="Instantiatable"
+            tools:node="merge" />
+
+        <activity
+            android:name="com.mazenrashed.printooth.ui.ScanningActivity"
+            android:exported="true"
+            tools:node="merge">
+            <meta-data
+                android:name="quadrant"
+                android:value="ignore" />
+        </activity>
+    </application>
+
+</manifest>

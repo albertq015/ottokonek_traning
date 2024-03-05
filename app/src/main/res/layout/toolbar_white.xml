@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="13dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_white_with_shadow_bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/view_back"
+            android:layout_width="@dimen/size_button_toolbar"
+            android:layout_height="@dimen/size_button_toolbar"
+            android:paddingStart="2dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:src="@drawable/vector_arrow_left"
+            android:background="?selectableItemBackground"
+            android:tint="@color/greyish_brown"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="right|center_vertical"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:id="@+id/view_poin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|right">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_point_kamu"
+                        android:textStyle="normal"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        style="@style/Text.Bold"
+                        android:id="@+id/tv_header_poin_ottopoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/empty_poin_three"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/vector_logo_ottopoint" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/Text.Bold"
+            android:id="@+id/tv_title_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textColor="@color/greyish_brown"
+            android:text="@string/empty_string"/>
+
+        <LinearLayout
+            android:id="@+id/view_voucher_saya_detail"
+            style="@style/ButtonTransparentBorderBlueCapsule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/voucher_icon_white_default"
+                android:tint="@color/dark_sky_blue" />
+
+            <TextView
+                style="@style/Text.MediumFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/label_voucher_saya"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_riwayat_tukar_kupon"
+            style="@style/ButtonTransparentBorderBlueCapsule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/voucher_icon_white"
+                android:tint="@color/dark_sky_blue" />
+
+            <TextView
+                style="@style/Text.MediumFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/label_riwayat"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_deals"
+            style="@style/ButtonTransparentBorderBlueCapsule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/vector_tag_discounts"
+                android:tint="@color/dark_sky_blue" />
+
+            <TextView
+                style="@style/Text.MediumFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/label_deals"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+    android:layout_width="30dp"
+    android:layout_height="28dp">
+
+    <ImageView
+        android:id="@+id/jenk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="24dp"
+        android:minWidth="24dp"
+        android:src="@drawable/icon_riwayat_pesanan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/historyCountContainer"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@drawable/circle_light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/historyOrderCount"
+            style="@style/TextView8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="88"
+            android:textColor="@color/color_white" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

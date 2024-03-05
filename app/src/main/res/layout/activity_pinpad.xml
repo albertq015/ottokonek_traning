@@ -1,0 +1,452 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_pintainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="toko"
+                android:textColor="@color/text_blue"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_jenk"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/text_input_pin_6_digit"
+                android:textColor="@color/text_blue" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jenk"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/pin1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/border_circle_white" />
+
+                <ImageView
+                    android:id="@+id/pin2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@id/pin1"
+                    android:src="@drawable/border_circle_white" />
+
+                <ImageView
+                    android:id="@+id/pin3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@id/pin2"
+                    android:src="@drawable/border_circle_white" />
+
+                <ImageView
+                    android:id="@+id/pin4"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@id/pin3"
+                    android:src="@drawable/border_circle_white" />
+
+                <ImageView
+                    android:id="@+id/pin5"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@id/pin4"
+                    android:src="@drawable/border_circle_white" />
+
+                <ImageView
+                    android:id="@+id/pin6"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@id/pin5"
+                    android:src="@drawable/border_circle_white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_forgot_pin"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/white"
+            android:textColor="@color/dark_blue_green"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            android:text="@string/text_forgot_pin"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:columnCount="3"
+            android:drawSelectorOnTop="true"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_pintainer">
+
+            <FrameLayout
+                android:id="@+id/l_1"
+                android:layout_columnWeight="1">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="1"
+                    android:textColor="@color/text_blue" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_2"
+                android:layout_columnWeight="1">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="2"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_3"
+                android:layout_columnWeight="1">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="3"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_4"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="4"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_5"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="5"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_6"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="6"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_7"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="7"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_8"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="8"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_9"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="9"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_x"
+                android:layout_columnWeight="1"
+                android:visibility="invisible">
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:gravity="center"
+                    android:text="@string/button_forgot_pin"
+                    android:textColor="@color/color_white" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_0"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/TextView28spbold"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/selector"
+                    android:gravity="center"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:text="0"
+                    android:textColor="@color/text_blue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/l_b"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="16dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="@dimen/keypad_tv_padding"
+                    android:src="@drawable/ic_backspace_white"/>
+            </FrameLayout>
+
+        </GridLayout>
+
+        <com.andexert.library.RippleView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/dark_grey_blue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:rv_rippleDuration="300"
+            app:rv_ripplePadding="16dp">
+
+            <TextView
+                style="@style/TextView14spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="{bottom_pinpad_text}"
+                android:textColor="@color/color_white" />
+        </com.andexert.library.RippleView>
+
+        <LinearLayout
+            android:id="@+id/layout_pinchance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_input_pin_chance"
+                android:textColor="@color/color_white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_anda_tinggal"
+                    android:textColor="@color/color_white" />
+
+                <TextView
+                    android:id="@+id/tv_pinchance"
+                    style="@style/TextView12spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_3_kali"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/margin_small"
+                android:src="@drawable/ic_secure"/>
+
+            <TextView
+                android:id="@+id/tvTncDesc"
+                style="@style/TextView10sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_blue"
+                android:text="@string/msg_tnc_confirmation"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/border_white"
+        android:checkedButton="@+id/offer"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/positive"
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_switch_it1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Tunjukan Kode QR"
+            android:textColor="@color/color_white" />
+        <RadioButton
+            android:id="@+id/negative"
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_switch_it1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Baca Kode QR"
+            android:textColor="@color/ocean_blue_40" />
+    </RadioGroup>
+
+</LinearLayout>

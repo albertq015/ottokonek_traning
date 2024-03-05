@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:gravity="center_vertical">
+
+    <com.otto.mart.ui.component.SquareImageByWidth
+        android:id="@+id/categoryImage"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_category_fashion" />
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="8dp"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Fashion"
+        android:textColor="@color/charcoal_grey" />
+</LinearLayout>

@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/cam_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:borderColor="@android:color/transparent"
+            app:maskColor="@android:color/transparent" />
+
+        <com.otto.mart.ui.component.ScannerFinderView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:id="@+id/backhitbox"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_back_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/qrscan_title"
+                    style="@style/TextView14spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/text_scan_qr"
+                    android:textColor="@color/color_white" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/qrscan_info"
+                style="@style/FontOpenSansSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="@string/message_show_oc_token"
+                android:textColor="@color/colorWhite" />
+
+        </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/btnToken"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/button_blue_rounded_bg"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_ottopay_code"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/margin_small"
+                android:src="@drawable/icon_barcode_white"
+                android:visibility="visible"/>
+
+            <TextView
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/text_ottocash_token"/>
+
+        </LinearLayout>
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            layout="@layout/qr_payment_tab_menu"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

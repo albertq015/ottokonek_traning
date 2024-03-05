@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.otto.mart.ui.fragment.dashboard.MoreMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_large"
+        android:paddingBottom="@dimen/margin_medium"
+        android:paddingLeft="@dimen/margin_large"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextView16spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            tools:text="Yakin hapus?"/>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            style="@style/TextView14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_brown"
+            android:layout_marginTop="@dimen/margin_small"
+            tools:text="Yakin hapus no rekening ini?"/>
+
+        <Button
+            android:id="@+id/btnNegative"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/transparent"
+            android:textColor="@color/dark_sky_blue"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            android:text="@string/button_batal"/>
+
+        <Button
+            android:id="@+id/btnPositive"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/button_blue_rounded_bg"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            android:text="@string/text_yes"/>
+
+    </LinearLayout>
+
+</FrameLayout>

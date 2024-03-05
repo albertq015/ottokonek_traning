@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.tokoOttopay.CheckoutActivity"
+    tools:showIn="@layout/activity_checkout"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_grey_blue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow_left_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/title_activity_checkout"
+            android:textColor="@color/colorWhite" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_checkout"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:id="@+id/devider_pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/white_three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+            <LinearLayout
+                android:id="@+id/total_payment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin"
+                app:layout_constraintTop_toBottomOf="@+id/devider_pesanan">
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_total_order"
+                    android:textColor="@color/charcoal_grey" />
+
+                <TextView
+                    android:id="@+id/tv_total_pembayaran"
+                    style="@style/TextView12spbold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    tools:text="Rp 157.999"
+                    android:textColor="@color/charcoal_grey" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devider_payment_deatil"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/white_three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total_payment_layout" />
+
+            <TextView
+                android:id="@+id/tv_lable_payment_method"
+                style="@style/TextView12spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/text_payment_method"
+                android:textColor="@color/charcoal_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/devider_payment_deatil"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/payment_method_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:padding="@dimen/margin"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lable_payment_method"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_qr"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="24dp"
+                        android:textColor="@color/charcoal_grey"
+                        android:text="@string/text_payment_qr" />
+
+                    <RadioButton
+                        android:id="@+id/rb_cash"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/charcoal_grey"
+                        android:text="@string/text_cash" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devider_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/white_three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_method_layout"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/TextView12spbold"
+                android:layout_width="132dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_blue"
+                android:text="@string/button_nexts"
+                android:textColor="@color/color_white"
+                app:layout_constraintBottom_toTopOf="@+id/ex3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/devider_payment_method"
+                android:visibility="gone"/>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/epl_bayar_sekarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:el_expanded="false"
+                app:layout_constraintTop_toBottomOf="@+id/btn_next">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_three"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="@string/text_payment"
+                            android:textColor="@color/charcoal_grey" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardCornerRadius="8dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="16dp">
+
+                                <TextView
+                                    android:id="@+id/tv_account_number"
+                                    style="@style/TextView12sp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:textAlignment="textEnd"
+                                    app:layout_constraintBottom_toTopOf="@+id/tv_account_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/walletImage"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:text="081112341234" />
+
+                                <TextView
+                                    android:id="@+id/tv_account_name"
+                                    style="@style/TextView12sp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/cool_grey"
+                                    app:layout_constraintBottom_toTopOf="@+id/view"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/walletImage"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_account_number"
+                                    tools:text="Linda Firdaus" />
+
+                                <View
+                                    android:id="@+id/view"
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@color/white_six"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_account_name" />
+
+                                <ImageView
+                                    android:id="@+id/walletImage"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:src="@drawable/logo_otto_pay_baru"
+                                    app:layout_constraintBottom_toTopOf="@+id/view"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    style="@style/TextView12sp"
+                                    android:id="@+id/tv_wallet_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@string/text_upgrade_ottocash_plus"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/view" />
+
+                                <TextView
+                                    android:id="@+id/tv_saldo"
+                                    style="@style/TextView12sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:gravity="right"
+                                    android:text="@string/text_balance"
+                                    android:textColor="@color/charcoal_grey"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_balance"
+                                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                                <TextView
+                                    android:id="@+id/tv_balance"
+                                    style="@style/TextView12sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:gravity="right"
+                                    android:textColor="@color/ocean_blue"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/view"
+                                    tools:text="Rp 3.050.400" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="@dimen/margin"
+                            android:text="@string/text_another_wallet"
+                            android:textColor="@color/ocean_blue"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="24dp"
+                        android:background="@color/color_white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextView10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:gravity="center"
+                            android:text="@string/message_tnc_payment" />
+
+                        <Button
+                            android:id="@+id/btn_bayar_sekarang"
+                            style="@style/TextView12spbold"
+                            android:layout_width="160dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="@dimen/margin"
+                            android:background="@drawable/button_blue"
+                            android:text="@string/button_pay_now"
+                            android:textColor="@color/color_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

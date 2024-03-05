@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 33
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "mode"
+    productFlavors {
+        development {
+            dimension "mode"
+            buildConfigField "String", "BASEURLINDOMARCO", String.format("\"%s%s\"", devIndomarcoUrl, devIndomarcoVersion)
+            buildConfigField "String", "OTTOKONEK_SERVER_URL", '"https://dev2-ottokonek.ottopay.id/"'
+        }
+        production {
+            dimension "mode"
+            buildConfigField "String", "BASEURLINDOMARCO", String.format("\"%s%s\"", prodIndomarcoUrl, prodIndomarcoVersion)
+            buildConfigField "String", "OTTOKONEK_SERVER_URL", '"https://ottokonek.ottopay.id/"'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.21"
+    api 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    api project(path: ':core')
+    kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:$jvm_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+}

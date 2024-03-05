@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@color/status_bar</color>
+
+    <color name="ocean_blue">#0858a0</color>
+    <color name="dark_ocean_blue">#064479</color>
+    <color name="ocean_blue_40">#660858a0</color>
+    <color name="ocean_blue_10">#19056eb5</color>
+    <color name="ocean_blue_t">#18056eb5</color>
+    <color name="greyish">#afafaf</color>
+    <color name="warm_grey">#9b9b9b</color>
+    <color name="warm_gre_40">#669b9b9b</color>
+    <color name="scarlet">#d0021b</color>
+    <color name="white_two">#f5f5f5</color>
+    <color name="white_three">#e5e5e5</color>
+    <color name="white_four">#80ffffff</color>
+    <color name="white_five">#f1f1f1</color>
+    <color name="white_six">#e2e2e2</color>
+    <color name="white_seven">#ececec</color>
+    <color name="charcoal_grey">#394553</color>
+    <color name="charcoal_grey50">#80394553</color>
+    <color name="very_light_pink_two">#ececec</color>
+    <color name="very_light_pink_three">#e2e2e2</color>
+
+    <color name="charcoal_grey14">#14394553</color>
+    <color name="apple_green">#7ed321</color>
+    <color name="apple_green_10">#197ed321</color>
+    <color name="cherry_red">#ff001f</color>
+    <color name="bluey_grey">#b4bfc9</color>
+    <color name="squash">#f5a623</color>
+    <color name="prussian_blue">#034775</color>
+    <color name="faded_red_old">#e03c4f</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="colorYellow">#FFBD05</color>
+    <color name="colorBlueChat">#ebf6fe</color>
+    <color name="colorBlueOttoHeader">#2a6eaf</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreySoft">#b2b2b2</color>
+    <color name="colorGreySoft1">#c4c4c4</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#2A61B5</color>
+    <color name="dark">#1b1b1f</color>
+    <color name="cool_grey">#9ca2a9</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="lanc">#18000000</color>
+    <color name="super_soft_grey">#d8d8d8</color>
+    <color name="disable_bg">#E6E6E6</color>
+    <color name="very_light_pink">#d8d8d8</color>
+
+    <color name="finder_mask">#60000000</color>
+    <color name="colorWhite30">#30FFFFFF</color>
+    <color name="transparent">#04ffffff</color>
+
+
+    <!-- Ottopay 3.0 Themes -->
+    <color name="very_light_blue">#dff2fa</color>
+    <color name="blue_grey">#5a738a</color>
+    <color name="dark_sky_blue">#2B6447</color>
+    <color name="dark_sky_blue_selected">#2B6447</color>
+    <color name="dark_sky_blue_two">#2B6447</color>
+    <color name="dark_sky_blue_three">#2B6447</color>
+    <color name="very_light_grey">#eeeeee</color>
+    <color name="very_light_grey_50">#88eeeeee</color>
+    <color name="very_light_grey_two">#e2e2e2</color>
+    <color name="black">#000000</color>
+    <color name="black10">#22000000</color>
+    <color name="black10p">#19000000</color>
+    <color name="light_blue_grey">#d2d8db</color>
+    <color name="dark_grey_blue">#273d52</color>
+    <color name="dark_grey_blue_50">#88273d52</color>
+    <color name="brown_grey">#a5a5a5</color>
+    <color name="dark_blue_grey">#1a1c40</color>
+    <color name="ice_blue">#eaf9ff</color>
+    <color name="greyish_brown">#484848</color>
+    <color name="brown_grey_two">#8b8b8b</color>
+    <color name="brown_grey_three">#858585</color>
+    <color name="white98">#fafafa</color>
+    <color name="cross_toolbar_color">#FFFFFF</color>
+    <color name="cross_toolbar_text_color">#0496f4</color>
+    <color name="faded_red">#d04a55</color>
+    <color name="very_light_grey_dedede">#dedede</color>
+    <color name="dark_sky_blue_25">#4033b6eb</color>
+    <color name="dark_sky_blue_20">#3333b6eb</color>
+    <color name="nice_blue">#1374bb</color>
+
+    <color name="status_bar">@color/ottokonek_green</color>
+    <color name="text_error">@color/scarlet</color>
+    <color name="text_blue">@color/blue_grey</color>
+    <color name="text_blue_light">@color/dark_sky_blue</color>
+    <color name="text_brown">@color/brown_grey</color>
+    <color name="text_black">@color/dark_grey_blue</color>
+    <color name="line_color">@color/very_light_grey_two</color>
+
+    <!-- End Ottopay 3.0 Themes -->
+
+    <color name="white_transparent_21">#A6FFFFFF</color>
+    <color name="ocean_blue_transparent">#800858A0</color>
+    <color name="ocean_blue_dark_transparent">#80074D8B</color>
+    <color name="grey">#A8AAA9</color>
+    <color name="grey_two">#bebebe</color>
+    <color name="grey_soft">#E1E2E1</color>
+    <color name="grey_soft_two">#f0f0f0</color>
+    <color name="grey_soft_three">#f6f6f6</color>
+    <color name="grey_dark">#474747</color>
+    <color name="grey_three">#A8AAA9</color>
+    <color name="dark_grey_blue_two">#1a1c40</color>
+    <color name="dark_grey_blue_two_transparent">#801A1C40</color>
+    <color name="blue_dark_two">#415166</color>
+    <color name="ocean_blue_005">#0c056eb5</color>
+    <color name="ocean_blue_0036">#5B056EB5</color>
+    <color name="ocean_blue_soft">#057BCA</color>
+    <color name="red_soft">#E9405E</color>
+    <color name="red_soft_two">#e14053</color>
+    <color name="green_very_light">#e6f8d3</color>
+    <color name="red_custom">#eb0029</color>
+    <color name="blue_soft_two">#2A95CC</color>
+    <color name="light_sky_blue">#7CD3F5</color>
+    <color name="black_two">#222222</color>
+    <color name="really_light_blue">#d4eeff</color>
+
+    <!-- Ottopay 4.0 Themes -->
+    <color name="ocean_blue_4">#056eb5</color>
+    <color name="text_grey">#828282</color>
+    <color name="gunmetal">#4f545a</color>
+    <color name="soft_gray_f9">#f9f9f9</color>
+    <color name="brown_grey_4">#a5a5a5</color>
+    <color name="brown_grey_two_4">#ababab</color>
+    <color name="dark_sky_blue_4">#0a33b6eb</color>
+    <color name="steel_grey">#878b8f</color>
+    <color name="red_dark_4">#d04a55</color>
+    <color name="green_dark_4">#31b820</color>
+    <color name="green_dark_order_oasis">#3fc02b</color>
+
+    <!-- Oasis color -->
+    <color name="red_soft_oasis">#F9E9EA</color>
+    <color name="red_dark_oasis">#d04a55</color>
+    <color name="green_soft_oasis">#E6F6E4</color>
+    <color name="green_dark_oasis">#31b820</color>
+    <color name="blue_soft_oasis">#E6F6FC</color>
+    <color name="blue_dark_oasis">#33b6eb</color>
+    <color name="white_soft_oasis">#F2F2F2</color>
+    <color name="white_dark_oasis">#999999</color>
+    <color name="orange_soft_oasis">#FDF4E2</color>
+    <color name="orange_dark_oasis">#f1a812</color>
+
+    <!-- OttoKonek Themes -->
+    <color name="ottokonek_green">#2B6447</color>
+    <color name="dark_blue_green">#006841</color>
+    <color name="dark_blue_green_focus">#008051</color>
+    <color name="duck_egg_blue">#e0f9ef</color>
+    <color name="slate_green">#527b6c</color>
+    <color name="dark_blue_green_20">#0D006841</color>
+    <color name="dark_grey_blue_60">#80273d52</color>
+    <color name="silver">#d2d8db</color>
+    <color name="silver_two">#babfc4</color>
+    <color name="squash_otto_konek">#f1a812</color>
+    <color name="squash_12">#1ef1a812</color>
+    <color name="green_4">#0a31b820</color>
+    <color name="grey_text">#526A7A</color>
+
+
+
+    <!--    shadow color https://inloop.github.io/shadow4android/-->
+    <!--    rgba(51,182,235,0.32)-->
+</resources>

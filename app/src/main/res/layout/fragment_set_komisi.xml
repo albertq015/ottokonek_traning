@@ -1,0 +1,167 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.otto.mart.ui.fragment.dashboard.MoreMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_gray_small_rounded" />
+
+        <TextView
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="@string/text_set_commission"
+            android:textColor="@color/text_blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgMin"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="9dp"
+                android:src="@drawable/ppob_amount_min_"
+                android:layout_marginLeft="@dimen/margin_medium"/>
+
+            <EditText
+                android:id="@+id/etKomisi"
+                style="@style/TextView14spbold"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:background="@drawable/edittext_grey_rounded_bg"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:hint="@string/text_comission"
+                android:textColor="@color/dark_grey_blue"
+                android:focusable="false"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/imgPlus"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="9dp"
+                android:src="@drawable/ppob_amount_plus"
+                android:layout_marginRight="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            style="@style/TextView14spbold"
+            android:textColor="@color/text_blue"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/text_harga_jual_berpengaruh_terhadap_nkeuntungan_kamu"/>
+
+        <TextView
+            style="@style/TextView10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_gravity="left"
+            android:textColor="@color/text_brown"
+            android:text="@string/text_details"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView14spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_blue"
+                android:text="@string/label_cost_of_capital"/>
+
+            <TextView
+                android:id="@+id/tvModal"
+                style="@style/TextView14spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_blue"
+                tools:text="Rp25.000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView14spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_blue"
+                android:text="@string/text_comission"/>
+
+            <TextView
+                android:id="@+id/tvKomisi"
+                style="@style/TextView14spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/dark_sky_blue_two"
+                tools:text="Rp25.000"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/margin_large"
+            android:background="@drawable/button_blue_rounded_bg"
+            android:stateListAnimator="@null"
+            android:text="@string/button_terapkan"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</FrameLayout>

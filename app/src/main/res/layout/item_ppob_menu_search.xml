@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_white_grey_selector"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_medium"
+    android:paddingTop="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_small">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:adjustViewBounds="true"
+        android:layout_marginRight="@dimen/margin_small" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_weight="1"
+        style="@style/TextView12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey_blue"
+        tools:text="Paket Data" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/icon_panah_atas_samping" />
+
+</LinearLayout>

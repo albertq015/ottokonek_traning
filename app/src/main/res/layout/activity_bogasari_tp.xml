@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nsv_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/dialog_header"
+                android:focusable="true" />
+
+        </RelativeLayout>
+
+        <com.otto.mart.ui.component.LazyTextview
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:customLayout="@layout/cw_textview_horizontal"
+            app:title="@string/label_kind_of_transaction"
+            app:text="Pembelian Bogasari"/>
+
+        <com.otto.mart.ui.component.LazyTextview
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:customLayout="@layout/cw_textview_horizontal"
+            app:title="Tanggal Transaksi"
+            app:text="@string/dash"/>
+
+        <com.otto.mart.ui.component.LazyTextview
+            android:id="@+id/orderNo"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:customLayout="@layout/cw_textview_horizontal"
+            app:title="@string/label_order_numb"
+            app:text="@string/dash"/>
+
+        <com.otto.mart.ui.component.LazyTextview
+            android:id="@+id/total"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:customLayout="@layout/cw_textview_horizontal"
+            app:title="@string/label_total_amount"
+            app:text="@string/dash"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

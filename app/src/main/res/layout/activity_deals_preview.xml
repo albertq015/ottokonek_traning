@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.otto.mart.ui.activity.ottopoint.DealsPreviewActivity">
+
+    <com.otto.mart.ui.component.ActionbarOttopointWhite
+        android:id="@+id/view_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:aow_title="@string/menu_point_voucher"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_company"
+                    android:layout_width="@dimen/img_small"
+                    android:layout_height="@dimen/img_small"
+                    android:src="@drawable/image_placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    style="@style/Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="21dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="gravity" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/view_count_voucher"
+                layout="@layout/view_set_count"/>
+        </LinearLayout>
+
+        <com.otto.mart.ui.component.ViewTotalHargaPoint
+            android:id="@+id/view_total_harga_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_soft"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            layout="@layout/view_input_use_voucher"/>
+
+        <include layout="@layout/view_ottopoint_point_kamu"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom">
+
+            <Button
+                style="@style/ButtonBlueSoftCapsule"
+                android:id="@+id/btn_lanjut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_beli"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

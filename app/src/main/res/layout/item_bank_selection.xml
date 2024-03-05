@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBank"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rbSelection"
+            app:layout_constraintStart_toEndOf="@+id/rbSelection"
+            app:layout_constraintTop_toTopOf="@+id/rbSelection" />
+
+        <LinearLayout
+            android:id="@+id/tvBankNameContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/tvAccountNumber"
+            app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+            app:layout_constraintStart_toEndOf="@+id/ivBank"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/tvBankName"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_grey"
+                tools:text="Bank Name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tv_name_bank"
+                android:background="@drawable/bg_grey_rounded"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/margin_10"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="Matapat"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    android:textColor="#2CC885" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAccountNumber"
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Bank account Number"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/blue_grey"
+            app:layout_constraintBottom_toTopOf="@+id/tvBeneficiaryName"
+            app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+            app:layout_constraintStart_toEndOf="@+id/ivBank"
+            app:layout_constraintTop_toBottomOf="@+id/tvBankNameContainer" />
+
+        <TextView
+            android:id="@+id/tvBeneficiaryName"
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="24dp"
+            tools:text="Bank Name"
+            android:textColor="@color/blue_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+            app:layout_constraintStart_toEndOf="@+id/ivBank"
+            app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber" />
+
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="24dp"
+            android:padding="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_delete_cart" />
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/layout_shimmer_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBank"
+            app:layout_constraintTop_toBottomOf="@+id/tvBeneficiaryName">
+
+            <include
+                android:id="@+id/llTotalUangBg"
+                layout="@layout/item_text_loading_shimmer" />
+
+            <TextView
+                android:id="@+id/tv_total_uang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="250,000 PHP dummy"
+                android:textColor="#006841"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red_custom"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="this is dummy error message" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout"
+        android:background="@color/grey_soft"/>
+</RelativeLayout>

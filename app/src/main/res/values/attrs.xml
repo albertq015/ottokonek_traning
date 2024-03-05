@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="inputable">
+        <attr name="title" format="string" />
+        <attr name="hintText" format="string" />
+        <attr name="customLayout" format="reference" />
+        <attr name="text" format="string" />
+        <attr name="typeface" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LazyEdittext" parent="inputable">
+        <attr name="title" />
+        <attr name="hintText" />
+        <attr name="customLayout" />
+        <attr name="typeface" />
+        <attr name="text" />
+        <attr name="customError" format="string" />
+        <attr name="minLength" format="integer" />
+        <attr name="maxLength" format="integer" />
+        <attr name="let_inputType" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="LazyTextview" parent="inputable">
+        <attr name="title" />
+        <attr name="customLayout" />
+        <attr name="typeface" />
+        <attr name="text" />
+    </declare-styleable>
+
+    <declare-styleable name="DottedTextview" parent="inputable">
+        <attr name="customLayout" />
+        <attr name="typeface" />
+        <attr name="text" />
+        <attr name="dots" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LazySpinner" parent="inputable">
+        <attr name="title" />
+        <attr name="hintText" />
+        <attr name="customLayout" />
+        <attr name="customLayoutdropdown" format="reference" />
+        <attr name="customLayoutview" format="reference" />
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="LazyCheckboxGroup" parent="inputable">
+        <attr name="title" />
+        <attr name="customLayout" />
+        <attr name="customChildLayout" format="reference" />
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="IntentButtonViewGroup" parent="inputable">
+        <attr name="title" />
+        <attr name="customLayout" />
+        <attr name="childLayout" format="reference" />
+        <attr name="drawableLeft" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IntentButtonProductViewGroup" parent="IntentButtonViewGroup">
+        <attr name="title" />
+        <attr name="customLayout" />
+        <attr name="childLayout" />
+        <attr name="drawableLeft" />
+    </declare-styleable>
+
+    <declare-styleable name="TimeSelectButton" parent="inputable">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="HeaderViewGroup" parent="inputable">
+        <attr name="customLayout" />
+    </declare-styleable>
+
+    <declare-styleable name="HintTextView" parent="inputable">
+        <attr name="title" />
+        <attr name="hintText" />
+        <attr name="hintbubbleColor" format="reference" />
+        <attr name="hintbubbleTextColor" format="string" />
+        <attr name="customLayout" />
+        <attr name="text" />
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="RadioCustomViewGroup" parent="inputable">
+        <attr name="title" />
+        <attr name="customLayout" />
+    </declare-styleable>
+
+    <declare-styleable name="HideableSpinnerView" parent="inputable">
+        <attr name="title" />
+        <attr name="typeface" />
+        <attr name="customLayout" />
+        <!--<attr name="customSpinnerLayout"/>
+        <attr name="customDropdownLayout"/>-->
+        <attr name="isHidden" format="boolean" />
+        <attr name="hideKeyboard" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonToggleable" parent="inputable">
+        <attr name="title" />
+        <attr name="customLayout" />
+        <attr name="inactiveTextColor" format="color" />
+        <attr name="activeTextColor" format="color" />
+        <attr name="inactiveBackground" format="reference" />
+        <attr name="activeBackground" format="reference" />
+        <attr name="inactiveIcon" format="reference" />
+        <attr name="activeIcon" format="reference" />
+
+    </declare-styleable>
+    <declare-styleable name="HidableBankSpinnerView" parent="HideableSpinnerView" />
+
+    <declare-styleable name="StepViewComponent">
+        <attr name="rangeCount" format="integer" />
+        <attr name="filledColor" format="color" />
+        <attr name="emptyColor" format="color" />
+        <attr name="strokeColor" format="color" />
+        <attr name="barHeightPercent" format="float" />
+        <attr name="slotRadiusPercent" format="float" />
+        <attr name="sliderRadiusPercent" format="float" />
+        <attr name="showNumbering" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="OtpView">
+        <attr name="android:inputType" />
+        <attr name="android:textColor" />
+        <attr name="text_background_color" format="color" />
+        <attr name="otp" format="string" />
+        <attr name="length" format="integer" />
+        <attr name="width" format="dimension" />
+        <attr name="height" format="dimension" />
+        <attr name="space" format="dimension" />
+        <attr name="space_left" format="dimension" />
+        <attr name="space_right" format="dimension" />
+        <attr name="space_top" format="dimension" />
+        <attr name="space_bottom" format="dimension" />
+        <attr name="hint_color" format="color" />
+        <attr name="hint" format="string" />
+        <attr name="background_drawable" format="reference" />
+    </declare-styleable>
+
+    <!-- default style -->
+    <declare-styleable name="TooltipLayout">
+        <attr name="ttlm_padding" format="dimension" />
+        <attr name="ttlm_strokeColor" format="color" />
+        <attr name="ttlm_backgroundColor" format="color" />
+        <attr name="ttlm_strokeWeight" format="dimension" />
+        <attr name="ttlm_cornerRadius" format="dimension" />
+        <attr name="ttlm_arrowRatio" format="float" />
+        <attr name="android:textAppearance" />
+        <attr name="ttlm_overlayStyle" format="reference" />
+        <attr name="ttlm_elevation" format="dimension" />
+
+        <!-- font file path inside your assets folder -->
+        <attr name="ttlm_font" format="string" />
+
+        <!-- item_category_chooser text gravity -->
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="SquareImage">
+        <attr name="horizontal" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ViewTitleWithButtonAll">
+        <attr name="vtba_title" format="reference" />
+        <attr name="vtba_title_button" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ActionbarOttopointTransparent">
+        <attr name="aot_title" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ActionbarOttopointTransparentWhite">
+        <attr name="aotw_title" format="reference"/>
+        <attr name="aotw_is_show_title" format="boolean"/>
+        <attr name="aotw_is_show_menu_left" format="boolean"/>
+        <attr name="aotw_is_show_menu_right" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ActionbarOttopointWhite">
+        <attr name="aow_title" format="reference"/>
+        <attr name="aow_is_show_title" format="boolean"/>
+        <attr name="aow_is_show_point" format="boolean"/>
+        <attr name="aow_is_show_voucher_saya" format="boolean"/>
+        <attr name="aow_is_show_tukar_kupon" format="boolean"/>
+        <attr name="aow_is_show_deals" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ViewTotalHargaPoint">
+        <attr name="vthp_text_point" format="reference"/>
+    </declare-styleable>
+</resources>

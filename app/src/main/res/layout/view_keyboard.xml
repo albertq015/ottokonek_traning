@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@id/tv_title"
+        style="@style/TextView14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Jumlah"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <LinearLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                style="@style/TextView20spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:layout_weight="1.5"
+                android:text="Rp"
+                android:textColor="@color/ocean_blue" />
+
+            <com.otto.mart.support.util.widget.MyCurrencyEditText
+                android:id="@+id/cet_val"
+                style="@style/TextView20spbold"
+                android.setLongClickable="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-60dp"
+                android:layout_weight="8"
+                android:background="@android:color/transparent"
+                android:digits="0123456789"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLength="14"
+                android:padding="8dp"
+                android:text="0"
+                android:textColor="@color/ocean_blue"
+                app:groupDivider="."
+                app:locale="in_ID"
+                app:showSymbol="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/warm_gre_40"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_1" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="3"
+        android:columnCount="3"
+        android:drawSelectorOnTop="true"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_2">
+
+        <FrameLayout
+            android:id="@+id/l_1"
+            android:layout_columnWeight="1">
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="1"
+                android:textColor="@color/colorBlack" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_2"
+            android:layout_columnWeight="1">
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="2"
+                android:textColor="@color/colorBlack"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_3"
+            android:layout_columnWeight="1">
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="3"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_4"
+            android:layout_columnWeight="1"
+          >
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="4"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_5"
+            android:layout_columnWeight="1"
+            >
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="5"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_6"
+            android:layout_columnWeight="1"
+>
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="6"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_7"
+            android:layout_columnWeight="1"
+          >
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="7"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_8"
+            android:layout_columnWeight="1"
+          >
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="8"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_9"
+            android:layout_columnWeight="1">
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="9"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_0"
+            android:layout_columnWeight="1"
+        >
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="0"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_000"
+            android:layout_columnWeight="1">
+
+            <TextView
+                style="@style/TextView24spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/selector"
+                android:gravity="center"
+                android:padding="@dimen/keypad_tv_padding"
+                android:text="000"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/l_b"
+            android:layout_columnWeight="1"
+
+            android:background="@drawable/ripple_overide">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/keypad_tv_padding"
+                android:src="@drawable/ic_backspace_black"
+                android:textColor="@color/colorBlack" />
+        </FrameLayout>
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar">
+
+        <include layout="@layout/dark_toolbar"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottomUp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_upgrade_ottocash_plus"
+            android:layout_margin="20dp"
+            style="@style/TextView20sp"
+            android:id="@+id/title"
+            android:textColor="@color/colorBlueOttoHeader"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="235dp"
+            android:layout_height="153dp"
+            android:layout_below="@+id/title"
+            android:background="@color/cherry_red"
+            android:id="@+id/imagektp_cont"
+            app:cardBackgroundColor="@color/colorBlueChat"
+            android:visibility="visible"
+            app:cardCornerRadius="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="18dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:id="@+id/imageKTP"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="178dp"
+            android:layout_height="244dp"
+            android:layout_below="@+id/title"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@color/colorBlueChat"
+            android:id="@+id/imageselfie_cont"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:id="@+id/imageSELFIE"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/faded_red_old"
+        android:gravity="center"
+        android:id="@+id/bottomUp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/bottom"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_take_photo_with_id_card"
+            style="@style/TextView14sp"
+            android:layout_margin="20dp"
+            android:id="@+id/tvNext"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:id="@+id/bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_retake_photo"
+            style="@style/TextView14sp"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/cherry_red"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

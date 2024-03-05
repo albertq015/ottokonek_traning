@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingStart="0dp"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
+    android:paddingBottom="0dp"
+    style="@style/DialogBottomStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_default"
+        android:paddingRight="@dimen/space_default">
+
+        <TextView
+            style="@style/Text.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_medium"
+            android:text="@string/label_filter"/>
+
+        <ImageView
+            android:id="@+id/view_back"
+            android:layout_width="@dimen/img_icon_small"
+            android:layout_height="@dimen/img_icon_small"
+            android:padding="4dp"
+            app:srcCompat="@drawable/vector_cross"
+            android:tint="@color/dark_grey_blue"
+            android:layout_gravity="right"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_default">
+
+                <TextView
+                    style="@style/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:text="@string/label_harga"/>
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/sb_range_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rsb_gravity="center"
+                    app:rsb_mode="range"
+                    app:rsb_thumb_drawable="@drawable/circle_dark_sky_green"
+                    app:rsb_progress_color="@color/dark_sky_blue"
+                    app:rsb_progress_default_color="@color/grey_two"
+                    app:rsb_progress_height="6dp"
+                    app:rsb_progress_radius="5dp"
+                    app:rsb_min_interval="1"
+                    app:rsb_min="0"
+                    app:rsb_tick_mark_layout_gravity="bottom"
+                    app:rsb_tick_mark_text_margin="15dp"
+                    app:rsb_tick_mark_mode="number"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="left"
+                        android:layout_marginEnd="10dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            style="@style/LabelInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/text_small_two"
+                            android:text="@string/label_harga_minimum"/>
+
+                        <EditText
+                            style="@style/EditTextBottomLineGrey"
+                            android:id="@+id/edt_minimum"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:digits="0123456789"
+                            android:textColor="@color/greyish_brown"
+                            android:gravity="left|center_vertical"
+                            android:textAlignment="gravity"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/dash"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            style="@style/LabelInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="@dimen/text_small_two"
+                            android:text="@string/label_harga_maksimum"/>
+
+                        <EditText
+                            style="@style/EditTextBottomLineGrey"
+                            android:id="@+id/edt_maximum"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:digits="0123456789"
+                            android:textColor="@color/greyish_brown"
+                            android:gravity="right|center_vertical"
+                            android:textAlignment="gravity"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/grey_soft_three"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_default"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:text="@string/label_lokasi"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/grey_soft_three"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_default">
+
+                <TextView
+                    style="@style/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:text="@string/label_penawaran"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_penawaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_default">
+
+                <Button
+                    android:id="@+id/btn_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/button_batal"
+                    style="@style/ButtonWhiteBorderBlueSoft"/>
+
+                <Button
+                    android:id="@+id/btn_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/button_terapkan"
+                    style="@style/ButtonBlueSoftRoundTwo"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

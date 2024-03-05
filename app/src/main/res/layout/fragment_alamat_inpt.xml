@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.otto.mart.ui.component.LazyEdittext
+        android:visibility="gone"
+        android:id="@+id/addressName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customLayout="@layout/cw_edittext_multiline"
+        android:layout_marginTop="16dp"
+        app:title="@string/label_address_name" />
+
+    <com.otto.mart.ui.component.LazyEdittext
+        android:id="@+id/let_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customLayout="@layout/cw_edittext_multiline"
+        android:layout_marginTop="16dp"
+        app:title="@string/label_complete_address" />
+
+    <include layout="@layout/partial_spinner_loc_chained" />
+
+
+</LinearLayout>

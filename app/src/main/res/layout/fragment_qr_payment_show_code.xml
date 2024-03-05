@@ -1,0 +1,195 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/dialog_toolbar_bg">
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:padding="16dp"
+                    android:src="@drawable/icon_close_popup_white" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_name"
+                    style="@style/TextView12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@android:color/white"
+                    tools:text="Indomaret" />
+            </RelativeLayout>
+
+            <ViewAnimator
+                android:id="@+id/view_animator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_white">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    style="@style/TextView14spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/label_payment_time"
+                    android:textColor="@color/charcoal_grey" />
+
+                <TextView
+                    android:id="@+id/tv_timeer"
+                    style="@style/TextView12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    tools:text="02:59"
+                    android:textColor="@color/ocean_blue"
+                    android:textSize="36sp" />
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:text="Silahkan sebutkan ini ke kasir Indomaret"
+                    android:textColor="@color/ocean_blue" />
+
+                <!--            <TextView
+                                style="@style/TextView12spbold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:gravity="center"
+                                android:text="Nama Produk" />
+
+                            <TextView
+                                android:id="@+id/tv_product_name"
+                                style="@style/TextView14spbold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:textColor="@color/ocean_blue"
+                                tools:text="Ottopay" />-->
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/label_telephone_number" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    style="@style/TextView14spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/ocean_blue"
+                    tools:text="087881918192" />
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/label_merchant_name" />
+
+                <TextView
+                    android:id="@+id/tv_merch"
+                    style="@style/TextView14spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/ocean_blue"
+                    tools:text="087881918192" />
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/text_address" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    style="@style/TextView14spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/ocean_blue"
+                    tools:text="087881918192" />
+
+
+                <TextView
+                    style="@style/TextView12spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/label_terminal_id" />
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    style="@style/TextView14spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/ocean_blue"
+                    tools:text="087881918192" />
+
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="24dp"
+                    android:paddingLeft="48dp"
+                    android:paddingRight="48dp"
+                    android:background="@drawable/button_red"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="center"
+                    android:text="@string/button_cancel_transaction"/>
+
+
+            </LinearLayout>
+
+            </ViewAnimator>
+
+        </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,472 @@
+buildscript {
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.31.2'
+    }
+}
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'com.google.gms.google-services'
+}
+
+apply plugin: 'realm-android'
+apply plugin: 'com.gaelmarhic.quadrant'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.firebase.crashlytics'
+
+quadrantConfig {
+    generateByDefault true
+}
+
+android {
+    signingConfigs {
+        ottopay_keystore {
+            keyAlias 'ottokonek'
+            keyPassword 'ottokonek2021'
+            storeFile file('/Users/elifastariwi/Documents/OttoKonek/android-op4/app/all_ottokonek_key')
+            storePassword 'ottokonek2021'
+        }
+    }
+
+    compileSdkVersion 33
+    buildToolsVersion = '28.0.3'
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        /*ndk {F
+            abiFilters "armeabi-v7a" , "x86" ,"x86_64", "arm64-v8a"
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                arguments "-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON"
+            }
+        }*/
+
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.ottopay_keystore
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    flavorDimensions "mode"
+    productFlavors {
+        development {
+            dimension "mode"
+            resValue "string", "app_name", "OttoKonek Dev"
+
+            buildConfigField "String", "SERVER_URL", '"http://ottopay2-api.clappingape.com/v1/ottopay-mart/"'
+            buildConfigField "String", "MAP_URL", '"https://indoalliz-test.apigee.net/partner/api/"'
+            buildConfigField "String", "TOKOL_URL", '"http://toko-online.clappingape.com/v1/ottopay-mart/"'
+
+            buildConfigField "String", "OTTOFIN_SERVER_URL", '"http://13.228.25.85:8999/"'
+            buildConfigField "String", "OTTOFIN_API_VERSION", '"v0.1.0"'
+
+            buildConfigField "String", "OTTOFIN_AUTH_SERVER_URL", '"http://13.228.25.85:8993/"'
+            buildConfigField "String", "OTTOFIN_AUTH_API_VERSION", '"v1.0"'
+
+            buildConfigField "String", "OTTOFIN_QRIS_SERVER_URL", '"http://13.228.25.85:8986/"'
+            buildConfigField "String", "OTTOFIN_QRIS_API_VERSION", '"v0.2.0"'
+
+            buildConfigField "String", "OTTOPOINT_SERVER_URL", '"http://13.228.25.85:8009/api/"'
+            buildConfigField "String", "RESOURCE", '"http://ottopay-mart.clappingape.com"'
+
+            buildConfigField "String", "GROSIR_SERVER_URL_V2", '"https://dev2-ottokonek.ottopay.id/ottokonek/"'
+
+            buildConfigField "String", "GROSIR_SERVER_URL", '"https://dev2-ottokonek.ottopay.id/opoasis/ottokonek/"'
+            buildConfigField "String", "GROSIR_SHIPMENT_URL", '"https://dev2-ottokonek.ottopay.id/ottopay/v0.3.2/logistic/"'
+            buildConfigField "String", "GROSIR_DATA_ADDRESS_URL", '"https://dev2-ottokonek.ottopay.id/rose-ottokonek-api/"'
+
+            buildConfigField "String", "OCBI_SERVER_URL", '"http://13.228.25.85:8978/"'
+            buildConfigField "String", "OCBI_API_VERSION", '"v0.1.0"'
+
+            buildConfigField "String", "POIN_KEY", '"b2c7b79a-2e02-44e4-ae89-7a3b3cc1bfdf"'
+            buildConfigField "String", "POIN_APP_ID", '"123456789"'
+            buildConfigField "String", "POIN_INSTITUSION_ID", '"PSM0001"'
+
+            buildConfigField "String", "OTTOKONEK_SERVER_URL", '" https://dev2-ottokonek.ottopay.id/"'
+            buildConfigField "String", "OTTOKONEK_MOOCKON_URL", '"http://192.168.0.181:1996/"'
+            buildConfigField "String", "OTTOKONEK_API_VERSION", '"v1.0"'
+            applicationId "com.ottokonek.dev"
+            versionCode rootProject.appVeersionCode
+            versionName "" + rootProject.appVersion + " Version Code " + getVersionCode()
+
+            //Netcore
+            manifestPlaceholders = [netcoreAppId: "1fbc4afdb66aae5cdad0ce810ad21192"]
+        }
+
+        production {
+            dimension "mode"
+            resValue "string", "app_name", "OttoKonek"
+
+            buildConfigField "String", "SERVER_URL", '"https://ottopay3.ottopay.id/v1/ottopay-mart/"'
+            buildConfigField "String", "MAP_URL", '"https://indoalliz-prod.apigee.net/partner/api/"'
+            buildConfigField "String", "TOKOL_URL", '"https://tokoonline.ottopay.id/v1/ottopay-mart/"'
+
+            buildConfigField "String", "OTTOFIN_SERVER_URL", '"https://core.ottokonek.com/"'
+            buildConfigField "String", "OTTOFIN_API_VERSION", '"v0.1.0"'
+
+            buildConfigField "String", "OTTOFIN_AUTH_SERVER_URL", '"https://core.ottokonek.com/"'
+            buildConfigField "String", "OTTOFIN_AUTH_API_VERSION", '"v1.0"'
+
+            buildConfigField "String", "OTTOFIN_QRIS_SERVER_URL", '"https://core.ottokonek.com/"'
+            buildConfigField "String", "OTTOFIN_QRIS_API_VERSION", '"v1.0"'
+
+            buildConfigField "String", "OTTOPOINT_SERVER_URL", '"https://apisfa3.ottopay.id/api/"'
+            buildConfigField "String", "RESOURCE", '"https://ottopay3.ottopay.id"'
+
+            buildConfigField "String", "GROSIR_SERVER_URL", '"https://core.ottokonek.com/opoasis/ottokonek/"'
+            buildConfigField "String", "GROSIR_SHIPMENT_URL", '"https://core.ottokonek.com/ottopay/v0.3.2/logistic/"'
+            buildConfigField "String", "GROSIR_DATA_ADDRESS_URL", '"https://core.ottokonek.com/rose-ottokonek-api/"'
+            buildConfigField "String", "GROSIR_SERVER_URL_V2", '"https://core.ottokonek.com/ottokonek/"'
+
+            buildConfigField "String", "OCBI_SERVER_URL", '"https://core.ottokonek.com/"'
+            buildConfigField "String", "OCBI_API_VERSION", '"v0.1.0"'
+
+            buildConfigField "String", "POIN_KEY", '"930f10e0-39d2-47d3-bf30-13230865f9e0"'
+            buildConfigField "String", "POIN_APP_ID", '"PSM0001"'
+            buildConfigField "String", "POIN_INSTITUSION_ID", '"PSM0001"'
+
+            buildConfigField "String", "OTTOKONEK_SERVER_URL", '"https://core.ottokonek.com/"'
+            buildConfigField "String", "OTTOKONEK_API_VERSION", '"v1.0"'
+
+            applicationId "com.ottokonek.ottokonek"
+            versionCode rootProject.appVeersionCode
+            versionName "" + rootProject.appVersion
+
+            //Netcore
+            manifestPlaceholders = [netcoreAppId: "60487ec2d79fce147473261c7b670e1f"]
+        }
+    }
+
+    dynamicFeatures = [':oasis']
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    /*externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+//			path "src/main/c/CMakeLists.txt"
+//			version "3.10.2"
+
+        }
+    }*/
+
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url 'https://maven.fabric.io/public'
+    }
+    maven { url "https://jitpack.io" }
+}
+
+configurations {
+    productionDebugImplementation
+    productionReleaseImplementation
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.21"
+    api 'androidx.appcompat:appcompat:1.4.2'
+    api 'com.google.android.material:material:1.5.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'androidx.constraintlayout:constraintlayout:2.0.4'
+    api 'androidx.recyclerview:recyclerview:1.1.0'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    //Android Base CA
+    api 'id.pede.gitlab.vexlib:coconut:2.0' //1.0a
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+
+    //Retrofit
+    api "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
+    api "com.squareup.okhttp3:okhttp:$okhttp3_version"
+    api "com.squareup.retrofit2:retrofit:$retro_version"
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:converter-jackson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //RxBinding
+    api 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    implementation 'com.appsflyer:af-android-sdk:6.5.4'
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:$jvm_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+
+    //ZXing
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+
+    //smart tech net core
+    implementation 'com.netcore.android:smartech-sdk:3.1.4'
+
+    // Google Play Servicee
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    implementation 'com.google.android.gms:play-services-vision:20.1.0'
+
+
+    //Firebase
+//    implementation 'com.google.firebase:firebase-core:17.4.0'
+    implementation platform('com.google.firebase:firebase-bom:32.2.2')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging'
+
+
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Currency EditText
+    implementation 'com.github.faranjit:currency-edittext:1.0.1'
+
+    //Nammu
+//    implementation 'com.github.tajchert:nammu:1.2.0'
+    implementation 'com.karumi:dexter:6.2.3'
+
+    //Tool Tip
+    implementation 'com.github.vihtarb:tooltip:0.1.9'
+
+    //Ripple Effect
+    implementation 'com.patrickpissurno:ripple-effect:1.3.1'
+
+    //Circular Progress Button
+    implementation 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+
+    //Smart Tab Layout
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+
+    //Bubble Layout
+    implementation 'com.daasuu:BubbleLayout:1.2.0'
+
+    //Expandable Layout
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
+    //Camera Kit
+    implementation 'com.wonderkiln:camerakit:0.13.1'
+
+    //Super Nova Emoji
+    implementation 'com.github.hani-momanii:SuperNova-Emoji:1.1'
+
+    //Gravity Snap Helper
+    implementation 'com.github.rubensousa:gravitysnaphelper:1.5'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-messaging:20.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
+    implementation 'com.google.firebase:firebase-crashlytics:17.1.0'
+
+    //Page Indicator View
+    api('com.romandanylyk:pageindicatorview:1.0.0') {
+        exclude group: 'com.android.support', module: 'appcompat-v7:'
+        exclude group: 'com.android.support', module: 'recyclerview-v7:'
+    }
+
+    //Nisrulz Screenshott
+    implementation 'com.github.nisrulz:screenshott:2.0.0'
+
+    //Camera View
+    implementation 'com.otaliastudios:cameraview:1.6.0'
+
+    //Chip Cloud
+    implementation 'com.github.adroitandroid:ChipCloud:2.2.1'
+
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //RxJava
+    api 'io.reactivex.rxjava2:rxjava:2.2.8'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //RxBinding
+    api 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'
+
+    //Image Picker
+    implementation 'com.linchaolong.android:imagepicker:1.5'
+
+    //Glide
+    api 'com.github.bumptech.glide:glide:4.11.0'
+    api 'jp.wasabeef:glide-transformations:4.1.0'
+
+    //image picker
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.4.5'
+
+    //SmsVerifyCatcher
+    implementation 'com.github.stfalcon:smsverifycatcher:0.3.2'
+
+    //Room
+//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+//    api 'androidx.room:room-rxjava2:2.4.3'
+//    kapt 'androidx.room:room-compiler:2.4.3'
+//    implementation "androidx.room:room-runtime:2.4.3"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+    api 'androidx.room:room-rxjava2:2.4.3'
+    implementation "androidx.room:room-ktx:2.4.3"
+    implementation "androidx.room:room-runtime:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+    androidTestImplementation "androidx.room:room-testing:2.4.3"
+
+    implementation 'com.github.yalantis:ucrop:2.2.2-native'
+
+    implementation 'com.otaliastudios:cameraview:1.5.0'
+
+    //SpinKit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    implementation 'id.zelory:compressor:2.1.0'
+
+    //Lifecycle Components
+    implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion
+    kapt 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion
+
+    // custom viewpager
+    implementation 'com.tiagosantos:enchantedviewpager:1.1.0'
+
+    // custom dot indicator viewpager
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+
+    // custom pin input (need repository : maven - https://jitpack.io )
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    // slideview
+    implementation 'com.github.MAXDeliveryNG:slideview:1.1.0'
+
+    // switch - zcweng:switch
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    // seekbar - Jay-Goo:RangeSeekBar
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v3.0.0'
+
+    //Dexter
+    implementation 'com.karumi:dexter:4.2.0'
+
+    //Stooltip
+    implementation 'cl.jesualex.android:stooltip:1.0'
+
+    //Image Base64 Encoder
+    implementation files('libs/ImageBase64Encoder.jar')
+
+    //Chucker
+    debugImplementation "com.github.ChuckerTeam.Chucker:library:3.5.2" //3.1.2jj
+    releaseImplementation "com.github.ChuckerTeam.Chucker:library-no-op:3.5.2" //3.1.2
+
+    //OttoPoin SDK
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-scope:$koin_version"
+    implementation "org.koin:koin-core:$koin_version"
+    //implementation "org.koin:koin-core-ext:$koin_version"
+    //implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+//    developmentImplementation files('libs/ottosdk-development-debug.aar')
+//    productionDebugImplementation files('libs/ottosdk-production-release.aar')
+//    productionReleaseImplementation files('libs/ottosdk-production-release.aar')
+
+    //coremodule
+    developmentImplementation files('libs/coreModule-staging.aar')
+    productionDebugImplementation files('libs/coreModule-staging.aar')
+    productionReleaseImplementation files('libs/coreModule-release.aar')
+
+    //paymentModule
+    developmentImplementation files('libs/paymentModule-staging.aar')
+    productionDebugImplementation files('libs/paymentModule-staging.aar')
+    productionReleaseImplementation files('libs/paymentModule-release.aar')
+
+    //billerModule
+    implementation files('libs/billerModule-debug.aar')
+    // productionDebugImplementation files('libs/billerModule-staging.aar')
+    //productionReleaseImplementation files('libs/billerModule-release.aar')
+
+    //Netcore
+    implementation 'androidx.work:work-runtime:2.7.1'
+
+    //Mervick Aes Everywhere
+    implementation 'com.github.mervick:aes-everywhere-java:1.2.7'
+    implementation project(path: ':data')
+
+    implementation 'com.github.mazenrashed:Printooth:1.2.2'
+    implementation 'com.github.peter1492:LongScreenshot:1.0'
+    //  implementation 'id.pede.gitlab.vexlib:android_encryption:V1.0.2'
+
+    implementation 'cn.ymex:banner:1.6.8'
+    implementation "com.tokopedia.tkpdlib:showcase-stepper:0.6.0"
+    implementation "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.6"
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+    implementation 'me.zhanghai.android.materialprogressbar:library:1.1.7'
+
+    implementation 'com.github.oatrice:internet-speed-testing:1.0.1'
+
+    implementation 'com.synnapps:carouselview:0.1.4'
+
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    testImplementation "org.powermock:powermock-module-junit4:1.7.4"
+    testImplementation "org.powermock:powermock-api-mockito2:1.7.4"
+
+    //rootbeer implementation
+    implementation 'com.scottyab:rootbeer-lib:0.1.0'
+
+    //shimeer loading fb
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+}

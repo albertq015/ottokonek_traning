@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.transaction.TransactionDetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_grey_blue">
+
+        <LinearLayout
+            android:id="@+id/backhitbox"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow_left_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/title_activity_ppob_payment_detail"
+            android:textColor="@color/colorWhite" />
+
+
+    </FrameLayout>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/idTransaction"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customLayout="@layout/cw_textview_b"
+        app:title="@string/label_id_transaction"
+        app:text="2983654239562075"/>
+
+    <View
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white_six"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/trans_type"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customLayout="@layout/cw_textview_b"
+        app:title="@string/label_kind_of_transaction"
+        app:text="Pencairan Omzet ke Dompet"/>
+
+    <View
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white_six"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/amount"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customLayout="@layout/cw_textview_b"
+        app:title="@string/label_withdraw_nominal_amount"
+        app:text="Rp 400.000,-"/>
+
+    <View
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white_six"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/white_six"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/text_withdraw_omzet"
+        style="@style/TextView14sp"
+        android:layout_marginTop="24dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/deny"
+            style="@style/TextView16spbold"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_anjk"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/text_no"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/color_white" />
+
+
+        <TextView
+            android:id="@+id/confirm"
+            style="@style/TextView16spbold"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/text_yes"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+</LinearLayout>

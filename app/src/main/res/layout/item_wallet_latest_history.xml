@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="@dimen/margin_super_small"
+    android:paddingBottom="@dimen/margin_super_small"
+    android:paddingRight="@dimen/margin"
+    android:paddingLeft="@dimen/margin"
+    android:id="@+id/item_layout">
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/TextView10spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_gravity="left"
+        tools:text="12 Nov 2022"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin"
+        android:background="@drawable/white_grey_border_rounded_5_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNoResi"
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text_brown"
+                tools:text="CADFH3645645656"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="left"
+                android:textColor="@color/brown_grey_two"
+                tools:text="Name"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/greyish_brown"
+                tools:text="Desc"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/greyish_brown"
+            tools:text="Rp 120.000"/>
+
+    </LinearLayout>
+
+</LinearLayout>

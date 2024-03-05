@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_dialog_notice"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/vector_thumb_up" />
+
+    <TextView
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_success"
+        android:textColor="@color/ocean_blue"
+        android:textSize="24sp" />
+
+    <TextView
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/text_success_activation_account_pede"
+        android:textAlignment="gravity"
+        android:textSize="@dimen/text_large"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btn_poin"
+        style="@style/ButtonBlueCapsule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_cek_poin"
+        android:textSize="@dimen/text_medium" />
+</LinearLayout>

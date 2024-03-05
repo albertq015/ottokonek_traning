@@ -1,0 +1,19 @@
+package com.otto.mart.model.APIModel.Response.olshop.background;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class EventBackground {
+    private BackgroundData background_event;
+
+    public EventBackground() {
+    }
+
+    public BackgroundData getBackground_event() {
+        return background_event;
+    }
+
+    public void setBackground_event(BackgroundData background_event) {
+        this.background_event = background_event;
+    }
+}

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mid" translatable="false">MID</string>
+    <string name="nmid" translatable="false">NMID</string>
+    <string name="mpan" translatable="false">MPAN</string>
+    <string name="tid" translatable="false">TID</string>
+    <string name="load">Loading</string>
+
+    <string name="label_activation_benefit_oc">Enjoy every benefits provided by OttoCash</string>
+    <string name="label_tnc_op"><![CDATA[I have read and agree to the applicable OttoPay Terms & Conditions.]]></string>
+    <string name="label_main_address">Primary Address</string>
+    <string name="label_address_name">Name</string>
+    <string name="label_add_address">Add Address</string>
+    <string name="label_complete_address">Address</string>
+    <string name="label_postal_code">Postal Code</string>
+    <string name="label_merchant_name">Merchant Name</string>
+    <string name="label_another_product">Other Products</string>
+    <string name="label_another_product_price">Price</string>
+    <string name="label_plus_plus">Add</string>
+    <string name="label_next">Continue</string>
+    <string name="label_upload_ktp_photo">Upload Selfie with ID Card</string>
+    <string name="label_total">Total</string>
+    <string name="label_order">Order</string>
+    <string name="label_input_old_pin">Enter Old PIN</string>
+    <string name="label_input_new_pin">Enter New PIN</string>
+    <string name="label_confirm_new_pin">Re-Enter New PIN</string>
+    <string name="label_contact_us">Contact Us</string>
+    <string name="label_write_message">Write Message</string>
+    <string name="label_call_now">Call Now</string>
+    <string name="label_whatsapp">Whatsapp</string>
+    <string name="label_input_phone">Mobile Number</string>
+    <string name="label_hint_phone_number">Mobile Number</string>
+    <string name="label_reset_pin">Reset PIN</string>
+    <string name="label_shipping_address">Delivery Address</string>
+    <string name="label_supplier_name">Supplier name</string>
+    <string name="label_order_status">Order status</string>
+    <string name="label_order_number">Order number</string>
+    <string name="label_payment_method">Payment method</string>
+    <string name="label_product_list">Product list</string>
+    <string name="label_shipping">Shipping</string>
+    <string name="label_currier">Courrier</string>
+    <string name="label_service">Service</string>
+    <string name="label_shipping_cost">Shipping cost</string>
+    <string name="label_total_payment">Total</string>
+    <string name="label_order_onprocess">Processing</string>
+    <string name="label_payment_amount">Payment Amount</string>
+    <string name="label_open_detail">See Details</string>
+    <string name="label_shipping_info">Delivery Info</string>
+    <string name="label_recipient_name">Recipient Name</string>
+    <string name="label_amount">Amount</string>
+    <string name="label_astrerix_mandatory">*mandatory</string>
+    <string name="label_email">Email</string>
+    <string name="label_email_asterix">Email *</string>
+    <string name="button_edit">Edit</string>
+    <string name="label_total_product_price">Total Product Price</string>
+    <string name="label_subtotal_product_price">SubTotal Product Price</string>
+    <string name="label_order_date">Order Date</string>
+    <string name="label_forgot_pin_code_question">Forgot PIN?</string>
+    <string name="label_register_now">Register now</string>
+    <string name="label_total_price">Total</string>
+    <string name="label_choose_all_product">Choose All Product</string>
+    <string name="label_input_your_pin">Enter PIN</string>
+    <string name="label_my_address">My Address</string>
+    <string name="label_main_account">Primary account</string>
+    <string name="label_pin_code">PIN</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_full_name_asterisk">Full Name *</string>
+    <string name="label_merchant_id">Merchant ID</string>
+    <string name="label_main_phone_number">Primary Mobile Number</string>
+    <string name="label_another_phone_number">Other Mobile number</string>
+    <string name="label_dob">Birth Date</string>
+    <string name="label_company_name">Store Name</string>
+    <string name="label_company_type">Store Type</string>
+    <string name="label_phone_number_short">Mobile Number</string>
+    <string name="label_choose_question">Choose Security Question</string>
+    <string name="label_top_up_deposit_balance">Top Up Deposit</string>
+    <string name="label_id_transaction">Transaction ID</string>
+    <string name="label_total_amount">Total</string>
+    <string name="label_total_order">Total Order</string>
+    <string name="label_sub_total_order">Sub Total Order</string>
+    <string name="label_total_order_colon">Total Order :</string>
+    <string name="label_donatur_name">Donor Name</string>
+    <string name="label_donors_phone">Donor Mobile Number</string>
+    <string name="label_donors_email">Donor Email</string>
+    <string name="label_input_donation_amount">Enter Amount</string>
+    <string name="label_donors_npwp">Donor NPWP</string>
+    <string name="label_payment_time">Payment Time</string>
+    <string name="label_telephone_number">Mobile number</string>
+    <string name="label_terminal_id">Terminal ID</string>
+    <string name="label_shipping_cost_addition_insurance">Total Shipping + Insurance</string>
+    <string name="label_cost_of_capital">Basic Price</string>
+    <string name="label_type_game_voucher">Voucher Game Type</string>
+    <string name="lebale_server_id">Server ID</string>
+    <string name="label_seller_name">Seller Name</string>
+    <string name="label_choose_variant">Choose Variant :</string>
+    <string name="label_product_info">Product Information</string>
+    <string name="label_product_desc">Product Description</string>
+    <string name="label_transaction_nominal">Transaction Amount</string>
+    <string name="label_input_nominal">Enter Amount</string>
+    <string name="label_input_total_payment">Payment Amount</string>
+    <string name="label_reference_number">Reference Number</string>
+    <string name="label_account_withdraw">Settlement Account</string>
+    <string name="label_choose_account_withdraw_type">Choose Account type</string>
+    <string name="label_withdraw_nominal">Settlement amount</string>
+    <string name="label_withdraw_nominal_amount">Total</string>
+    <string name="label_input_withdraw_nominal">Enter Amount</string>
+    <string name="label_transfer_fee">Fee</string>
+    <string name="label_oc_balance">OttoCash balance</string>
+    <string name="label_oc_contact_us">Contact</string>
+    <string name="label_working_hour">Operational Hour</string>
+    <string name="label_phone_number_withdraw_opt">Mobile Number (Optional)</string>
+    <string name="label_note">Notes :</string>
+    <string name="label_price_per_piece">Enter Price per Unit</string>
+    <string name="label_payment_type">Payment Type</string>
+    <string name="label_transaction_type">Transaction Type</string>
+    <string name="label_business_address">Store Address</string>
+    <string name="label_order_numb">Order No.</string>
+    <string name="label_payment_status">Payment Status</string>
+    <string name="label_payment_status_colon">Payment Status :</string>
+    <string name="label_total_pemesanan">Total Order</string>
+    <string name="label_total_colon">Total :</string>
+    <string name="label_status_order">Order Status</string>
+    <string name="label_status_order_colon">Order Status :</string>
+    <string name="label_kind_of_transaction">Transaction type</string>
+    <string name="label_order_no">Order No. :</string>
+    <string name="label_daily_deals">Daily Deals</string>
+    <string name="label_top_100">Top 100</string>
+    <string name="label_all_stuff">All Items</string>
+    <string name="label_create_pin_code">Create PIN</string>
+    <string name="label_forgot_pin_code">Forgot PIN</string>
+    <string name="label_input_pin_code">Enter PIN</string>
+    <string name="label_input_pin_confirm">Re-Enter PIN</string>
+    <string name="label_input_pin">Enter PIN</string>
+
+    <string name="pesan_barang">Order</string>
+    <string name="riwayat_pesanan">Order\nHistory</string>
+    <string name="bayar_pesanan">Order\nPayment</string>
+    <string name="proses_oasis">On Progress</string>
+    <string name="selesai_oasis">Completed</string>
+    <string name="dibatalkan_oasis">Cancelled</string>
+    <string name="no_resi">Receipt Number</string>
+    <string name="no_pemesanan">Order Number</string>
+    <string name="total_pembayaran">Total Payment</string>
+    <string name="tanggal_pembelian">Purchase Date</string>
+    <string name="total_pesanan">Total Payment</string>
+    <string name="pembayaran">Payment</string>
+    <string name="opsional">(Optional)</string>
+    <string name="opsi_pengiriman">Courier</string>
+    <string name="ringkasan_belanja">Order Summary</string>
+    <string name="total_harga">Total Price</string>
+    <string name="total_ongkos_kirim">Delivery Fee</string>
+    <string name="pilih_kategori">Select Categori</string>
+    <string name="product">Product</string>
+    <string name="produk_toko_kosong">Product is Empty</string>
+    <string name="masukkan_produk_ke_dalam_scan_barcode">Aim your camera at the barcode</string>
+    <string name="scan_produk">Scan Barcode</string>
+    <string name="detail_pengiriman">Delivery Details</string>
+    <string name="hubungi_penjual">Contact Seller</string>
+    <string name="cara_pengiriman">Shipping Method</string>
+    <string name="alamat_usaha">Store Address</string>
+    <string name="ubah_kode_pin">Change PIN</string>
+    <string name="pembelian_kelipatan">Puchase Unit of Measure %$ pcs</string>
+    <string name="masukkan_pin_lama_anda">Enter Old PIN</string>
+    <string name="lupa_pin">Forgot PIN</string>
+    <string name="masukkan_pin_baru">Enter New PIN</string>
+    <string name="no_resi_pembayaran">Payment Receipt Number</string>
+    <string name="pesanan_selesai">Pesanan Selesai</string>
+    <string name="oke">OK</string>
+    <string name="pesanan_diproses">Order in Process</string>
+    <string name="lanjut_belanja">Continue Shopping</string>
+    <string name="lihat_riwayat">History</string>
+    <string name="label_logiin_msg_welcome">Welcome to OttoKonek</string>
+    <string name="label_logiin_msg_welcome_desc">Start your business here</string>
+    <string name="label_login_msg_upgrade">Upgrade your business with OttoKonek</string>
+    <string name="label_menu_cash_out_generate_qr">Generate QR Code</string>
+    <string name="label_menu_cash_out_qr_list">QR Code List</string>
+    <string name="label_cash_out_input_amount">Input Amount</string>
+    <string name="label_forgot_pin_title">Please enter your mobile number that is already registered</string>
+    <string name="label_transfer_title">Transfer</string>
+    <string name="checkout">Checkout</string>
+    <string name="address_as">Address as</string>
+    <string name="label_hint_mobile_number">Mobile number</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="label_availability">Availability</string>
+
+
+    <string name="dialog_ask_location_title">Allow Device Location</string>
+    <string name="dialog_ask_location_msg">Ottokonek needs to access your location all the time to enable registration, login, activation and all transaction. Even when you\'re not using the app.</string>
+    <string name="dialog_ask_location_btn_ok">I Understand</string>
+    <string name="dialog_ask_location_btn_yes">Yes, Logout</string>
+    <string name="dialog_ask_location_btn_no">No</string>
+
+
+    <string name="dialog_ask_contact_title">Allow Contact Access</string>
+    <string name="dialog_ask_contact_msg">OttoKonek requires contact access for seamless transaction process</string>
+    <string name="dialog_ask_contact_btn_ok">I Understand</string>
+
+
+    <string name="dialog_title_logout">Logout</string>
+    <string name="dialog_sub_title_logout">Are you sure you want to exit the app?</string>
+
+    <string name="dialog_ask_prominent_title">Data Access Permission</string>
+    <string name="dialog_ask_prominent_contentf">You must agree with our Privacy Policy before using the application. By clicking the <b>“Agree”</b>, you accept the Privacy Policy, as may be amended from time to time, including the collection, sharing and processing of your personal data under the Privacy Policy.</string>
+    <string name="dialog_ask_prominent_contents">In order to use OttoKonek application, we require
+        your permission to access information from your device. To learn more about how we collect
+        and use data, review our
+        <font style='color:#006841'>
+            <a href='https://otto-konek.s3-ap-southeast-1.amazonaws.com/tnc/otto_konek_privacy_policy.html'>
+                Privacy Policy.
+            </a>
+        </font>
+    </string>
+
+
+    <string name="dialog_ask_prominent_btnf">OK, I Understand</string>
+    <string name="dialog_ask_prominent_btn_ok">Agree</string>
+    <string name="dialog_ask_prominent_btn_no">Cancel</string>
+
+</resources>

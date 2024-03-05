@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/itemParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/walletList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/walletPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_dompet" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextView12spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="16dp"
+                android:text="@string/button_add_wallet"
+                android:textColor="@color/ocean_blue"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/TextView12splight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_six"
+                android:padding="16dp"
+                android:text="@string/label_account_withdraw"
+                android:textColor="@color/ocean_blue" />
+
+            <TextView
+                style="@style/TextView12splight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/squash"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="5dp"
+                android:text="Rekening bank yang didaftarkan harus atas nama pemilik akun OttoPay."
+                android:textColor="@android:color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bankList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/TextView12spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="114dp"
+                android:gravity="end"
+                android:padding="16dp"
+                android:text=""
+                android:textColor="@color/ocean_blue" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@drawable/button_white_grey_selector"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/margin"
+            android:paddingRight="@dimen/margin_large"
+            android:paddingBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCustNumber"
+                style="@style/TextView14spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_blue"
+                tools:text="081112341234"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:visibility="gone"
+                style="@style/TextView12sp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_super_small"
+                android:layout_height="wrap_content"
+                android:textColor="@color/brown_grey"
+                tools:text="@string/label_email"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="@dimen/margin"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/cart_delete"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/line_color" />
+
+</LinearLayout>

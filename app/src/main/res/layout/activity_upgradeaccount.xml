@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_grey_blue">
+
+        <LinearLayout
+            android:id="@+id/backhitbox"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow_left_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/button_upgrade_accouint"
+            android:textColor="@color/colorWhite" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:paddingTop="40dp">
+
+        <com.otto.mart.ui.component.ButtonToggleable
+            android:id="@+id/bt_action1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:activeIcon="@drawable/ic_done_all_green"
+            app:inactiveIcon="@drawable/icon_upload"
+            app:title="Upload Foto KTP" />
+
+        <com.otto.mart.ui.component.ButtonToggleable
+            android:id="@+id/bt_action2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:activeIcon="@drawable/ic_done_all_green"
+            app:inactiveIcon="@drawable/icon_upload"
+            app:title="Upload Foto Kamu &amp; KTP" />
+
+        <com.otto.mart.ui.component.ButtonToggleable
+            android:id="@+id/bt_action3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:activeIcon="@drawable/ic_done_all_green"
+            app:inactiveIcon="@drawable/icon_upload"
+            app:title="Upload Foto Toko Kamu" />
+
+        <TextView
+            android:id="@+id/tv_action1"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_tnc"
+            android:textColor="@color/ocean_blue" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/eLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_action2"
+                style="@style/TextView14spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_blue"
+                android:paddingBottom="8dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="8dp"
+                android:text="@string/text_propose_upgrade_account"
+                android:textColor="@color/color_white" />
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

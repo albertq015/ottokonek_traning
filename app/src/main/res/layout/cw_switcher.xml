@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:background="@drawable/background_bottom_line"
+        android:checkedButton="@+id/offer"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:padding="12dp"
+            android:id="@+id/positive"
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_line_indicator"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/text_process"
+            android:textColor="@color/blue_grey" />
+
+        <RadioButton
+            android:padding="12dp"
+            android:id="@+id/negative"
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_line_indicator"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/text_done"
+            android:textColor="@color/blue_grey" />
+    </RadioGroup>
+
+</LinearLayout>

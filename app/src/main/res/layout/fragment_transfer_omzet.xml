@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.otto.mart.ui.fragment.dashboard.MoreMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_gray_small_rounded" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_large"
+            android:paddingRight="@dimen/margin_large"
+            android:paddingLeft="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextView10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/text_pendapatan_non_tunai"/>
+
+                <TextView
+                    android:id="@+id/tvOmzet"
+                    style="@style/TextView14spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_super_small"
+                    android:textColor="@color/text_blue"
+                    tools:text="Rp1.500.000"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/scAllIn"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_move_all  "
+                android:layout_gravity="center"
+                android:textColor="@color/text_blue"
+                app:thumbTint="@color/white_six"
+                app:trackTint="@drawable/background_track_switch" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:background="@color/line_color"/>
+
+        <TextView
+            style="@style/TextView10spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="@string/label_input_withdraw_nominal"
+            android:textColor="@color/text_blue" />
+
+
+        <EditText
+            android:id="@+id/etAmount"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:background="@drawable/edittext_grey_rounded_bg"
+            android:gravity="center"
+            android:hint="@string/text_amount_ex"
+            android:inputType="number"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvAmountError"
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_super_small"
+            android:textColor="@color/text_error"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/button_primary_selector"
+            android:stateListAnimator="@null"
+            android:textAllCaps="true"
+            android:text="@string/button_withdraw"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</FrameLayout>

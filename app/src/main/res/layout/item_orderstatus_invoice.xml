@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@color/white">
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/ltv_invoiceno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:customLayout="@layout/cw_textview_horizontal_c_wwrapcontent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view24"
+        app:text="@string/dash"
+        app:title="No Invoice" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/orderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:customLayout="@layout/cw_textview_horizontal_c_wwrapcontent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltv_invoiceno"
+        app:text="@string/dash"
+        app:title="No Pembayaran" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/supplierOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:customLayout="@layout/cw_textview_horizontal_c_wwrapcontent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderNumber"
+        app:text="@string/dash"
+        app:title="@string/label_order_numb" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/refNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:customLayout="@layout/cw_textview_horizontal_c_wwrapcontent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/supplierOrderNumber"
+        app:text="@string/dash"
+        app:title="No Resi" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="HH:mm dd MMM YYYY"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ltv_invoiceno" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <LinearLayout
+        android:id="@+id/placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refNum">
+
+        <include layout="@layout/item_orderstatus_product" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/placeholder">
+
+        <TextView
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/label_shipping"
+            android:textColor="@color/charcoal_grey" />
+
+        <TextView
+            android:id="@+id/tv_sender"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/dash"
+            android:textColor="@color/charcoal_grey" />
+    </FrameLayout>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/resi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal_d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_1"
+        app:text="@string/dash"
+        app:title="Nomor Resi Pengiriman" />
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#e2e2e2"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resi" />
+
+    <TextView
+        android:id="@+id/tv_a"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_order_status"
+        android:textColor="@color/charcoal_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_1" />
+
+
+    <ImageView
+        android:id="@+id/paymentStatusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_st_waiting_on"
+        app:layout_constraintLeft_toLeftOf="@id/paymentStatus"
+        app:layout_constraintRight_toRightOf="@id/paymentStatus"
+        app:layout_constraintTop_toBottomOf="@id/tv_a" />
+
+    <TextView
+        android:id="@+id/paymentStatus"
+        style="@style/TextView8sp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_wait_for_payment"
+        android:textColor="@color/ocean_blue"
+        app:layout_constraintEnd_toStartOf="@+id/transactionStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentStatusImg" />
+
+    <ImageView
+        android:id="@+id/transactionStatusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_st_transaksi_sukses_on"
+        app:layout_constraintLeft_toLeftOf="@id/transactionStatus"
+        app:layout_constraintRight_toRightOf="@id/transactionStatus"
+        app:layout_constraintTop_toBottomOf="@id/tv_a" />
+
+    <TextView
+        android:id="@+id/transactionStatus"
+        style="@style/TextView8sp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_transaction_success_nl"
+        android:textColor="@color/ocean_blue"
+        app:layout_constraintEnd_toStartOf="@+id/packagingStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/paymentStatus"
+        app:layout_constraintTop_toTopOf="@+id/paymentStatus" />
+
+    <ImageView
+        android:id="@+id/packagingStatusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_st_packaging_off"
+        app:layout_constraintLeft_toLeftOf="@id/packagingStatus"
+        app:layout_constraintRight_toRightOf="@id/packagingStatus"
+        app:layout_constraintTop_toBottomOf="@id/tv_a" />
+
+    <TextView
+        android:id="@+id/packagingStatus"
+        style="@style/TextView8sp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_on_packing"
+        android:textColor="@color/charcoal_grey"
+        app:layout_constraintEnd_toStartOf="@+id/shippingStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/transactionStatus"
+        app:layout_constraintTop_toTopOf="@+id/transactionStatus" />
+
+    <ImageView
+        android:id="@+id/shippingStatusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_st_pengirim_off"
+        app:layout_constraintLeft_toLeftOf="@id/shippingStatus"
+        app:layout_constraintRight_toRightOf="@id/shippingStatus"
+        app:layout_constraintTop_toBottomOf="@id/tv_a" />
+
+    <TextView
+        android:id="@+id/shippingStatus"
+        style="@style/TextView8sp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_on_delivery"
+        android:textColor="@color/charcoal_grey"
+        app:layout_constraintEnd_toStartOf="@+id/completeStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/packagingStatus"
+        app:layout_constraintTop_toTopOf="@+id/packagingStatus" />
+
+    <ImageView
+        android:id="@+id/completeStatusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_st_done_off"
+        app:layout_constraintLeft_toLeftOf="@id/completeStatus"
+        app:layout_constraintRight_toRightOf="@id/completeStatus"
+        app:layout_constraintTop_toBottomOf="@id/tv_a" />
+
+    <TextView
+        android:id="@+id/completeStatus"
+        style="@style/TextView8sp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_done"
+        android:textColor="@color/charcoal_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shippingStatus"
+        app:layout_constraintTop_toTopOf="@+id/shippingStatus" />
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#e2e2e2"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transactionStatus" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll_2">
+
+        <TextView
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/label_sub_total_order"
+            android:textColor="@color/charcoal_grey" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            tools:text="Rp xx.xxx"
+            android:textColor="@color/ocean_blue" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/supplierName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/supplierImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/supplierImage"
+        app:layout_constraintTop_toTopOf="@+id/supplierImage"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <com.otto.mart.ui.component.SquareImageByWidth
+        android:id="@+id/supplierImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/camera_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view24"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/supplierImage" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/subTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:customLayout="@layout/cw_textview_horizontal_d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_2"
+        app:text="@string/dash"
+        app:title="Sub Total Pesanan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

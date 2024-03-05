@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        style="@style/TextView10sp"
+        android:id="@+id/productName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:ellipsize="end"
+        tools:text="Women Shirt Branded - SLIM FIT CASUAL 6 WARNA / …"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.otto.mart.ui.component.StrikeTextView
+        android:id="@+id/specialPrice"
+        style="@style/TextView10spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Rp 109.999"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <TextView
+        app:layout_goneMarginTop="8dp"
+        android:id="@+id/productPrice"
+        style="@style/TextView10spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Rp 99.999"
+        android:textColor="@drawable/color_special_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specialPrice" />
+</androidx.constraintlayout.widget.ConstraintLayout>

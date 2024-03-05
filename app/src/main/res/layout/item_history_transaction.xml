@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_white_grey_selector"
+    android:clickable="true"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin"
+        android:paddingLeft="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/imageIcon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/cashin"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    style="@style/TextView16spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="right"
+                    android:textColor="@color/faded_red"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvDesc"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+                    app:layout_constraintWidth_percent="0.3"
+                    tools:text="+Rp1.000" />
+
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    style="@style/TextView10spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/text_blue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDate"
+                    app:layout_constraintWidth_percent="0.7"
+                    tools:text="Komisi Pembelian Pulsa XL 25rb - 087881***191" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    style="@style/TextView10sp"
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_brown"
+                    tools:text="22-06-86" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    style="@style/TextView10spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="left"
+                    android:textColor="@color/text_brown"
+                    tools:text="Sukses"/>
+
+                <TextView
+                    android:id="@+id/tvNoReff"
+                    style="@style/TextView10spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="left"
+                    android:textColor="@color/text_brown"
+                    tools:text="922900001587"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_check_status"
+            style="@style/TextView12spbold"
+            android:background="@drawable/button_primary_selector"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+            android:text="@string/button_check_status"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

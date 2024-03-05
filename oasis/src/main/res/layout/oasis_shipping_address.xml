@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+        android:id="@+id/parentToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/backhitbox"
+            android:layout_width="60dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/label_shipping_address"
+            android:textColor="@color/blue_grey" />
+
+        <TextView
+            android:visibility="gone"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="16dp"
+            android:text="@string/text_add"
+            android:textColor="@color/blue_grey" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/parentToolbar"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/addressLabel"
+            style="@style/FontOpenSansBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:textSize="16sp"
+            android:textColor="@color/dark_grey_blue"
+            android:text="@string/alamat_usaha"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addressList"
+            android:layout_below="@id/addressLabel"
+            tools:listitem="@layout/item_address_oasis"
+            android:layout_width="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:layout_height="match_parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addAction"
+            android:layout_below="@+id/addressList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/dark_blue_green"
+            app:backgroundTint="@color/dark_sky_blue"
+            app:layout_anchorGravity="end|bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                style="@style/FontOpenSansBold"
+                android:textColor="@color/white"
+                android:text="Add Address"/>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

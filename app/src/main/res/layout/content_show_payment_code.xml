@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.transaction.alfamart.AlfamartShowPaymentCodeActivity"
+    tools:showIn="@layout/activity_show_payment_code"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ViewAnimator
+            android:id="@+id/view_animator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tabLayout"
+            android:animateFirstView="true">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/contentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ice_blue"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin">
+
+                        <TextView
+                            style="@style/TextView12spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_payment_code_label_title"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tvNote"
+                            style="@style/TextView10spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_payment_code_desc"
+                            android:textColor="@color/dark_sky_blue" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/ppob_tab_menu"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/qr_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin"
+                        android:background="@drawable/button_ocean_blue_rounded_bg"
+                        android:padding="40dp">
+
+                        <ImageView
+                            android:id="@+id/img_qr"
+                            android:layout_width="260dp"
+                            android:layout_height="260dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_qr" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/barcode_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin"
+                            android:padding="@dimen/margin_medium"
+                            android:gravity="center"
+                            android:background="@drawable/button_ocean_blue_rounded_bg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextView10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:textColor="@color/white"
+                                android:text="@string/show_payment_code_label_barcode" />
+
+                            <ImageView
+                                android:id="@+id/img_barcode"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_height="118dp"
+                                android:src="@drawable/barcode_tariktunai_indomaret" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin"
+                            android:padding="@dimen/margin_medium"
+                            android:background="@drawable/button_ocean_blue_rounded_bg"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextView10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin_small"
+                                android:textColor="@color/white"
+                                android:text="@string/show_payment_code_label_kode_token" />
+
+                            <TextView
+                                android:id="@+id/tvCode"
+                                style="@style/TextView14spbold"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/margin_small"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:background="@drawable/button_dark_ocean_blue_rounded_bg"
+                                tools:text="239403"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextView10sp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:layout_weight="3"
+                            android:gravity="right"
+                            android:text="@string/show_payment_code_label_timer"
+                            android:textColor="@color/text_black" />
+
+                        <TextView
+                            android:id="@+id/tvTimer"
+                            style="@style/TextView10sp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="left"
+                            android:textColor="@color/dark_sky_blue"
+                            tools:text="02:59" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvGuideTitle"
+                            style="@style/TextView12spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_grey_blue"
+                            android:text="@string/text_ottocash_token"/>
+
+                        <TextView
+                            android:id="@+id/tvGuideDesc"
+                            style="@style/TextView12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_super_small"
+                            android:textColor="@color/dark_grey_blue"
+                            android:text="@string/text_usability_oc_token_in_indomaret_alfamart"/>
+
+                        <TextView
+                            style="@style/TextView12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:textColor="@color/dark_grey_blue"
+                            android:text="@string/text_steps"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGuide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:id="@+id/btnCheckStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="24dp"
+                        android:paddingLeft="48dp"
+                        android:paddingRight="48dp"
+                        android:background="@drawable/button_blue"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="center"
+                        android:text="@string/button_check_payment"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </ViewAnimator>
+
+        <include
+            android:id="@+id/tabLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            layout="@layout/qr_payment_tab_menu"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

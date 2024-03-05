@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/DialogBottomStyle">
+
+    <ImageView
+        android:id="@+id/view_back"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:padding="4dp"
+        android:src="@drawable/vector_cross"
+        android:tint="@color/dark_grey_blue"
+        android:layout_gravity="right"
+        tools:ignore="RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        style="@style/DialogContent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vector_golden_ticket_fail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/dark_sky_blue"
+            android:textStyle="bold"
+            android:text="@string/text_title_gagal_tukar_voucher"
+            style="@style/Text"/>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_small_two"
+            android:textAlignment="gravity"
+            android:textColor="@color/greyish_brown"
+            android:text="@string/text_desc_gagal_tukar_voucher"
+            style="@style/Text.Medium"/>
+
+        <Button
+            android:id="@+id/btn_tutup"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/button_tutup"
+            style="@style/ButtonBlueSoftRound"/>
+    </LinearLayout>
+</LinearLayout>

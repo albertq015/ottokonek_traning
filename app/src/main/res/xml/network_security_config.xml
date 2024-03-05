@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true"/>
+    <domain-config>
+        <domain includeSubdomains="true">ottokonek.com</domain>
+        <pin-set>
+            <pin digest="SHA-256">jyAD8tLgPLXJoi/Y2hHMqFEhRQpM87mDB0zb0TezkHQ=</pin>r
+            <pin digest="SHA-256">Sc7wL4FfOw8ued5w3JOSzu5MzB471PfqdyN4hnMYbX4=</pin>
+        </pin-set>
+    </domain-config>
+    <domain-config enforcePinning="true">
+        <domain includeSubdomains="true">indoalliz-prod.apigee.net</domain>
+        <pin-set>
+            <!-- Invalid pins -->
+            <pin digest="SHA-256">RgXzjcSR2v7o3RXD81TEzPPZ5SFOJFpeZe6O+gEH8VQ=</pin>
+            <pin digest="SHA-256">YZPgTZ+woNCCCIW3LH2CxQeLzB/1m42QcCTBSdgayjs=</pin>
+        </pin-set>
+        <trustkit-config enforcePinning="true" disableDefaultReportUri="true">
+            <report-uri>https://overmind.datatheorem.com/trustkit/report</report-uri>
+        </trustkit-config>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round_white">
+
+    <!-- body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="gravity"
+            android:textColor="@color/charcoal_grey"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/very_light_pink"/>
+
+    <!-- footer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:gravity="center">
+
+        <Button
+            style="@style/ButtonBlueCapsule"
+            android:id="@+id/button_ok"
+            android:layout_width="125dp"
+            android:layout_height="39dp"
+            android:textStyle="bold"
+            android:text="@string/text_ok"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/DialogBottomStyle">
+
+    <ImageView
+        android:id="@+id/view_back"
+        android:layout_width="@dimen/img_icon_small"
+        android:layout_height="@dimen/img_icon_small"
+        android:padding="4dp"
+        app:srcCompat="@drawable/vector_cross"
+        android:tint="@color/dark_grey_blue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        style="@style/DialogContent">
+
+        <ImageView
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:padding="14dp"
+            app:srcCompat="@drawable/vector_logo_ottopoint"/>
+
+        <TextView
+            style="@style/Text.Bold"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="gravity"
+            android:textColor="@color/dark_sky_blue"
+            android:textSize="@dimen/text_medium"
+            android:text="@string/text_title_info_user_not_eligible"/>
+
+        <TextView
+            style="@style/Text"
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/text_small_two"
+            android:textColor="@color/blue_dark_two"
+            android:text="@string/empty_string"/>
+
+        <Button
+            style="@style/ButtonBlueSoftRound"
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="true"
+            android:text="@string/button_ok"/>
+    </LinearLayout>
+</LinearLayout>

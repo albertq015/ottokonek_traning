@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/cam_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:borderColor="@android:color/transparent"
+            app:maskColor="@android:color/transparent" />
+
+        <com.otto.mart.ui.component.ScannerFinderView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvBalance"
+            style="@style/TextView12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_sky_blue"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            tools:text="Saldo yang dapat digunakan : Rp914.220" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivQrGallery"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_qr_gallery" />
+
+    <ImageView
+        android:id="@+id/ivQrFlash"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_qr_flash" />
+
+</RelativeLayout>

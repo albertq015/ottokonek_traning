@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.otto.mart.ui.activity.ottopoint.VerifikasiOtpOttopoint">
+
+    <com.otto.mart.ui.component.ActionbarOttopointWhite
+        android:id="@+id/view_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:aow_title="@string/title_kode_verifikasi"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/space_body_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_info_pin"
+            android:textStyle="normal"
+            style="@style/Text"/>
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pinview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            app:pinBackground="@drawable/custom_pin_view"
+            app:pinWidth="41dp"
+            app:pinHeight="70dp"
+            app:pinLength="4"
+            app:cursorVisible="false"
+            app:forceKeyboard="true"
+            app:password="false">
+
+            <requestFocus/>
+        </com.goodiebag.pinview.Pinview>
+
+        <TextView
+            android:id="@+id/tv_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="?selectableItemBackground"
+            android:padding="4dp"
+            android:textStyle="normal"
+            android:textAllCaps="true"
+            android:text="@string/empty_countdown"
+            style="@style/Text.Large"/>
+
+        <TextView
+            android:id="@+id/tv_send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="?selectableItemBackground"
+            android:padding="4dp"
+            android:text="@string/text_kirim_ulang_kode"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            style="@style/Text.Large"/>
+    </LinearLayout>
+</LinearLayout>

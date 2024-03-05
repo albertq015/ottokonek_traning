@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.qr.payment.QrPaymentActivity"
+    tools:showIn="@layout/activity_qr_payment">
+
+    <ViewAnimator
+        android:id="@+id/viewAnimator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateFirstView="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/top_shadow"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMerchantName"
+                            style="@style/TextView16spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:gravity="center"
+                            android:textColor="@color/text_black"
+                            tools:text="Warung Sukses Makmur  " />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_large"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="@dimen/margin_large"
+                            android:gravity="center"
+                            android:textColor="@color/dark_sky_blue" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:background="#d4eeff" />
+
+                        <TextView
+                            android:id="@+id/tvMPAN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_large"
+                            android:layout_marginEnd="@dimen/margin_large"
+                            android:layout_marginBottom="@dimen/margin_large"
+                            android:gravity="center"
+                            android:textColor="#026eb4"
+                            tools:text="1335001203199912OP1A005973830703A01" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/top_bottom_shadow"
+                        android:orientation="vertical"
+                        android:padding="32dp">
+
+                        <TextView
+                            android:id="@+id/tvLabelAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:gravity="center"
+                            android:text="@string/label_transaction_nominal"
+                            android:textColor="@color/dark_grey_blue" />
+
+                        <EditText
+                            android:id="@+id/etAmount"
+                            style="@style/TextView16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@drawable/edittext_bottom_line_grey_default"
+                            android:gravity="center"
+                            android:hint="@string/text_amount_ex"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:padding="@dimen/margin_small"
+                            android:textColorHint="@color/light_blue_grey" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:enabled="false"
+                        android:id="@+id/btnNext"
+                        style="@style/TextView14spbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginEnd="60dp"
+                        android:background="@drawable/bg_button_red"
+                        android:text="@string/button_continue_transaction"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvAmountError"
+                        style="@style/TextView10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_super_small"
+                        android:gravity="center"
+                        android:textColor="@color/text_error"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/paymentMethodLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/TextView12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:text="@string/label_payment_method"
+                            android:textColor="@color/text_brown" />
+
+                        <include
+                            layout="@layout/qr_button_payment_method"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/selectNominalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/TextView12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:text="@string/label_input_nominal"
+                            android:textColor="@color/text_brown" />
+
+                        <include
+                            layout="@layout/button_split_payment_select_nominal_"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:layout_marginRight="@dimen/margin" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_medium"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_medium"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:src="@drawable/ic_secure" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTNC"
+                            style="@style/TextView10sp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/msg_tnc_confirmation"
+                            android:textColor="@color/text_blue" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </ViewAnimator>
+
+</LinearLayout>

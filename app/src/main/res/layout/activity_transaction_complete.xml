@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/dialog_header" />
+
+        <TextView
+            android:id="@+id/idTransaction"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp"
+            tools:text="2983654239562075"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lableIdTransaction"
+            style="@style/TextView12splight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/idTransaction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/label_id_transaction"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/lableIdTransaction"
+            android:layout_alignBottom="@id/idTransaction"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/circle_black_58"
+            android:padding="10dp"
+            android:src="@drawable/icon_share" />
+    </RelativeLayout>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_resi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Nomor Resi" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Tanggal Transaksi" />
+
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_transaction_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Deskripsi" />
+
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="@string/label_payment_method " />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:visibility="gone"
+        android:id="@+id/paymentNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Nomor Pembayaran" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Tipe Transaksi" />
+
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_direction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Direction" />
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_biller_reference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Biller Reference"
+        android:visibility="gone"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_stroom_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Stroom Token"
+        android:visibility="gone"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="Customer Name"
+        android:visibility="gone"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_commission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal"
+        app:text=" @string/dash "
+        app:title="@string/text_payment_details"
+        android:visibility="gone"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_serial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal_bold"
+        app:text=" @string/dash "
+        app:title="Serial"
+        android:visibility="gone"/>
+
+    <com.otto.mart.ui.component.LazyTextview
+        android:id="@+id/let_pin_kode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:customLayout="@layout/cw_textview_horizontal_bold"
+        app:text=" @string/dash "
+        app:title="Pin Kode"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_total_amount"
+            android:textColor="@color/cool_grey" />
+
+        <TextView
+            android:id="@+id/amount"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/dash"
+            android:textColor="@color/cool_grey" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/amount"
+            android:text=""
+            android:textColor="@color/scarlet" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_check_status"
+        style="@style/TextView12spbold"
+        android:background="@drawable/button_blue"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/white"
+        android:stateListAnimator="@null"
+        android:text="@string/button_check_status"
+        android:visibility="gone"/>
+
+</LinearLayout>

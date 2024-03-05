@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/iclToolbar"/>
+
+    <TextView
+        android:layout_below="@id/iclToolbar"
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8F5FB"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        android:text="@string/message_account_addition_24h"
+        android:textColor="@color/blue_grey"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.otto.mart.ui.component.HideableSpinnerView
+                android:id="@+id/hsv_jeniscair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:isHidden="false"
+                app:title="@string/label_choose_account_withdraw_type" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/eLayout_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:el_expanded="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:orientation="vertical">
+
+                    <com.otto.mart.ui.component.HidableBankSpinnerView
+                        android:id="@+id/hsv_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:isHidden="false"
+                        app:title="Bank" />
+
+                    <com.otto.mart.ui.component.LazyEdittext
+                        android:id="@+id/let_rekening"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:customLayout="@layout/cw_edittext_c"
+                        app:maxLength="20"
+                        app:title="@string/text_account_number" />
+
+                    <com.otto.mart.ui.component.LazyTextview
+                        android:id="@+id/ltv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone"
+                        app:text="@string/dash"
+                        app:title="@string/text_beneficiary_name" />
+
+                    <com.otto.mart.ui.component.LazyEdittext
+                        android:id="@+id/accountOwner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:customLayout="@layout/cw_edittext_a"
+                        app:maxLength="40"
+                        app:title="@string/text_beneficiary_name" />
+
+                    <CheckBox
+                        android:visibility="gone"
+                        android:id="@+id/cb_main"
+                        style="@style/TextView10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_save_as_main_account"
+                        android:textColor="@color/ocean_blue" />
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/TextView14spbold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_button_green"
+        android:stateListAnimator="@null"
+        android:text="@string/button_add"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ottopoint.ActivePointActivity">
+
+    <com.otto.mart.ui.component.ActionbarOttopointWhite
+        android:id="@+id/view_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:aow_title="@string/menu_active_poin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/space_body_container">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/vector_logo_pede_medium"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="26dp"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/text_default"
+            android:text="@string/text_info_active_account_pede"
+            style="@style/Text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/warm_grey"
+                android:text="@string/label_phone_number"
+                style="@style/Text"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/warm_grey"
+                    android:text="@string/label_code_phone_indo"
+                    style="@style/Text.Medium"/>
+
+                <EditText
+                    android:id="@+id/edt_phone_number"
+                    android:layout_width="match_parent"
+                    android:inputType="phone"
+                    android:digits="01234567890"
+                    android:hint="@string/place_holder_phone_number"
+                    android:layout_marginStart="12dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:textStyle="bold"
+                    android:textColor="@color/ocean_blue"
+                    style="@style/EditTextBottomLineGrey"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="@string/button_masuk"
+            android:enabled="false"
+            style="@style/ButtonBlueCapsule"/>
+    </LinearLayout>
+</LinearLayout>

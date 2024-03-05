@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/btnToolbarBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@drawable/button_white_grey_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgToolbarLeft"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:src="@drawable/ic_close"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvToolbarTitle"
+        style="@style/TextView14sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/blue_grey"
+        android:layout_centerInParent="true"
+        tools:text="@string/text_category"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

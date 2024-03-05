@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.olshop.CheckoutOlshopActivity"
+    tools:showIn="@layout/activity_olshop_checkout">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/btn_next"
+            app:layout_constraintStart_toStartOf="@+id/btn_next">
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/toolbar_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="0dp"-->
+            <!--android:layout_marginStart="0dp"-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--android:background="@color/dark_grey_blue"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/parent">-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/backhitbox"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginStart="16dp">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:src="@drawable/arrow_left_white" />-->
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--style="@style/TextView14spbold"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_margin="16dp"-->
+            <!--android:text="@string/title_activity_checkout"-->
+            <!--android:textColor="@color/colorWhite" />-->
+
+            <!--</FrameLayout>-->
+
+            <include
+                android:id="@+id/toolbar_layout"
+                layout="@layout/toolbar" />
+
+            <TextView
+                android:id="@+id/tv_data_pengiriman"
+                style="@style/TextView12spbold"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/checkout_data_pengiriman"
+                android:textColor="@color/dark_grey_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+            <com.otto.mart.ui.component.LazyEdittext
+                android:id="@+id/le_nama_pelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_data_pengiriman"
+                app:title="@string/label_recipient_name">
+
+            </com.otto.mart.ui.component.LazyEdittext>
+
+            <com.otto.mart.ui.component.LazyEdittext
+                android:id="@+id/le_no_telepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:customLayout="@layout/cw_edittext_phone2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/le_nama_pelanggan"
+                app:title="@string/label_telephone_number" />
+
+            <com.otto.mart.ui.component.LazyEdittext
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:customLayout="@layout/cw_edittext_email1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/le_no_telepon"
+                app:title="@string/label_email">
+
+            </com.otto.mart.ui.component.LazyEdittext>
+
+            <LinearLayout
+                android:id="@+id/address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shadow_custom"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/very_light_pink_two" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/icon_address" />
+
+                    <TextView
+                        android:id="@+id/tv_address_name"
+                        style="@style/TextView10sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/blue_grey"
+                        app:layout_constraintStart_toEndOf="@+id/imageView13"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Alamat Shipping 1" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/TextView10sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        tools:text="Jl. Wolter Monginsidi, Nomor 19, Kebayoran Baru, Jakarta Selatan, DKI Jakarta.dadas dkalsdjlaksd akldjasdlkdma"
+                        android:textColor="@color/brown_grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_address_name"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_address_name" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/very_light_pink_two" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_pesanan"
+                style="@style/TextView12spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/checkout_label_pesanan"
+                android:textColor="@color/dark_grey_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_layout" />
+
+            <TextView
+                android:id="@+id/changeAddress"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/button_edit"
+                android:textColor="@color/dark_sky_blue"
+                app:layout_constraintEnd_toEndOf="@+id/address_layout"
+                app:layout_constraintTop_toBottomOf="@+id/address_layout" />
+
+            <View
+                android:id="@+id/devider_pesanan_label"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@color/very_light_pink_three"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pesanan" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/devider_pesanan_label"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_olshop_checkout">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/devider_pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/very_light_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+            <LinearLayout
+                android:id="@+id/sub_total_product_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin"
+                android:paddingTop="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                app:layout_constraintTop_toBottomOf="@+id/devider_pesanan">
+
+                <TextView
+                    style="@style/TextView12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_total_product_price"
+                    android:textColor="@color/blue_grey" />
+
+                <TextView
+                    android:id="@+id/tv_subtotal_product"
+                    style="@style/TextView12spbold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    tools:text="Rp 139.999"
+                    android:textColor="@color/dark_blue_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sub_total_shipping_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin"
+                android:paddingTop="8dp"
+                android:paddingRight="@dimen/margin"
+                app:layout_constraintTop_toBottomOf="@+id/sub_total_product_layout">
+
+                <TextView
+                    style="@style/TextView12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_shipping_cost_addition_insurance"
+                    android:textColor="@color/blue_grey" />
+
+                <TextView
+                    android:id="@+id/tv_subtotal_pengiriman"
+                    style="@style/TextView12spbold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    tools:text="Rp 18.000"
+                    android:textColor="@color/dark_blue_grey" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devider_payment_deatil"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/very_light_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sub_total_shipping_layout" />
+
+            <TextView
+                android:id="@+id/tv_lable_payment_method"
+                style="@style/TextView12spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/text_payment_method"
+                android:textColor="@color/charcoal_grey"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/devider_payment_deatil" />
+
+            <LinearLayout
+                android:id="@+id/payment_method_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lable_payment_method">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_qr"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="24dp"
+                        android:text="@string/text_payment_qr"
+                        android:textColor="@color/charcoal_grey" />
+
+                    <RadioButton
+                        android:id="@+id/rb_cash"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_cash"
+                        android:textColor="@color/charcoal_grey" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devider_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/white_three"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_method_layout" />
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/TextView12spbold"
+                android:layout_width="132dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_blue"
+                android:text="@string/button_nexts"
+                android:textColor="@color/color_white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/ex3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/devider_payment_method" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/epl_bayar_sekarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:el_expanded="true"
+                app:layout_constraintTop_toBottomOf="@+id/btn_next">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/margin"
+                            android:layout_marginRight="16dp"
+                            android:text="@string/label_payment_method"
+                            android:textColor="@color/charcoal_grey" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardCornerRadius="8dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/walletImage"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:src="@drawable/ic_ottopay_logo"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_wallet_name"
+                                    style="@style/TextView12sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:text="@string/text_deposit"
+                                    android:textColor="@color/blue_grey"
+                                    app:layout_constraintBottom_toBottomOf="@+id/walletImage"
+                                    app:layout_constraintStart_toEndOf="@+id/walletImage"
+                                    app:layout_constraintTop_toTopOf="@+id/walletImage" />
+
+                                <TextView
+                                    android:id="@+id/tv_balance"
+                                    style="@style/TextView12spbold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="16dp"
+                                    android:gravity="right"
+                                    android:textColor="@color/blue_grey"
+                                    app:layout_constraintBottom_toBottomOf="@+id/walletImage"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/walletImage"
+                                    tools:text="Rp 3.050.400" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:visibility="gone"
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="@dimen/margin"
+                            android:text="@string/button_edit"
+                            android:textColor="@color/dark_sky_blue" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/very_light_grey"/>
+
+                        <include layout="@layout/part_snk"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/very_light_grey"/>
+
+                        <LinearLayout
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_total_payment"
+                                android:textColor="@color/brown_grey"
+                                style="@style/TextView12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_total_pembayaran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dash"
+                                android:textColor="@color/dark_blue_grey"
+                                style="@style/TextView14spbold" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_bayar_sekarang"
+                            style="@style/TextView14spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_primary_selected_bg"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:text="@string/btn_pay"
+                            android:textAllCaps="true"
+                            android:textColor="@color/color_white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

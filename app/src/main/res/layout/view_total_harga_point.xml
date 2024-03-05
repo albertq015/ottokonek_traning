@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/Text.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium"
+        android:text="@string/label_total_harga"/>
+
+    <TextView
+        style="@style/Text.Bold"
+        android:id="@+id/tv_point"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:textSize="@dimen/text_medium"
+        android:textAlignment="gravity"
+        android:textColor="@color/dark_sky_blue"
+        android:text="@string/empty_poin_two"
+        tools:ignore="RtlHardcoded" />
+</LinearLayout>

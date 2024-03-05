@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_grey_blue">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icon_popup_qr"
+        app:civ_border_color="@color/colorYellow"
+        app:civ_border_width="3dp"
+        app:civ_circle_background_color="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/pool_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/imgv"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/s_name"
+            style="@style/TextView14spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="namennamen"
+            android:textColor="@color/colorWhite"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/b_name"
+            style="@style/TextView12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="namennamen"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/imgv"
+        app:layout_constraintTop_toBottomOf="@id/pool_1">
+
+        <TextView
+            android:id="@+id/p_name"
+            style="@style/TextView12spbold"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="makjangtuktotblungkok"
+            android:textColor="@color/colorWhite" />
+
+        <!--<View-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@color/white_two" />-->
+
+        <!--<TextView-->
+        <!--style="@style/TextView12splight"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="M.ID"-->
+        <!--android:layout_marginRight="2dp"/>-->
+
+        <TextView
+            android:id="@+id/s_id"
+            style="@style/TextView12spbold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="924834193854415"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

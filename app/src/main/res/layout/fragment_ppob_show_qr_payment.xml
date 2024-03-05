@@ -1,0 +1,138 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.otto.mart.ui.fragment.dashboard.MoreMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border_gray_small_rounded"/>
+
+        <TextView
+            android:id="@+id/tvProductName"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:textColor="@color/text_blue"
+            android:gravity="center"
+            tools:text="Pulsa XL 25.000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:gravity="center"
+            android:background="@drawable/button_ocean_blue_rounded_bg"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/label_total_payment"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_super_small"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:gravity="center"
+                android:padding="@dimen/margin_super_small"
+                android:background="@drawable/button_black10_rounded_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    style="@style/TextView14spbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="Rp26.000"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextView10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/text_tunjukan_kode_qr_kepada_pembeli_yang_akan_melakukan_pembayaran_pastikan_nominal_sesuai"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:layout_margin="@dimen/margin"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="15dp"
+                >
+
+                <com.otto.mart.ui.component.SquareImageByWidth
+                    android:id="@+id/imgQR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/button_white_grey_bg"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/TextView10spbold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textColor="@color/white"
+                tools:text="Kadaluarsa : 02:58"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/margin_small"
+                android:src="@drawable/ic_secure"/>
+
+            <TextView
+                style="@style/TextView10sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_blue"
+                android:text="@string/text_semua_transaksi_cepat_dan_aman_dengan_melanjutkan_maka_kamu_telah_menyetujui_syarat_amp_ketentuan_yang_berlaku"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

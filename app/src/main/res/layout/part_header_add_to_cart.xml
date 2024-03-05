@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ransum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productName"
+        style="@style/TextView12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Jfashion Blazer Wanita Gaya Korea Tangan 7/8 Variasi renda - Emelia"
+        android:textColor="@color/charcoal_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/productImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.otto.mart.ui.component.StrikeTextView
+        android:id="@+id/productSpecialPrice"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        tools:text="Rp 89.999"
+        android:visibility="gone"
+        android:textColor="@color/brown_grey"
+        app:layout_constraintStart_toEndOf="@+id/productImage"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        style="@style/TextView12spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Rp 89.999"
+        android:textColor="@color/dark_sky_blue"
+        app:layout_constraintStart_toStartOf="@+id/productSpecialPrice"
+        app:layout_constraintTop_toBottomOf="@+id/productSpecialPrice"
+        app:layout_goneMarginBottom="8dp"
+        app:layout_goneMarginStart="16dp"
+        app:layout_goneMarginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

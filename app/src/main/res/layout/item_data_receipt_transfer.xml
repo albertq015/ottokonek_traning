@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label1"
+            android:text="Payment Method"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label1"
+            android:maxLines="2"
+            android:text="CARD BANK - 101**********963"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label2"
+            android:text="Date and Time"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label2"
+            android:maxLines="2"
+            android:text="24 Jan 2022, 12:40 PM"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label3"
+            android:text="Receipt Number"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label3"
+            android:maxLines="2"
+            android:text="O88P00000022"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label4"
+            android:text="Ref. Biller Number"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label4"
+            android:maxLines="2"
+            android:text="093Q00002233"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label5"
+            android:text="Ref. Issuer Number"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label5"
+            android:maxLines="2"
+            android:text="87714463910661"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label6"
+            android:text="Description"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label6"
+            android:maxLines="2"
+            android:text="Transfer"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label7"
+            android:text="Destination Bank"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label7"
+            android:maxLines="2"
+            android:text="CARD SME - 101**********028"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label8"
+            android:text="Acc. Holder Name"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label8"
+            android:maxLines="2"
+            android:text="Maria Rivera"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label9"
+            android:text="Transfer Amount"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label9"
+            android:maxLines="2"
+            android:text="50,000 PHP"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label10"
+            android:text="Transfer Fee"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label10"
+            android:maxLines="2"
+            android:text="20 PHP"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label11"
+            android:text="Total"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label11"
+            android:maxLines="2"
+            android:text="520,20 PHP"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/label12"
+            android:text="Status"
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=" : "
+            android:textColor="#526A7A"
+            android:textSize="14sp" />
+
+        <TextView
+
+            style="@style/FontOpenSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/label12"
+            android:maxLines="2"
+            android:text="Succes"
+            android:textColor="#212A31"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

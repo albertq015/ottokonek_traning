@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lezizNUForm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextView12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/ppob_label_field_is_required"
+        android:textColor="@color/text_brown" />
+
+    <EditText
+        android:id="@+id/etAmountNu"
+        style="@style/TextView24spbold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:hint="@string/text_amount_ex_asteriks"
+        android:gravity="center"
+        android:textColorHint="@color/light_blue_grey"
+        android:inputType="number"
+        android:maxLength="14"
+        android:background="@drawable/edittext_grey_rounded_bg"/>
+
+    <TextView
+        android:id="@+id/tvAmountNuError"
+        style="@style/TextView10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_super_small"
+        android:textColor="@color/text_error"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        style="@style/TextView10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:layout_gravity="center"
+        android:text="@string/label_input_donation_amount"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <RadioGroup
+        android:id="@+id/rgDonationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbLeft"
+            style="@style/TextView12spbold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/ocean_blue"
+            android:checked="true"
+            android:textColor="@color/text_blue"
+            android:text="@string/text_zakat" />
+
+        <RadioButton
+            android:id="@+id/rbRight"
+            style="@style/TextView12spbold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/ocean_blue"
+            android:textColor="@color/text_blue"
+            android:text="@string/text_infaq" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_brown"
+            android:text="@string/label_donatur_name"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_user_grey"/>
+
+            <EditText
+                android:id="@+id/etNameNu"
+                style="@style/TextView18spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/dark_grey_blue"
+                android:inputType="textPersonName"
+                android:hint="@string/label_full_name_asterisk"
+                android:textColorHint="@color/light_blue_grey"
+                android:background="@color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tvNameNuError"
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_super_small"
+            android:textColor="@color/text_error"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_brown"
+            android:text="@string/label_donors_phone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_phone_grey"/>
+
+            <EditText
+                android:id="@+id/etPhoneNu"
+                style="@style/TextView18spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/dark_grey_blue"
+                android:inputType="phone"
+                android:hint="@string/text_phone_ex"
+                android:textColorHint="@color/light_blue_grey"
+                android:background="@color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tvPhoneNuError"
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_super_small"
+            android:textColor="@color/text_error"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_brown"
+            android:text="@string/label_donors_npwp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_email_grey"/>
+
+            <EditText
+                android:id="@+id/etNpwpNu"
+                style="@style/TextView18spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/dark_grey_blue"
+                android:inputType="number"
+                android:hint="@string/text_npwp"
+                android:textColorHint="@color/light_blue_grey"
+                android:maxLength="17"
+                android:background="@color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tvNpwpError"
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_super_small"
+            android:textColor="@color/text_error"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_brown"
+            android:text="@string/label_donors_email"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_email_grey"/>
+
+            <EditText
+                android:id="@+id/etEmailNu"
+                style="@style/TextView18spbold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/dark_grey_blue"
+                android:inputType="textEmailAddress"
+                android:hint="@string/label_email"
+                android:textColorHint="@color/light_blue_grey"
+                android:background="@color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tvEmailNuError"
+            style="@style/TextView10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_super_small"
+            android:textColor="@color/text_error"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_medium" />
+
+</LinearLayout>

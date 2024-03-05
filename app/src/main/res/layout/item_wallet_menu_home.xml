@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/item_layout">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_pulsa"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TextView12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:lines="2"
+        android:gravity="center"
+        android:textColor="@color/text_blue"
+        tools:text="@string/text_deposit"/>
+
+</LinearLayout>

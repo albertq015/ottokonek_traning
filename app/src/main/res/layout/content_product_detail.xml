@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/buttonContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/dark_grey_blue"
+            android:gravity="center"
+            android:text="@string/button_add_to_cart"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            style="@style/TextView12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/ocean_blue"
+            android:gravity="center"
+            android:text="@string/button_buy_now"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@id/buttonContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp">
+
+            <com.otto.mart.ui.component.SquareImage
+                android:visibility="gone"
+                android:id="@+id/supplierThumb"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_button_elevenia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/supplierName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                tools:text="Elevenia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/supplierThumb"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white_five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supplierName" />
+
+            <TextView
+                android:id="@+id/productName"
+                style="@style/TextView14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/dash"
+                android:textColor="@color/blue_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <TextView
+                app:layout_goneMarginStart="16dp"
+                android:id="@+id/productPrice"
+                style="@style/TextView14spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/dark_sky_blue"
+                app:layout_constraintStart_toStartOf="@+id/productSpecialPrice"
+                app:layout_constraintTop_toBottomOf="@+id/productSpecialPrice"
+                app:layout_goneMarginTop="8dp" />
+
+            <com.otto.mart.ui.component.StrikeTextView
+                android:visibility="gone"
+                android:id="@+id/productSpecialPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                tools:text="Rp 89.999"
+                android:textColor="@color/brown_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white_five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView25"
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_choose_variant"
+                android:textColor="@color/charcoal_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView26"
+                style="@style/TextView12sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/text_variant_ex"
+                app:layout_constraintEnd_toStartOf="@+id/imageView12"
+                app:layout_constraintStart_toEndOf="@+id/textView25"
+                app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView26"
+                app:srcCompat="@drawable/icon_next_biru" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/view10"
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white_five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <TextView
+                style="@style/TextView12sp"
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_product_info"
+                android:textColor="@color/brown_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:id="@+id/productCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27"
+                app:title="@string/text_category"
+                app:text="@string/dash"/>
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:id="@+id/shippingMethod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productCategory"
+                app:title="Metode Pengiriman"
+                app:text="@string/dash"/>
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:id="@+id/productWeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shippingMethod"
+                app:title="Berat"
+                app:text="@string/dash"/>
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:visibility="gone"
+                android:id="@+id/minOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productWeight"
+                app:text="@string/dash"
+                app:title="Min Order" />
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:visibility="gone"
+                android:id="@+id/maxOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/minOrder"
+                app:text="@string/dash"
+                app:title="Maks Order" />
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:visibility="gone"
+                android:id="@+id/a4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/maxOrder"
+                app:title="Status Garansi" />
+
+            <com.otto.mart.ui.component.LazyTextview
+                android:visibility="gone"
+                android:id="@+id/a5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:customLayout="@layout/part_product_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/a4"
+                app:title="Negara Asal" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:background="@color/white_five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/a5" />
+
+            <TextView
+                android:id="@+id/textView28"
+                style="@style/TextView12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_product_desc"
+                android:textColor="@color/charcoal_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/dash"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <WebView
+                android:scrollbarSize="0dp"
+                android:id="@+id/webView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28"
+                android:layout_marginBottom="100dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

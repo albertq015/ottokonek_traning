@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="id.ottopay.oasis">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/module_name">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+
+        <meta-data
+            android:name="addressable"
+            android:value="false" />
+        <activity android:name="id.ottopay.oasis.ui.GrosirDetailHistoryActivity">
+
+        </activity>
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirAddressPicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirChangeShipment"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirPaymentMethod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirCheckOutPaO"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirHome"
+            android:label="@string/title_activity_otp_verification"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <meta-data
+                android:name="addressable"
+                android:value="true" />
+
+        </activity>
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirOrderDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirShippingAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirCheckStatusActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="addressable"
+                android:value="true" />
+        </activity>
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirCheckOut"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="id.ottopay.oasis.ui.GrosirShowProduct"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

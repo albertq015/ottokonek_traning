@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.login.OtpVerificationActivity"
+    android:background="@color/white"
+    tools:showIn="@layout/activity_otp_verification">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNext">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:id="@+id/btnToolbarBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_white_grey_selector"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgToolbarLeft"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/ic_close" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvToolbarTitle"
+                    style="@style/TextView14spbold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/title_activity_otp_verification"
+                    android:textColor="@color/text_blue" />
+
+                <LinearLayout
+                    android:id="@+id/btnToolbarRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_white_grey_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgToolbarRight"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/icon_share" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPhoneInfo"
+                style="@style/TextView12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:gravity="center"
+                android:textColor="@color/text_brown"
+                tools:text="@string/otp_verification_phone_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et1"
+                        style="@style/TextView14spbold"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="1" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et2"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="1" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et3"
+                        style="@style/TextView14spbold"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="1" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et4"
+                        style="@style/TextView14spbold"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="1" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et5"
+                        style="@style/TextView14spbold"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="1" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et6"
+                        style="@style/TextView14spbold"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="1" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTimer"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin"
+                android:gravity="center"
+                android:textColor="@color/text_blue"
+                tools:text="02:56" />
+
+            <Button
+                android:id="@+id/btnResend"
+                style="@style/TextView12spbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@color/transparent"
+                android:text="@string/button_resend_otp"
+                android:textColor="@color/dark_sky_blue"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/TextView14spbold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_primary_selector"
+        android:text="@string/label_konfirmasi"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:background="@drawable/shadow_custom"
+        android:padding="12dp"
+        android:layout_marginBottom="@dimen/margin_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/radioButton"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:buttonTint="@color/ocean_blue"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_toRightOf="@+id/radioButton"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:paddingEnd="16dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/address_name"
+                        style="@style/FontOpenSansSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#878b8f"
+                        tools:text="Rumah 1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="(Primary)"
+                        android:visibility="gone"
+                        android:id="@+id/is_primary"
+                        android:textColor="@color/cherry_red"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/address_owner"
+                    style="@style/FontOpenSansSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/dark_grey_blue"
+                    tools:text="Warung Sukses Makmur"/>
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/FontOpenSansReguler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/dark_grey_blue"
+                    tools:text="Jl. Wolter Monginsidi, Nomor 19, Kebayoran Baru, Jakarta Selatan, DKI Jakarta." />
+
+
+                <TextView
+                    android:id="@+id/address1"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:visibility="gone"
+                    android:textColor="@color/text_brown"
+                    tools:text="Kota Jakarta Selatan - Kebayoran Baru DKI Jakarta" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view"
+            android:layout_below="@+id/container"
+            android:background="#eeeeee"/>
+
+        <TextView
+            android:id="@+id/actionEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/view"
+            android:textColor="@color/dark_blue_green"
+            style="@style/FontOpenSansSemiBold"
+            android:textSize="12sp"
+            android:text="@string/button_edit"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ViewAnimator
+        android:id="@+id/view_animator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmit">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_large"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/icon_popup_qr"
+                        app:civ_border_color="@color/bluey_grey"
+                        app:civ_border_width="1dp"
+                        app:civ_circle_background_color="@color/color_white" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/icon_edit"
+                        app:civ_border_color="@color/colorBlack"
+                        app:civ_border_width="1dp"
+                        app:civ_circle_background_color="@color/color_white" />
+
+                </FrameLayout>
+
+                <TextView
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_full_name"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_user_grey"/>
+
+                    <EditText
+                        android:id="@+id/etName"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue_50"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="false"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_merchant_id"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_user_grey"/>
+
+                    <EditText
+                        android:id="@+id/etMerchantId"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue_50"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="false"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_main_phone_number"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_phone_grey"/>
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue_50"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="false"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/phone2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextView10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin"
+                        android:textColor="@color/text_brown"
+                        android:text="@string/label_another_phone_number"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icon_phone_grey"/>
+
+                        <EditText
+                            android:id="@+id/etPhone2"
+                            style="@style/TextView14spbold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="12dp"
+                            android:textColor="@color/dark_grey_blue"
+                            android:inputType="textEmailAddress"
+                            android:hint=""
+                            android:enabled="true"
+                            android:textColorHint="@color/light_blue_grey"
+                            android:background="@color/transparent"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line_color"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextView12spbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingBottom="24dp"
+                        android:paddingTop="24dp"
+                        android:text="@string/button_add_phone_number"
+                        android:textColor="@color/ocean_blue" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white_six" />
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_email"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_email_grey"/>
+
+                    <EditText
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:id="@+id/etEmail"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="true"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_dob"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_calendar_grey"/>
+
+                    <EditText
+                        android:id="@+id/etDob"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="true"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_company_name"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_store_grey"/>
+
+                    <EditText
+                        android:id="@+id/etNamaUsaha"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue_50"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="false"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/TextView10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:textColor="@color/text_brown"
+                    android:text="@string/label_company_type"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_store_grey"/>
+
+                    <EditText
+                        android:id="@+id/etJenisUsaha"
+                        style="@style/TextView14spbold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/dark_grey_blue_50"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        android:enabled="false"
+                        android:textColorHint="@color/light_blue_grey"
+                        android:background="@color/transparent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </ViewAnimator>
+
+    <Button
+        android:id="@id/btnSubmit"
+        style="@style/TextView12spbold"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_primary_selector"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_save"
+        android:textColor="@color/color_white"
+        android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

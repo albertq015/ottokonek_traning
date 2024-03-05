@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="21dp"
+            android:paddingBottom="21dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/vector_logo_ottopoint"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/label_point_kamu"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_default"
+                style="@style/Text"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|bottom"
+                android:layout_marginStart="8dp"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/tv_poin_ottopoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/empty_poin_three"
+                    style="@style/Text.MediumFont"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view_arrow"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/chevron_white"
+                android:tint="@color/grey"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

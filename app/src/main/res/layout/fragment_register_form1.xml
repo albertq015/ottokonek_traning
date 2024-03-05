@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.otto.mart.ui.component.LazyEdittext
+        android:id="@+id/let_shopname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:customLayout="@layout/cw_edittext_roundedbg_c_name"
+        app:maxLength="40"
+        app:minLength="5"
+        app:text=""
+        app:title="@string/label_company_name" />
+
+    <com.otto.mart.ui.component.LazyEdittext
+        android:id="@+id/let_merchantname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:customLayout="@layout/cw_edittext_roundedbg_c_name"
+        app:maxLength="40"
+        app:minLength="3"
+        app:text=""
+        app:title="Nama Pemilik Usaha" />
+
+    <com.otto.mart.ui.component.LazyEdittext
+        android:id="@+id/let_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:customLayout="@layout/cw_edittext_roundedbg_c_email"
+        app:maxLength="40"
+        app:minLength="5"
+        app:text=""
+        app:title="Email" />
+
+    <com.otto.mart.ui.component.LazyEdittext
+        android:id="@+id/let_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:customLayout="@layout/cw_edittext_roundedbg_c"
+        app:maxLength="16"
+        app:minLength="9"
+        app:text=""
+        app:title="Nomor Ponsel" />
+
+    <RelativeLayout
+        android:id="@+id/layout_bc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/labelProdType"
+            style="@style/TextView12spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/label_company_type"
+            android:textColor="@color/colorBlack"
+            android:transitionName="kucing_transition" />
+
+        <TextView
+            android:id="@+id/tv_bc"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelProdType"
+            android:background="@drawable/border_edittext"
+            android:drawableEnd="@drawable/icon_next_biru"
+            android:drawablePadding="8dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingEnd="14dp"
+            android:paddingStart="38dp"
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="@color/charcoal_grey"
+            android:textColorHint="@android:color/transparent"
+            android:transitionName="kucing_transition" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/let_borndate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/labeldate"
+            style="@style/TextView12spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/label_dob"
+            android:textColor="@color/colorBlack"
+            android:transitionName="kucing_transition" />
+
+        <TextView
+            android:id="@+id/tv_borndate"
+            style="@style/TextView14spbold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labeldate"
+            android:background="@drawable/border_edittext"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="@color/charcoal_grey"
+            android:textColorHint="@android:color/transparent"
+            android:transitionName="kucing_transition" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <com.otto.mart.ui.component.SapiEdittext
+            android:id="@+id/sapi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:customLayout="@layout/cw_edttext_roundedbg_g"
+            app:title="Punya Nomor Referal?" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white_seven" />
+
+
+    <TextView
+        android:id="@+id/action"
+        style="@style/TextView16spbold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_blue"
+        android:paddingBottom="8dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="8dp"
+        android:text="@string/label_next"
+        android:textColor="@color/color_white" />
+
+</LinearLayout>

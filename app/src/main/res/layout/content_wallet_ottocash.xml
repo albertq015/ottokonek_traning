@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.deposit.ottocash.WalletOttocashActivity"
+    tools:showIn="@layout/activity_wallet_ottocash"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="-100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wallet_header_bg"/>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="72dp"
+                        android:id="@+id/logo_wallet"
+                        android:src="@drawable/ic_ottocash_logo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin"
+                        android:id="@+id/saldo_name"
+                        android:text="@string/label_oc_balance"/>
+
+                    <TextView
+                        android:id="@+id/tvBalance"
+                        style="@style/TextView14spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textSize="24sp"
+                        android:textColor="@color/dark_grey_blue"
+                        android:text="@string/dash"/>
+
+                    <TextView
+                        android:id="@+id/tvUpgradeStatus"
+                        style="@style/TextView12spbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:textColor="#0671b6"
+                        android:background="@color/grey_soft_three"
+                        android:text="@string/text_verification_onprocess"
+                        android:visibility="gone"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="gone"
+                        android:layout_width="54dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="20dp"
+                        app:cardBackgroundColor="#1f1f4c"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn_upgrade">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_upgrade"
+                            android:id="@+id/tv_upgrade"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"
+                            android:textColor="@color/white"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:padding="@dimen/margin_small"
+                    android:background="@drawable/white_grey_border_rounded_10_bg"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <ViewAnimator
+                    android:id="@+id/viewAnimator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateFirstView="true"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="60dp"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextView12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginBottom="@dimen/margin"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:textColor="@color/greyish_brown"
+                            android:text="@string/text_history_transaction"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <Button
+                            android:id="@+id/btnMore"
+                            style="@style/TextView12spbold"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin"
+                            android:layout_marginBottom="@dimen/margin"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:background="@color/dark_blue_grey"
+                            android:stateListAnimator="@null"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:text="@string/button_show_more"/>
+
+                    </LinearLayout>
+
+                </ViewAnimator>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:id="@+id/headerContactUs"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_oc_contact_us"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mail_1"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_margin="3dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorGreySoft" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView10sp"
+                                android:id="@+id/emailWallet"
+                                android:text="@string/label_email"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView12spbold"
+                                android:id="@+id/tvEmailWallet"
+                                android:text="@string/text_oc_email"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/colorGreySoft"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/caller_1"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_margin="3dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorGreySoft" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView10sp"
+                                android:id="@+id/phoneNumberWallet"
+                                android:text="@string/label_telephone_number"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView12spbold"
+                                android:id="@+id/tvPhoneNumberWallet"
+                                android:text="@string/text_oc_phone"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/colorGreySoft"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/international"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_margin="3dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorGreySoft" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView10sp"
+                                android:id="@+id/websiteWallet"
+                                android:text="@string/text_website"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView12spbold"
+                                android:id="@+id/tvWebsiteWallet"
+                                android:text="@string/text_oc_url"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/colorGreySoft"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/clock_2"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_margin="3dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorGreySoft" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="@dimen/margin"
+                            android:layout_marginLeft="10dp">
+
+                            <TextView
+                                android:id="@+id/timeWallet"
+                                style="@style/TextView10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_working_hour" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextView12spbold"
+                                android:id="@+id/tvTimeWallet"
+                                android:text="@string/text_working_hour"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/colorGreySoft"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/changePin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/union"
+                            android:layout_marginLeft="10dp"/>
+                        <TextView
+                            style="@style/TextView12spbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/pengaturan_pin"
+                            android:textColor="@color/faded_red" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/btnTnc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:layout_alignParentRight="true">
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/union_1"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView12spbold"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/syarat_dan_ketentuan"
+                        android:autoLink="all"
+                        android:linksClickable="false"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/faded_red"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

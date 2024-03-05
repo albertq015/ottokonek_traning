@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="24dp"
+    style="@style/DialogBottomStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/Text.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_medium"
+            android:text="@string/label_konfirmasi"/>
+
+        <ImageView
+            android:id="@+id/view_back"
+            android:layout_width="@dimen/img_icon_small"
+            android:layout_height="@dimen/img_icon_small"
+            android:padding="4dp"
+            app:srcCompat="@drawable/vector_cross"
+            android:tint="@color/dark_grey_blue"
+            android:layout_gravity="right"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/Text.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:text="@string/text_desc_konfirmasi_tukar_deals"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/img_company"
+                android:layout_width="@dimen/img_small"
+                android:layout_height="@dimen/img_small"
+                app:srcCompat="@drawable/vector_anonymous"/>
+
+            <TextView
+                style="@style/Text"
+                android:id="@+id/tv_product_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textStyle="normal"
+                android:textAlignment="gravity"
+                android:text="@string/empty_string"/>
+
+            <TextView
+                style="@style/Text"
+                android:id="@+id/tv_jumlah_product"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textStyle="normal"
+                android:textAlignment="gravity"
+                android:text="@string/empty_voucher"/>
+        </LinearLayout>
+
+        <com.otto.mart.ui.component.ViewTotalHargaPoint
+            android:id="@+id/view_total_harga_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/view_nomor_tujuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                style="@style/Text.Bold"
+                android:id="@+id/tv_info_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:text="@string/empty_string"/>
+
+            <TextView
+                style="@style/Text.Bold"
+                android:id="@+id/tv_nomor_tujuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textSize="@dimen/text_medium"
+                android:textAlignment="gravity"
+                android:textColor="@color/dark_sky_blue"
+                android:text="@string/empty_string"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_server_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:text="@string/label_id_server"/>
+
+            <TextView
+                style="@style/Text.Bold"
+                android:id="@+id/tv_server_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textSize="@dimen/text_medium"
+                android:textAlignment="gravity"
+                android:textColor="@color/dark_sky_blue"
+                android:text="@string/empty_string"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_soft"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <include layout="@layout/view_ottopoint_point_kamu"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="@string/button_batal"
+                style="@style/ButtonWhiteBorderBlueSoft"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true">
+
+                <Button
+                    style="@style/ButtonBlueSoftRoundTwo"
+                    android:id="@+id/btn_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/button_yes_tukar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_button_yes"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:indeterminateDrawable="@drawable/circular_progress_bar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
