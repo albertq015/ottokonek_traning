@@ -300,7 +300,10 @@ dependencies {
     implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
 
     //Camera Kit
-    implementation 'com.wonderkiln:camerakit:0.13.1'
+//    implementation 'com.wonderkiln:camerakit:0.13.1'
+    implementation 'com.github.CameraKit:camerakit-android:v1.0.0-beta3.11'
+    implementation 'com.github.CameraKit:jpegkit-android:v0.2.2'
+
 
     //Super Nova Emoji
     implementation 'com.github.hani-momanii:SuperNova-Emoji:1.1'

@@ -3,8 +3,11 @@ package com.otto.mart.ui.activity.register.kyc;
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.PointF;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
@@ -16,20 +19,24 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.otaliastudios.cameraview.CameraException;
+import com.otaliastudios.cameraview.CameraListener;
+import com.otaliastudios.cameraview.CameraOptions;
+import com.otaliastudios.cameraview.CameraView;
+import com.otaliastudios.cameraview.Facing;
 import com.otto.mart.R;
 import com.otto.mart.model.localmodel.Realm.ImageBase64StoreModel;
 import com.otto.mart.support.util.DataUtil;
 import com.otto.mart.ui.activity.AppActivity;
-import com.wonderkiln.camerakit.CameraKit;
-import com.wonderkiln.camerakit.CameraKitEventCallback;
-import com.wonderkiln.camerakit.CameraKitImage;
-import com.wonderkiln.camerakit.CameraView;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 
 import app.beelabs.com.codebase.component.ProgressDialogComponent;
 import io.realm.Realm;
-//activity not in use
+//import pl.tajchert.nammu.Nammu;
+//import pl.tajchert.nammu.PermissionCallback;
+
 public class RegisterAccountActivationCamUsrActivity extends AppActivity {
 
     private CameraView mCameraView;
@@ -39,7 +46,8 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
     private TextView tv_title, tv_desc, action;
     private int bg = R.drawable.scrim_userktp;
     private String textMain, textSub;
-    private int state = -1, facing = 0;
+    private int state = -1;
+    private Facing facing = Facing.BACK;
     private boolean isShowTuts = false;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -62,21 +70,21 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
             switch (state) {
                 case 1:
                     bg = R.color.transparent;
-                    facing = 0;
+                    facing =  facing = Facing.BACK;
                     textMain = getString(R.string.s_ain_2);
                     textSub = getString(R.string.s_sub_2);
 
                     break;
                 case 2:
                     bg = R.drawable.scrim_userktp;
-                    facing = 1;
+                    facing =  facing = Facing.FRONT;
                     textMain = getString(R.string.s_ain_1);
                     textSub = getString(R.string.s_sub_1);
                     isShowTuts = true;
                     break;
                 case 3:
                     bg = R.color.transparent;
-                    facing = 0;
+                    facing =  facing = Facing.BACK;
                     textMain = getString(R.string.s_ain_3);
                     textSub = getString(R.string.s_sub_3);
                     break;
@@ -85,7 +93,7 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
             }
         }
         setContentView(R.layout.activity_captureimage);
-        initPermissions();
+//        initPermissions();
         initComponent();
         initContent();
     }
@@ -120,10 +128,11 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
         imgv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mCameraView.getFacing() == CameraKit.Constants.FACING_FRONT) {
-                    mCameraView.setFacing(CameraKit.Constants.FACING_BACK);
+
+                if (mCameraView.getFacing() == Facing.FRONT) {
+                    mCameraView.setFacing(Facing.BACK);
                 } else {
-                    mCameraView.setFacing(CameraKit.Constants.FACING_FRONT);
+                    mCameraView.setFacing(Facing.FRONT);
                 }
             }
         });
@@ -133,12 +142,65 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
             @Override
             public void onClick(View v) {
                 ProgressDialogComponent.showProgressDialog(RegisterAccountActivationCamUsrActivity.this, "Memproses gambar", false).show();
-                mCameraView.captureImage(new CameraKitEventCallback<CameraKitImage>() {
+                mCameraView.addCameraListener(new CameraListener() {
                     @Override
-                    public void callback(CameraKitImage cameraKitImage) {
-                        sendOkAndFinish(cameraKitImage.getBitmap());
+                    public void onCameraOpened(CameraOptions options) {
+                        super.onCameraOpened(options);
+                    }
+
+                    @Override
+                    public void onCameraClosed() {
+                        super.onCameraClosed();
+                    }
+
+                    @Override
+                    public void onCameraError(@NonNull CameraException exception) {
+                        super.onCameraError(exception);
+                    }
+
+                    @Override
+                    public void onPictureTaken(byte[] jpeg) {
+                        super.onPictureTaken(jpeg);
+                        sendOkAndFinish2(jpeg);
+
+                    }
+
+                    @Override
+                    public void onVideoTaken(File video) {
+                        super.onVideoTaken(video);
+                    }
+
+                    @Override
+                    public void onOrientationChanged(int orientation) {
+                        super.onOrientationChanged(orientation);
+                    }
+
+                    @Override
+                    public void onFocusStart(PointF point) {
+                        super.onFocusStart(point);
+                    }
+
+                    @Override
+                    public void onFocusEnd(boolean successful, PointF point) {
+                        super.onFocusEnd(successful, point);
+                    }
+
+                    @Override
+                    public void onZoomChanged(float newValue, float[] bounds, PointF[] fingers) {
+                        super.onZoomChanged(newValue, bounds, fingers);
+                    }
+
+                    @Override
+                    public void onExposureCorrectionChanged(float newValue, float[] bounds, PointF[] fingers) {
+                        super.onExposureCorrectionChanged(newValue, bounds, fingers);
                     }
                 });
+//                mCameraView.captureImage(new CameraKitEventCallback<CameraKitImage>() {
+//                    @Override
+//                    public void callback(CameraKitImage cameraKitImage) {
+//                        sendOkAndFinish(cameraKitImage.getBitmap());
+//                    }
+//                });
 
             }
         });
@@ -157,10 +219,10 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
         });
     }
 
-    private void initPermissions() {
-//        Nammu.init(getApplicationContext());
-//        if (!Nammu.checkPermission(Manifest.permission.CAMERA)) {
-//            Nammu.askForPermission(this, Manifest.permission.CAMERA, new PermissionCallback() {
+//    private void initPermissions() {
+//        Nammu.INSTANCE.init(getApplicationContext());
+//        if (!Nammu.INSTANCE.checkPermission(Manifest.permission.CAMERA)) {
+//            Nammu.INSTANCE.askForPermission(this, Manifest.permission.CAMERA, new PermissionCallback() {
 //                @Override
 //                public void permissionGranted() {
 //                    initComponent();
@@ -173,7 +235,7 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
 //                }
 //            });
 //        }
-    }
+//    }
 
     private void sendOkAndFinish(Bitmap bmp) {
 
@@ -181,6 +243,34 @@ public class RegisterAccountActivationCamUsrActivity extends AppActivity {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.PNG, 75, byteArrayOutputStream);
         byte[] byteArray = byteArrayOutputStream.toByteArray();
+        String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+        DataUtil.querryRealm(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                ImageBase64StoreModel model = realm.where(ImageBase64StoreModel.class).findFirst();
+                switch (state) {
+                    case 1:
+                        model.setKtp(encoded);
+                        break;
+                    case 2:
+                        model.setKtporang(encoded);
+                        break;
+                    case 3:
+                        model.setEtalase(encoded);
+                        break;
+                }
+                realm.copyToRealmOrUpdate(model);
+            }
+        });
+        setResult(this.RESULT_OK, jenk);
+        finish();
+    }
+
+
+    private void sendOkAndFinish2(  byte[] jpeg) {
+        Intent jenk = new Intent();
+        byte[] byteArray = jpeg;
         String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
         DataUtil.querryRealm(new Realm.Transaction() {
