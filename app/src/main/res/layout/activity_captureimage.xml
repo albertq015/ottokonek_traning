@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.wonderkiln.camerakit.CameraView
+    <com.camerakit.CameraKitView
         android:id="@+id/cameraview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        app:ckJpegQuality="40"
-        app:ckFacing="back" />
+        app:camera_imageJpegQuality="40"
+        app:camera_facing="back" />
 
     <FrameLayout
         android:id="@+id/layout_bgholder"
