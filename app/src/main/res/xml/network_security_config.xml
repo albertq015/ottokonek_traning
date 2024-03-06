@@ -19,4 +19,12 @@
             <report-uri>https://overmind.datatheorem.com/trustkit/report</report-uri>
         </trustkit-config>
     </domain-config>
+    <domain-config>
+     <domain includeSubdomains="true">https://dev2-ottokonek.ottopay.id</domain>
+         <pin-set>
+             <pin digest="SHA-256">jyAD8tLgPLXJoi/Y2hHMqFEhRQpM87mDB0zb0TezkHQ=</pin>r
+             <pin digest="SHA-256">Sc7wL4FfOw8ued5w3JOSzu5MzB471PfqdyN4hnMYbX4=</pin>
+         </pin-set>
+    </domain-config>
+
 </network-security-config>
